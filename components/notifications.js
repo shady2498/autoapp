@@ -13,15 +13,49 @@ export default function Notifications(props) {
 					return <h1 key={index}>{notificationsdetail.title}</h1>;
 				}
 			})} */}
+
 			{props.show !== undefined && props.show !== "all"
 				? notifications
 						.slice(notifications.length - props.show, notifications.length)
 						.reverse()
 						.map((notificationsdetail, index) => {
-							return <h1 key={index}>{notificationsdetail.id}</h1>;
+							return (
+								<div className="actvitybox">
+									<div className="media">
+										<div className="media-body">
+											<h4>
+												<strong>
+													<i
+														className="fa fa-info-circle"
+														aria-hidden="true"
+													></i>
+													<p key={index}>{notificationsdetail.title}</p>
+													<span className="x"> X </span>{" "}
+												</strong>{" "}
+											</h4>
+											<text key={index}>{notificationsdetail.detail}</text>
+										</div>
+									</div>
+								</div>
+							);
 						})
 				: notifications.reverse().map((notificationsdetail, index) => {
-						return <h1 key={index}>{notificationsdetail.id}</h1>;
+						return (
+							<div className="actvitybox">
+								<div className="media">
+									<div className="media-body">
+										<h4>
+											<strong>
+												<i className="fa fa-info-circle" aria-hidden="true"></i>
+												<p key={index}>{notificationsdetail.title}</p>
+												<span className="x"> X </span>{" "}
+											</strong>{" "}
+										</h4>
+										<text key={index}>{notificationsdetail.detail}</text>
+									</div>
+								</div>
+							</div>
+						);
 				  })}
 		</div>
 	);

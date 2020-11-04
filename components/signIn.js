@@ -1,5 +1,6 @@
 import React from "react";
 import useForm from "../customhooks/useForm";
+import Link from "next/link";
 
 export default function SignIn() {
 	const { handleChange, values } = useForm();
@@ -39,7 +40,9 @@ export default function SignIn() {
 					</label>
 				</div>
 
-				<button type="submit">Signup</button>
+				<Link href="/home" passHref>
+					<button type="submit">SignIn</button>
+				</Link>
 			</form>
 		</>
 	);
