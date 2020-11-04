@@ -1,0 +1,36 @@
+[
+	{
+		"id": 1,
+		"title": "Acitivity detected 1",
+		"timestamp": "Sept 18, 2020, 03:57 PM",
+		"detail": "this is the detail about the notification"
+	},
+
+	{
+		"id": 2,
+		"title": "Acitivity detected in Eric's car",
+		"timestamp": "Sept 18, 2020, 03:57 PM",
+		"detail": "this is the detail about the notification"
+	},
+
+	{
+		"id": 3,
+		"title": "Acitivity detected in Eric's car",
+		"timestamp": "Sept 18, 2020, 03:57 PM",
+		"detail": "this is the detail about the notification"
+	},
+
+	{
+		"id": 4,
+		"title": "Acitivity detected in Eric's car",
+		"timestamp": "Sept 18, 2020, 03:57 PM",
+		"detail": "this is the detail about the notification"
+	},
+
+	{
+		"id": 5,
+		"title": "Acitivity detected in Eric's car",
+		"timestamp": "Sept 18, 2020, 03:57 PM",
+		"detail": "this is the detail about the notification"
+	}
+]

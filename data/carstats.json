@@ -1,0 +1,19 @@
+[
+	{
+		"id": 1,
+		"Speed": "0 mph",
+		"BodyStatus": "Armed",
+		"Battery": "good",
+		"Internet": "goood",
+		"Engine Status": "good"
+	},
+
+	{
+		"id": 2,
+		"Speed": "7 mph",
+		"BodyStatus": "Armed",
+		"Battery": "good",
+		"Internet": "goood",
+		"Engine Status": "good"
+	}
+]

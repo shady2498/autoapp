@@ -1,0 +1,38 @@
+REACT_APP_YOUTUBE_API_KEY = AIzaSyCW4wkJiAxAbFCIprO4PrEIhBVYT0qheco
+
+
+
+
+
+
+
+
+
+FOR RECORDINGS USING API
+
+
+import React from "react";
+
+export default function recording({ data }) {
+	console.log("data", data);
+	return <div>dsadsa</div>;
+}
+
+const YOUTUBE_PLAYLIST_ITEMS =
+	"https://www.googleapis.com/youtube/v3/playlistItems";
+
+export async function getServerSideProps() {
+	const res = await fetch(
+		`${YOUTUBE_PLAYLIST_ITEMS}?part=snippet&playlistId=PLMFGVXWuJ1C5ls-U4_c0Je5kvCCvIrR5K&maxResults=50key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+	);
+
+	const data = await res.json();
+	console.log(data);
+	console.log(process.env.REACT_APP_YOUTUBE_API_KEY);
+
+	return {
+		props: {
+			data,
+		},
+	};
+}

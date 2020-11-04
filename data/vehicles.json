@@ -1,0 +1,15 @@
+[
+	{
+		"id": 1,
+		"CarOwner": "Dad's Car",
+		"current speed": "0 mph",
+		"Current Elevation": "78.34 meters"
+	},
+
+	{
+		"id": 2,
+		"CarOwner": "mom's Car",
+		"current speed": "0 mph",
+		"Current Elevation": "78.34 meters"
+	}
+]
