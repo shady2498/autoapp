@@ -26,11 +26,13 @@ export default function Recordings(props) {
 								<div className="col mb-4">
 									<div className="card h-100">
 										<ReactPlayer
-											className="card-img-top"
+											className="col coloumn-setting"
 											controls={true}
 											loading="lazy"
 											key={index}
 											url={recordings.video}
+											width = '333px !important'
+                                            height= '191px !important'
 										/>
 										<div className="card-body">
 											<h5 className="card-title">Card title</h5>

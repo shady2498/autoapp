@@ -616,6 +616,7 @@ small {
 	overflow-x: hidden;
 	transition: all 0.5s ease 0s;
 	padding-top: 60px;
+	display: none;
 }
 
 .sidebar2 a {
@@ -714,5 +715,19 @@ address {
 .btn_radius_0 {
 	border-radius: 0px;
 }
-
+ .col.coloumn-setting {
+    max-width: 25% !important;
+} 
 /* home */
+
+/* box settings */
+ .mb-4, .my-4 {
+    margin-bottom: 1.5rem !important;
+    display: inline-block;
+    width: 24%;
+}
+ 
+ .card-img-top {
+    width: 318px !important;
+    height: 191px !important;
+}

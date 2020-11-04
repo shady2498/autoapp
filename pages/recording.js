@@ -156,6 +156,7 @@ export default function recording() {
 					<Recordings />
 				</div>
 			</div>
+	
 		</>
 	);
 }
