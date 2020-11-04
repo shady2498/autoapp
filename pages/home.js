@@ -33,7 +33,7 @@ export default function home() {
 		// 	<Vehicles show={1} />
 		// 	<Recordings show={2} />
 		// </div> */}
-			{/* 
+
 			<div id="mySidebar" className="sidebar">
 				<img
 					src="./sidebar-07/images/avatar.png"
@@ -70,13 +70,13 @@ export default function home() {
 						<i className="fa fa-desktop" aria-hidden="true"></i>Add new device
 					</a>
 				</div>
-			</div> */}
+			</div>
 
 			<div id="main">
 				<button className="openbtn" onClick={openNav}>
 					☰ Open Sidebar
 				</button>
-				{/* <div id="closesidebar">
+				<div id="closesidebar">
 					<div id="mySidebar2" className="sidebar2">
 						<strong> Select vehicle </strong>
 
@@ -102,7 +102,7 @@ export default function home() {
 							</a>
 						</div>
 					</div>
-				</div> */}
+				</div>
 
 				<section className="map_sect_one">
 					<div className="maparea">
