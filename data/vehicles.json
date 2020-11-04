@@ -3,13 +3,15 @@
 		"id": 1,
 		"CarOwner": "Dad's Car",
 		"current speed": "0 mph",
-		"Current Elevation": "78.34 meters"
+		"Current Elevation": "78.34 meters",
+		"image": "avatary.jpg"
 	},
 
 	{
 		"id": 2,
 		"CarOwner": "mom's Car",
-		"current speed": "0 mph",
-		"Current Elevation": "78.34 meters"
+		"currentSpeed": "0 mph",
+		"currentElevation": "78.34 meters",
+		"image": "avatary.jpg"
 	}
 ]

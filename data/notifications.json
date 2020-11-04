@@ -8,7 +8,7 @@
 
 	{
 		"id": 2,
-		"title": "Acitivity detected in Eric's car",
+		"title": " detected in Eric's car",
 		"timestamp": "Sept 18, 2020, 03:57 PM",
 		"detail": "this is the detail about the notification"
 	},
@@ -22,14 +22,14 @@
 
 	{
 		"id": 4,
-		"title": "Acitivity detected in Eric's car",
+		"title": "Acitivity detected in Akainu's car",
 		"timestamp": "Sept 18, 2020, 03:57 PM",
 		"detail": "this is the detail about the notification"
 	},
 
 	{
 		"id": 5,
-		"title": "Acitivity detected in Eric's car",
+		"title": "Acitivity detected in joyboy's car",
 		"timestamp": "Sept 18, 2020, 03:57 PM",
 		"detail": "this is the detail about the notification"
 	}
