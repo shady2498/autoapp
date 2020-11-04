@@ -42,12 +42,21 @@ export default function Recordings(props) {
 						})
 				: recordings.reverse().map((recordings, index) => {
 						return (
-							<ReactPlayer
-								controls={true}
-								loading="lazy"
-								key={index}
-								url={recordings.video}
-							/>
+							<div className="col mb-4">
+								<div className="card h-100">
+									<ReactPlayer
+										className="card-img-top"
+										controls={true}
+										loading="lazy"
+										key={index}
+										url={recordings.video}
+									/>
+									<div className="card-body">
+										<h5 className="card-title">Card title</h5>
+										<p className="card-text">This is a short card.</p>
+									</div>
+								</div>
+							</div>
 						);
 				  })}
 		</div>
