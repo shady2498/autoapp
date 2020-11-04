@@ -26,45 +26,40 @@ export default function recording() {
 	};
 	return (
 		<>
-			<div id="mySidebar" classNameName="sidebar">
+			<div id="mySidebar" className="sidebar">
 				<img
 					src="./sidebar-07/images/avatar.png"
 					alt="Avatar"
-					classNameName="avatar"
+					className="avatar"
 				/>
 				<label>
 					TOMAS WilSON
 					<small>luckytom@rach</small>
 				</label>
-				<a
-					href="javascript:void(0)"
-					classNameName="closebtn"
-					onClick={closeNav}
-				>
+				<a href="javascript:void(0)" className="closebtn" onClick={closeNav}>
 					×
 				</a>
-				<div classNameName="nav1">
+				<div className="nav1">
 					<a id="atag" onClick={{ openNav2 }} href="#">
 						{" "}
-						<i classNameName="fa fa-home" aria-hidden="true"></i> HOME
-						<i classNameName="fas fa-caret-right"></i>
+						<i className="fa fa-home" aria-hidden="true"></i> HOME
+						<i className="fas fa-caret-right"></i>
 					</a>
 					<a id="atag" href="#">
 						{" "}
-						<i classNameName="fa fa-bell" aria-hidden="true"></i>Notifications
+						<i className="fa fa-bell" aria-hidden="true"></i>Notifications
 					</a>
 					<a id="atag" href="#">
 						{" "}
-						<i classNameName="fa fa-square-o" aria-hidden="true"></i>View All
+						<i className="fa fa-square-o" aria-hidden="true"></i>View All
 					</a>
 					<a id="atag" href="#">
 						{" "}
-						<i classNameName="fa fa-user-o" aria-hidden="true"></i> Account
+						<i className="fa fa-user-o" aria-hidden="true"></i> Account
 					</a>
 					<a id="atag" href="#">
 						{" "}
-						<i classNameName="fa fa-desktop" aria-hidden="true"></i>Add new
-						device
+						<i className="fa fa-desktop" aria-hidden="true"></i>Add new device
 					</a>
 				</div>
 			</div>
@@ -158,69 +153,7 @@ export default function recording() {
 						</button>
 					</div>
 
-					{/* <!-- <div className="container-fluid"> --> */}
-					<div className="row row-cols-1 row-cols-md-3">
-						<div className="col mb-4">
-							<div className="card h-100">
-								<img src="./video12.PNG" className="card-img-top" alt="..." />
-								<div className="card-body">
-									<h5 className="card-title">Card title</h5>
-									<p className="card-text">
-										This is a longer card with supporting text below as a
-										natural lead-in to additional content. This content is a
-										little bit longer.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className="col mb-4">
-							<div className="card h-100">
-								<img src="./video12.PNG" className="card-img-top" alt="..." />
-								<div className="card-body">
-									<h5 className="card-title">Card title</h5>
-									<p className="card-text">This is a short card.</p>
-								</div>
-							</div>
-						</div>
-						<div className="col mb-4">
-							<div className="card h-100">
-								<img src="./video12.PNG" className="card-img-top" alt="..." />
-								<div className="card-body">
-									<h5 className="card-title">Card title</h5>
-									<p className="card-text">
-										This is a longer card with supporting text below as a
-										natural lead-in to additional content.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className="col mb-4">
-							<div className="card h-100">
-								<img src="./video12.PNG" className="card-img-top" alt="..." />
-								<div className="card-body">
-									<h5 className="card-title">Card title</h5>
-									<p className="card-text">
-										This is a longer card with supporting text below as a
-										natural lead-in to additional content. This content is a
-										little bit longer.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className="col mb-4">
-							<div className="card h-100">
-								<img src="./video12.PNG" className="card-img-top" alt="..." />
-								<div className="card-body">
-									<h5 className="card-title">Card title</h5>
-									<p className="card-text">
-										This is a longer card with supporting text below as a
-										natural lead-in to additional content. This content is a
-										little bit longer.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
+					<Recordings />
 				</div>
 			</div>
 		</>

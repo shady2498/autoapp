@@ -16,19 +16,28 @@ export default function Recordings(props) {
 			<ReactPlayer url="videos/warriors.mp4" controls={true} /> */}
 			{/* for online video */}
 			{/* <ReactPlayer url={recordings[0].video} /> */}
-			<h1>Recordings</h1>
+			<h1>Recordings</h1>s
 			{props.show !== undefined && props.show !== "all"
 				? recordings
 						.slice(recordings.length - props.show, recordings.length)
 						.reverse()
 						.map((recordings, index) => {
 							return (
-								<ReactPlayer
-									controls={true}
-									loading="lazy"
-									key={index}
-									url={recordings.video}
-								/>
+								<div className="col mb-4">
+									<div className="card h-100">
+										<ReactPlayer
+											className="card-img-top"
+											controls={true}
+											loading="lazy"
+											key={index}
+											url={recordings.video}
+										/>
+										<div className="card-body">
+											<h5 className="card-title">Card title</h5>
+											<p className="card-text">This is a short card.</p>
+										</div>
+									</div>
+								</div>
 							);
 						})
 				: recordings.reverse().map((recordings, index) => {
