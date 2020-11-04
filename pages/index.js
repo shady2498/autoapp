@@ -7,6 +7,7 @@ import Vehicles from "../components/Vehicles";
 import Recordings from "../components/Recordings";
 import Search from "../components/Search";
 import Driverrating from "../components/driverRating";
+import Summary from './Summary'
 export default function Home() {
 	return (
 		<>
