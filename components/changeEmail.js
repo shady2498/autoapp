@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
 export default function changeEmail() {
-	const [value, handleChangeEmail] = useState({ name: "sdfsdfsf" });
-
+	const [value, handleChangeEmail] = useState({ name: "sds" });
 	const changeField = (event) => {
 		event.preventDefault();
 		// console.log(event);
@@ -16,7 +15,7 @@ export default function changeEmail() {
 	};
 
 	return (
-		<form onSubmit={(event) => saveInput(event, value)}>
+		<form onSubmit={(event) => changeField(event, value)}>
 			<div className="input-group">
 				<input
 					className="input--style-1"
@@ -25,7 +24,7 @@ export default function changeEmail() {
 					placeholder="Name"
 					// onKeyPress={changeField}
 					// onChange={changeField}
-					onChange={changeField}
+					onChange={handleChangeEmail}
 				/>
 			</div>
 
