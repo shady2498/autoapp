@@ -8,20 +8,24 @@ import Recordings from "../components/Recordings";
 import Search from "../components/Search";
 import Driverrating from "../components/driverRating";
 import Summary from './Summary'
+import CallEmergencyModal from "../components/callEmergencylModal";
+import ChangeEmail from "../components/changeEmail";
 export default function Home() {
 	return (
 		<>
 			{/* <div className={styles.container}>
 				<h1>Soemaknfjkashd</h1>
 			</div> */}
-
 			{/* <SignUp /> */}
 			{/* <SignIn /> */}
 			{/* <Notifications show="all" /> */}
 			{/* <Vehicles show="all" /> */}
 			{/* <Recordings show="2" /> */}
 			{/* <Search /> */}
-			<Driverrating />
+			{/* // <Driverrating /> */}
+			{/* <CallEmergencyModal /> */}
+			{/* <Driverrating /> */}
+			<ChangeEmail />
 		</>
 	);
 }
