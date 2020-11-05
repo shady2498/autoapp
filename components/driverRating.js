@@ -8,10 +8,11 @@ export default function driverRating(props) {
 				{props.show !== undefined && props.show !== "all"
 					? driverrating
 							.slice(driverrating.length - props.show, driverrating.length)
+							.reverse()
 							.map((driverrating, index) => {
 								return <h1 key={index}>{driverrating.id}</h1>;
 							})
-					: driverrating.map((driverrating, index) => {
+					: driverrating.reverse().map((driverrating, index) => {
 							return <h1 key={index}>{driverrating.id}</h1>;
 					  })}
 			</div>
