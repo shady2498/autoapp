@@ -3,7 +3,14 @@ import React from 'react'
 const DriverRatings =  () =>{
     return(
 <>
- <h1>Welcome DriverRatings</h1>
+<section role="main" class="content-body">
+<div className="container">
+<div className="row">
+
+
+</div>
+</div>
+</section>
 </>
 
     );
