@@ -9,31 +9,31 @@ export default function notifications() {
 
 			<div>
 				<div className="container-fluid">
-					<div class="col-12 mx-auto btn-group btn-group-justified">
-						<a class="btn btn-primary" role="button">
+					<div className="col-12 mx-auto btn-group btn-group-justified">
+						<a className="btn btn-primary" role="button">
 							Left
 						</a>
-						<a class="btn btn-primary" role="button">
+						<a className="btn btn-primary" role="button">
 							Middle
 						</a>
 					</div>
 				</div>
-				<section role="main" class="content-body">
+				<section role="main" className="content-body">
 					<div className="container">
 						<div className="row">
-							<div class="col-md-12">
-								<section class="panel">
-									<header class="panel-heading">
-										<div class="panel-actions">
-											<a href="#" class="fa fa-caret-down"></a>
-											<a href="#" class="fa fa-times"></a>
+							<div className="col-md-12">
+								<section className="panel">
+									<header className="panel-heading">
+										<div className="panel-actions">
+											<a href="#" className="fa fa-caret-down"></a>
+											<a href="#" className="fa fa-times"></a>
 										</div>
 									</header>
-									<div class="panel-body">
-										<h2 class="panel-title">Driver Rating</h2>
+									<div className="panel-body">
+										<h2 className="panel-title">Driver Rating</h2>
 										<p>view list</p>
-										<div class="table-responsive">
-											<table class="table table-hover mb-none">
+										<div className="table-responsive">
+											<table className="table table-hover mb-none">
 												<thead>
 													<tr>
 														<th>#</th>

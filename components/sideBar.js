@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export default function sideBar() {
 	const openNav = () => {
-		document.getElementById("mySidebar").style.width = "250px";
-		document.getElementById("main").style.marginLeft = "250px";
+		// document.getElementById("mySidebar").style.width = "250px";
+		// document.getElementById("main").style.marginLeft = "250px";
 	};
 
 	const closeNav = () => {
-		document.getElementById("mySidebar").style.width = "10px";
-		document.getElementById("main").style.marginLeft = "0";
+		// document.getElementById("mySidebar").style.width = "10px";
+		// document.getElementById("main").style.marginLeft = "0";
 	};
 
 	const openNav2 = () => {
@@ -70,14 +70,14 @@ export default function sideBar() {
 			</div>
 
 			<div id="main">
-				<button class="openbtn" onClick={openNav}>
+				<button className="openbtn" onClick={openNav}>
 					☰ Open Sidebar
 				</button>
 				<div id="closesidebar">
-					<div id="mySidebar2" class="sidebar2">
+					<div id="mySidebar2" className="sidebar2">
 						<strong> Select vehicle </strong>
 
-						<div class="nav1">
+						<div className="nav1">
 							<a id="atag" href="#">
 								{" "}
 								Dan's Car
@@ -94,8 +94,8 @@ export default function sideBar() {
 								{" "}
 								Eric's Car
 							</a>
-							<a onclick="closeNav2()">
-								<i class="fas fa-caret-left"></i>
+							<a onClick={closeNav2}>
+								<i className="fas fa-caret-left"></i>
 							</a>
 						</div>
 					</div>

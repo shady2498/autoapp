@@ -1,18 +1,12 @@
 import React from "react";
 import Notifications from "../components/Notifications";
 import Recordings from "../components/recordings";
-import Vehicles from "../components/Vehicles";
+import Vehicles from "../components/vehicles";
 import Sidebar from "../components/sideBar";
 
 export default function home() {
 	return (
 		<>
-			{/* // <div>
-		// 	<Notifications show={3} />
-		// 	<Vehicles show={1} />
-		// 	<Recordings show={2} />
-		// </div> */}
-
 			<Sidebar />
 
 			<section className="map_sect_one">
@@ -20,10 +14,10 @@ export default function home() {
 					<iframe
 						width="100%"
 						height="350"
-						frameborder="0"
+						frameBorder="0"
 						scrolling="no"
-						marginheight="0"
-						marginwidth="0"
+						marginHeight="0"
+						marginWidth="0"
 						src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
 					></iframe>
 				</div>
@@ -40,7 +34,7 @@ export default function home() {
 									<text className="sep">18 September 2020</text>
 								</div>
 								<div className="activy_boxes">
-									<Notifications show="2" />
+									<Notifications show={2} />
 								</div>
 							</div>
 						</div>
@@ -50,7 +44,7 @@ export default function home() {
 									<h5 className="card-title text-uppercase"> Your Vehicle</h5>
 								</div>
 								<div className="activy_boxes">
-									<Vehicles show={2} />
+									<Vehicles show={3} />
 								</div>
 							</div>
 						</div>
@@ -61,8 +55,8 @@ export default function home() {
 			<section className="picture1">
 				<h1> Recent Recordings </h1>
 				<span style={{ float: "right", color: "#0091ff" }}>See All</span>
-				<div col-md-12>
-					<Recordings show="4" />
+				<div className="col-md-12">
+					<Recordings show={4} />
 				</div>
 			</section>
 		</>

@@ -1,5 +1,5 @@
 import React from "react";
-import notifications from "../data/notifications.json";
+import notificationsdata from "../data/notifications.json";
 
 export default function Notifications(props) {
 	return (
@@ -15,21 +15,24 @@ export default function Notifications(props) {
 			})} */}
 
 			{props.show !== undefined && props.show !== "all"
-				? notifications
-						.slice(notifications.length - props.show, notifications.length)
+				? notificationsdata
+						.slice(
+							notificationsdata.length - props.show,
+							notificationsdata.length
+						)
 						.reverse()
 						.map((notificationsdetail, index) => {
 							return (
 								<button
 									key={index}
 									id="desktop-notice"
-									class="mt-sm mb-sm btn btn-info"
+									className="mt-sm mb-sm btn btn-info"
 								>
 									<p>{notificationsdetail.title}</p>{" "}
 								</button>
 							);
 						})
-				: notifications.reverse().map((notificationsdetail, index) => {
+				: notificationsdata.reverse().map((notificationsdetail, index) => {
 						return (
 							<div className="actvitybox">
 								<div className="media">

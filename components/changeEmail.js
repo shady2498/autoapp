@@ -1,40 +1,32 @@
 import React, { useState } from "react";
 
+// for the account page to change email
 export default function changeEmail() {
-	const [value, handleChangeEmail] = useState({ name: "sds" });
-	const changeField = (event) => {
+	//set and change state for email
+	const [state, setState] = useState({
+		email: "",
+	});
+
+	//sets the state onChange
+	function handleChange(evt) {
+		setState({ email: evt.target.value });
+	}
+
+	// consolelog the updated state
+	const upDateEmail = (event, values) => {
 		event.preventDefault();
-		// console.log(event);
-		// var myJSON = JSON.stringify(value);
-		// console.log(myJSON);
-		console.log(event.target.value);
+		var myJSON = JSON.stringify(values);
+		console.log(myJSON);
 	};
-
-	const saveInput = (event) => {
-		console.log(event.target.value);
-	};
-
 	return (
-		<form onSubmit={(event) => changeField(event, value)}>
-			<div className="input-group">
-				<input
-					className="input--style-1"
-					type="text"
-					name="name"
-					placeholder="Name"
-					// onKeyPress={changeField}
-					// onChange={changeField}
-					onChange={handleChangeEmail}
-				/>
-			</div>
-
-			<button
-				type="submit"
-				className="btn btn-primary btnsubmit"
-				// onClick={() => saveInput(value)}
-			>
-				<span className="submit"> Submit </span>
-			</button>
-		</form>
+		<>
+			{/* takes email input */}
+			<form onSubmit={(event) => upDateEmail(event, state.email)}>
+				<label>
+					Email
+					<input type="email" value={state.email} onChange={handleChange} />
+				</label>
+			</form>
+		</>
 	);
 }
