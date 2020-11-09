@@ -195,7 +195,7 @@ export default function matSideBar() {
 							Nested List Items
 						</ListSubheader>
 					}
-					className={classes.root}
+					// className={classes.root}
 				>
 					<ListItem button onClick={handleClick}>
 						<ListItemIcon>

@@ -1,5 +1,7 @@
 import React from "react";
 import notificationsdata from "../data/notifications.json";
+import ErrorIcon from "@material-ui/icons/Error";
+import CloseIcon from "@material-ui/icons/Close";
 
 export default function Notifications(props) {
 	return (
@@ -34,20 +36,24 @@ export default function Notifications(props) {
 						})
 				: notificationsdata.reverse().map((notificationsdetail, index) => {
 						return (
-							<div className="actvitybox">
-								<div className="media">
-									<div className="media-body">
-										<h4>
-											<strong>
-												<i className="fa fa-info-circle" aria-hidden="true"></i>
-												<p key={index}>{notificationsdetail.title}</p>
-												<span className="x"> X </span>{" "}
-											</strong>{" "}
-										</h4>
-										<text key={index}>{notificationsdetail.detail}</text>
+							<>
+								<div className="widget-summary-col widget-summary-col-icon">
+									<div class="summary-icon ">
+										<ErrorIcon />
 									</div>
 								</div>
-							</div>
+								<div class="summary">
+									<h4 class="title">{notificationsdetail.title}</h4>
+								</div>
+								<div class="summary-footer">
+									<a class="text-muted text-uppercase">
+										{notificationsdetail.detail}
+									</a>
+								</div>
+								<div className="error-cross">
+									<CloseIcon />
+								</div>
+							</>
 						);
 				  })}
 		</div>
