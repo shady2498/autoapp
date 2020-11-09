@@ -5,6 +5,7 @@ import CloseIcon from '@material-ui/icons/Close';
 
 export default function notifications() {
 	return (
+		<>
 		<div>
 <section role="main" class="content-body">
      
@@ -140,9 +141,10 @@ export default function notifications() {
 									</div>
 								</section>
 							</div>
-</div>
-</div>
-</section>
-		</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</>
 	);
 }

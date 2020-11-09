@@ -1,10 +1,10 @@
 import React from "react";
-import notifications from "../data/notifications.json";
+import notificationsdata from "../data/notifications.json";
 
 export default function Notifications(props) {
 	return (
 		<div>
-			<h1>Notifications</h1>
+			{/* <h1>Notifications</h1> */}
 			{/* {notifications.map((notificationsdetail, index) => {
 				console.log(index);
 				if (props.show && index < props.show) {
@@ -15,31 +15,24 @@ export default function Notifications(props) {
 			})} */}
 
 			{props.show !== undefined && props.show !== "all"
-				? notifications
-						.slice(notifications.length - props.show, notifications.length)
+				? notificationsdata
+						.slice(
+							notificationsdata.length - props.show,
+							notificationsdata.length
+						)
 						.reverse()
 						.map((notificationsdetail, index) => {
 							return (
-								<div className="actvitybox">
-									<div className="media">
-										<div className="media-body">
-											<h4>
-												<strong>
-													<i
-														className="fa fa-info-circle"
-														aria-hidden="true"
-													></i>
-													<p key={index}>{notificationsdetail.title}</p>
-													<span className="x"> X </span>{" "}
-												</strong>{" "}
-											</h4>
-											<text key={index}>{notificationsdetail.detail}</text>
-										</div>
-									</div>
-								</div>
+								<button
+									key={index}
+									id="desktop-notice"
+									className="mt-sm mb-sm btn btn-info"
+								>
+									<p>{notificationsdetail.title}</p>{" "}
+								</button>
 							);
 						})
-				: notifications.reverse().map((notificationsdetail, index) => {
+				: notificationsdata.reverse().map((notificationsdetail, index) => {
 						return (
 							<div className="actvitybox">
 								<div className="media">

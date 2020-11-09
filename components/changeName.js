@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function changeDeviceName() {
+export default function changeName() {
 	//set and change state for name
 	const [state, setState] = useState({
 		name: "",
