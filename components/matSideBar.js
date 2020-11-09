@@ -20,6 +20,14 @@ import MailIcon from "@material-ui/icons/Mail";
 import LanguageIcon from "@material-ui/icons/Language";
 import Link from "next/link";
 import NotificationsIcon from "@material-ui/icons/Notifications";
+import ListSubheader from "@material-ui/core/ListSubheader";
+
+import Collapse from "@material-ui/core/Collapse";
+import DraftsIcon from "@material-ui/icons/Drafts";
+import SendIcon from "@material-ui/icons/Send";
+import ExpandLess from "@material-ui/icons/ExpandLess";
+import ExpandMore from "@material-ui/icons/ExpandMore";
+import StarBorder from "@material-ui/icons/StarBorder";
 
 const drawerWidth = 240;
 
@@ -83,12 +91,21 @@ const useStyles = makeStyles((theme) => ({
 		flexGrow: 1,
 		padding: theme.spacing(3),
 	},
+	nested: {
+		paddingLeft: theme.spacing(4),
+	},
 }));
 
 export default function matSideBar() {
 	const classes = useStyles();
 	const theme = useTheme();
 	const [open, setOpen] = React.useState(false);
+	const [subopen, subsetOpen] = React.useState(true);
+
+	const handleClick = () => {
+		subsetOpen(!subopen);
+	};
+
 	const menu = [
 		{
 			key: "Home",
@@ -128,29 +145,6 @@ export default function matSideBar() {
 	return (
 		<div className={classes.root}>
 			<CssBaseline />
-			{/* <AppBar
-				position="fixed"
-				className={clsx(classes.appBar, {
-					[classes.appBarShift]: open,
-				})} */}
-			{/* > */}
-			{/* <Toolbar>
-					<IconButton
-						color="inherit"
-						aria-label="open drawer"
-						onClick={handleDrawerOpen}
-						edge="start"
-						className={clsx(classes.menuButton, {
-							[classes.hide]: open,
-						})}
-					>
-						<MenuIcon />
-					</IconButton> */}
-			{/* <Typography variant="h6" noWrap>
-						Mini variant drawer
-					</Typography> */}
-			{/* </Toolbar> */}
-			{/* </AppBar> */}
 
 			<Drawer
 				variant="permanent"
@@ -199,7 +193,48 @@ export default function matSideBar() {
 						</Link>
 					))}
 				</List>
+				<Divider /> <Divider />
 				<Divider />
+				<List
+					component="nav"
+					aria-labelledby="nested-list-subheader"
+					subheader={
+						<ListSubheader component="div" id="nested-list-subheader">
+							Nested List Items
+						</ListSubheader>
+					}
+					className={classes.root}
+				>
+					<ListItem button onClick={handleClick}>
+						<ListItemIcon>
+							<InboxIcon />
+						</ListItemIcon>
+						<ListItemText primary="Inbox" />
+						{open ? <ExpandLess /> : <ExpandMore />}
+					</ListItem>
+					<Collapse in={subopen} timeout="auto" unmountOnExit>
+						<List component="div" disablePadding>
+							<ListItem button className={classes.nested}>
+								<ListItemIcon>
+									<StarBorder />
+								</ListItemIcon>
+								<ListItemText primary="Starred" />
+							</ListItem>
+						</List>
+					</Collapse>
+					<ListItem button>
+						<ListItemIcon>
+							<SendIcon />
+						</ListItemIcon>
+						<ListItemText primary="Sent mail" />
+					</ListItem>
+					<ListItem button>
+						<ListItemIcon>
+							<DraftsIcon />
+						</ListItemIcon>
+						<ListItemText primary="Drafts" />
+					</ListItem>
+				</List>
 				{/* <List>
 					{["All mail", "Trash", "Spam"].map((text, index) => (
 						<ListItem button key={text}>
