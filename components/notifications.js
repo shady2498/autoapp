@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import notificationsdata from "../data/notifications.json";
 import ErrorIcon from "@material-ui/icons/Error";
 import CloseIcon from "@material-ui/icons/Close";
 
 export default function Notifications(props) {
+	const [show, setShow] = useState(notificationsdata);
+	// const [notificationArray]
+
+	const handleDelete = (notificationsdataId) => {
+		const items = notificationsdata.splice(notificationsdataId, 1);
+		setShow({ notificationsdata: items });
+	};
 	return (
 		<div>
 			{/* <h1>Notifications</h1> */}
@@ -31,6 +38,9 @@ export default function Notifications(props) {
 									className="mt-sm mb-sm btn btn-info"
 								>
 									<p>{notificationsdetail.title}</p>{" "}
+									<div className="error-cross">
+										<CloseIcon onClick={() => handleDelete(index)} />
+									</div>
 								</button>
 							);
 						})
@@ -51,8 +61,9 @@ export default function Notifications(props) {
 									</a>
 								</div>
 								<div className="error-cross">
-									<CloseIcon />
+									<CloseIcon onClick={() => handleDelete(index)} />
 								</div>
+								{/* <button onClick={() => handleDelete(index)}>adasd</button> */}
 							</>
 						);
 				  })}
