@@ -1,5 +1,7 @@
 import React from "react";
 import Notifications from "../components/Notifications";
+import ErrorIcon from '@material-ui/icons/Error';
+import CloseIcon from '@material-ui/icons/Close';
 
 export default function notifications() {
 	return (
@@ -21,106 +23,117 @@ export default function notifications() {
 <div className="row">
 <div class="col-md-12">
 <section class="panel panel-featured-left panel-featured-secondary">
-									<div class="panel-body">
+									<div class="panel-body redclr">
 										<div class="widget-summary">
 											<div class="widget-summary-col widget-summary-col-icon">
-												<div class="summary-icon bg-secondary">
-													<i class="fa fa-usd"></i>
+												<div class="summary-icon 	">
+												<ErrorIcon />
+												</div>
+											</div>
+											<div class="widget-summary-col">
+												<div class="summary">
+												
+													<h4 class="title settings">Total Profit</h4>
+													
+													{/* <div class="info">
+														<strong class="amount">$ 14,890.30</strong>
+													</div> */}
+												</div>
+												<div class="summary-footer">
+													<a class="text-muted text-uppercase">(withdraw all)</a>
+												</div>
+												<div className="error-cross">
+												<CloseIcon />
+												</div>
+												
+											</div>
+										</div>
+									</div>
+
+									<div class="panel-body redclr">
+										<div class="widget-summary">
+											<div class="widget-summary-col widget-summary-col-icon">
+												<div class="summary-icon ">
+												<ErrorIcon />
+													
 												</div>
 											</div>
 											<div class="widget-summary-col">
 												<div class="summary">
 													<h4 class="title">Total Profit</h4>
-													<div class="info">
-														<strong class="amount">$ 14,890.30</strong>
-													</div>
+													
 												</div>
 												<div class="summary-footer">
 													<a class="text-muted text-uppercase">(withdraw all)</a>
+												</div>
+												<div className="error-cross">
+												<CloseIcon />
 												</div>
 											</div>
 										</div>
 									</div>
 
-									<div class="panel-body">
+									<div class="panel-body redclr">
 										<div class="widget-summary">
 											<div class="widget-summary-col widget-summary-col-icon">
-												<div class="summary-icon bg-secondary">
-													<i class="fa fa-usd"></i>
+												<div class="summary-icon ">
+												<ErrorIcon />
 												</div>
 											</div>
 											<div class="widget-summary-col">
 												<div class="summary">
 													<h4 class="title">Total Profit</h4>
-													<div class="info">
-														<strong class="amount">$ 14,890.30</strong>
-													</div>
+													
 												</div>
 												<div class="summary-footer">
 													<a class="text-muted text-uppercase">(withdraw all)</a>
+												</div>
+												<div className="error-cross">
+												<CloseIcon />
 												</div>
 											</div>
 										</div>
 									</div>
 
-									<div class="panel-body">
+									<div class="panel-body redclr">
 										<div class="widget-summary">
 											<div class="widget-summary-col widget-summary-col-icon">
-												<div class="summary-icon bg-secondary">
-													<i class="fa fa-usd"></i>
+												<div class="summary-icon ">
+												<ErrorIcon />
 												</div>
 											</div>
 											<div class="widget-summary-col">
 												<div class="summary">
 													<h4 class="title">Total Profit</h4>
-													<div class="info">
-														<strong class="amount">$ 14,890.30</strong>
-													</div>
+													
 												</div>
 												<div class="summary-footer">
 													<a class="text-muted text-uppercase">(withdraw all)</a>
+												</div>
+												<div className="error-cross">
+												<CloseIcon />
 												</div>
 											</div>
 										</div>
 									</div>
 
-									<div class="panel-body">
+									<div class="panel-body redclr">
 										<div class="widget-summary">
 											<div class="widget-summary-col widget-summary-col-icon">
-												<div class="summary-icon bg-secondary">
-													<i class="fa fa-usd"></i>
+												<div class="summary-icon ">
+												<ErrorIcon />
 												</div>
 											</div>
 											<div class="widget-summary-col">
 												<div class="summary">
 													<h4 class="title">Total Profit</h4>
-													<div class="info">
-														<strong class="amount">$ 14,890.30</strong>
-													</div>
+												
 												</div>
 												<div class="summary-footer">
 													<a class="text-muted text-uppercase">(withdraw all)</a>
 												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="panel-body">
-										<div class="widget-summary">
-											<div class="widget-summary-col widget-summary-col-icon">
-												<div class="summary-icon bg-secondary">
-													<i class="fa fa-usd"></i>
-												</div>
-											</div>
-											<div class="widget-summary-col">
-												<div class="summary">
-													<h4 class="title">Total Profit</h4>
-													<div class="info">
-														<strong class="amount">$ 14,890.30</strong>
-													</div>
-												</div>
-												<div class="summary-footer">
-													<a class="text-muted text-uppercase">(withdraw all)</a>
+												<div className="error-cross">
+												<CloseIcon />
 												</div>
 											</div>
 										</div>

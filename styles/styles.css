@@ -1003,6 +1003,7 @@ small {
 	border: none;
 	margin-bottom: 20px;
 	border-radius: 4px;
+	margin-top: 40px;
 }
 .panel-body {
     background: #fdfdfd;
@@ -1012,6 +1013,7 @@ small {
 }
 .panel-body {
 	padding: 15px;
+	padding-bottom: 0px;
 	margin-bottom: 43PX;
 }
 .widget-summary {
@@ -1051,4 +1053,36 @@ button#desktop-notice {
 }
 .btn-primary.btn-setting {
     height: 42px !important;
+}
+
+/**notification page**/
+.summary{
+	display: flex;
+	color: black;
+    font-weight: bold;
+}
+
+.MuiSvgIcon-root {
+    fill: currentColor;
+    width: 2em;
+    height: 1em;
+    display: inline-block;
+    font-size: 4.5rem !important;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    flex-shrink: 0;
+    user-select: none;
+}
+/*  .panel-body {
+	border-left: solid;
+    color: red;
+}  */
+
+.panel-body.redclr {
+    border-left: solid;
+    color: red;
+}
+.error-cross{
+	transform: translate(-35%, -58%);
+	color: black;	
+	float: right;
 }
