@@ -4,83 +4,125 @@ import Notifications from "../components/Notifications";
 export default function notifications() {
 	return (
 		<div>
+<section role="main" class="content-body">
+     
 		<div className="container-fluid">
+		<div className="col-md-10">
+		<h2 class="panel-title">Notifications</h2>
+				<p>18 sep 20</p></div>
 		<div class="col-12 mx-auto btn-group btn-group-justified">
-										<a class="btn btn-primary" role="button">Left</a>
-										<a class="btn btn-primary" role="button">Middle</a>
+	
+										<a class="btn btn-primary btn-setting" role="button">Current Notifications</a>
+										<a class="btn btn-primary btn-setting " role="button">Active Notifications</a>
 										</div>
 										</div>
-			 <section role="main" class="content-body">
+			 
 <div className="container">
 <div className="row">
 <div class="col-md-12">
-	<section class="panel">
-		<header class="panel-heading">
-			<div class="panel-actions">
-				<a href="#" class="fa fa-caret-down"></a>
-					<a href="#" class="fa fa-times"></a>
-							</div>
-						
-		
-</header>
-				<div class="panel-body">
-				<h2 class="panel-title">Driver Rating</h2>
-				<p>view list</p>
-						<div class="table-responsive">
-							<table class="table table-hover mb-none">
-										<thead>
-											<tr>
-										<th>#</th>
-								<th> Name</th>
-								<th>Last Driven</th>
-								<th>Drive Score</th>
-									</tr>
-								</thead>
-									<tbody>
-											<tr>
-			<td>1</td>
-				<td>Mark</td>
-					<td>Otto</td>
-<td>@mdo</td>
-</tr>
-		<tr>
-		<td>2</td>
-		<td>Jacob</td>
-		<td>Thornton</td>
-		<td>@fat</td>
-			</tr>
-		<tr>
-	<td>3</td>
-		<td>Larry</td>
-			<td>the Bird</td>
-			<td>@twitter</td>
-						</tr>
-						<tr>
-	<td>3</td>
-		<td>Larry</td>
-			<td>the Bird</td>
-			<td>@twitter</td>
-						</tr>
-						<tr>
-	<td>3</td>
-		<td>Larry</td>
-			<td>the Bird</td>
-			<td>@twitter</td>
-						</tr>
-						<tr>
-	<td>3</td>
-		<td>Larry</td>
-			<td>the Bird</td>
-			<td>@twitter</td>
-						</tr>
-						<tr>
-	<td>3</td>
-		<td>Larry</td>
-			<td>the Bird</td>
-			<td>@twitter</td>
-						</tr>
-												</tbody>
-											</table>
+<section class="panel panel-featured-left panel-featured-secondary">
+									<div class="panel-body">
+										<div class="widget-summary">
+											<div class="widget-summary-col widget-summary-col-icon">
+												<div class="summary-icon bg-secondary">
+													<i class="fa fa-usd"></i>
+												</div>
+											</div>
+											<div class="widget-summary-col">
+												<div class="summary">
+													<h4 class="title">Total Profit</h4>
+													<div class="info">
+														<strong class="amount">$ 14,890.30</strong>
+													</div>
+												</div>
+												<div class="summary-footer">
+													<a class="text-muted text-uppercase">(withdraw all)</a>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="panel-body">
+										<div class="widget-summary">
+											<div class="widget-summary-col widget-summary-col-icon">
+												<div class="summary-icon bg-secondary">
+													<i class="fa fa-usd"></i>
+												</div>
+											</div>
+											<div class="widget-summary-col">
+												<div class="summary">
+													<h4 class="title">Total Profit</h4>
+													<div class="info">
+														<strong class="amount">$ 14,890.30</strong>
+													</div>
+												</div>
+												<div class="summary-footer">
+													<a class="text-muted text-uppercase">(withdraw all)</a>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="panel-body">
+										<div class="widget-summary">
+											<div class="widget-summary-col widget-summary-col-icon">
+												<div class="summary-icon bg-secondary">
+													<i class="fa fa-usd"></i>
+												</div>
+											</div>
+											<div class="widget-summary-col">
+												<div class="summary">
+													<h4 class="title">Total Profit</h4>
+													<div class="info">
+														<strong class="amount">$ 14,890.30</strong>
+													</div>
+												</div>
+												<div class="summary-footer">
+													<a class="text-muted text-uppercase">(withdraw all)</a>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="panel-body">
+										<div class="widget-summary">
+											<div class="widget-summary-col widget-summary-col-icon">
+												<div class="summary-icon bg-secondary">
+													<i class="fa fa-usd"></i>
+												</div>
+											</div>
+											<div class="widget-summary-col">
+												<div class="summary">
+													<h4 class="title">Total Profit</h4>
+													<div class="info">
+														<strong class="amount">$ 14,890.30</strong>
+													</div>
+												</div>
+												<div class="summary-footer">
+													<a class="text-muted text-uppercase">(withdraw all)</a>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="panel-body">
+										<div class="widget-summary">
+											<div class="widget-summary-col widget-summary-col-icon">
+												<div class="summary-icon bg-secondary">
+													<i class="fa fa-usd"></i>
+												</div>
+											</div>
+											<div class="widget-summary-col">
+												<div class="summary">
+													<h4 class="title">Total Profit</h4>
+													<div class="info">
+														<strong class="amount">$ 14,890.30</strong>
+													</div>
+												</div>
+												<div class="summary-footer">
+													<a class="text-muted text-uppercase">(withdraw all)</a>
+												</div>
+											</div>
 										</div>
 									</div>
 								</section>

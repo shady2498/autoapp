@@ -1049,3 +1049,6 @@ section.content-body {
 button#desktop-notice {
     width: 100%;
 }
+.btn-primary.btn-setting {
+    height: 42px !important;
+}
