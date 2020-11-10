@@ -3,26 +3,26 @@ import Link from "next/link";
 
 export default function sideBar() {
 	const openNav = () => {
-		// document.getElementById("mySidebar").style.width = "250px";
-		// document.getElementById("main").style.marginLeft = "250px";
+		document.getElementById("mySidebar").style.width = "250px";
+		document.getElementById("main").style.marginLeft = "250px";
 	};
 
 	const closeNav = () => {
-		// document.getElementById("mySidebar").style.width = "10px";
-		// document.getElementById("main").style.marginLeft = "0";
+		document.getElementById("mySidebar").style.width = "10px";
+		document.getElementById("main").style.marginLeft = "0";
 	};
 
 	const openNav2 = () => {
-		// document.getElementById("mySidebar2").style.width = "250px";
-		// document.getElementById("main").style.marginLeft = "250px";
-		// document.getElementById("sidebar2").style.boxShadow =
-		// 	"0px 0px 0px 3px #ccc;";
+		document.getElementById("mySidebar2").style.width = "250px";
+		document.getElementById("main").style.marginLeft = "250px";
+		document.getElementById("sidebar2").style.boxShadow =
+			"0px 0px 0px 3px #ccc;";
 	};
 
 	const closeNav2 = () => {
-		// document.getElementById("mySidebar2").style.width = "0";
-		// document.getElementById("main").style.marginLeft = "0";
-		// document.getElementById("sidebar2").style.boxShadow = "0px 0px 0px 0px";
+		document.getElementById("mySidebar2").style.width = "0";
+		document.getElementById("main").style.marginLeft = "0";
+		document.getElementById("sidebar2").style.boxShadow = "0px 0px 0px 0px";
 	};
 	return (
 		<>
@@ -36,7 +36,7 @@ export default function sideBar() {
 					TOMAS WilSON
 					<small>luckytom@rach</small>
 				</label>
-				<a href="javascript:void(0)" className="closebtn" onClick={closeNav}>
+				<a href="#" className="closebtn" onClick={closeNav}>
 					×
 				</a>
 				<div className="nav1">

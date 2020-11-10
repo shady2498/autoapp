@@ -22,6 +22,7 @@ import ExpandMore from "@material-ui/icons/ExpandMore";
 import StarBorder from "@material-ui/icons/StarBorder";
 
 const drawerWidth = 240;
+const subMenuWidth = 500;
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -86,6 +87,28 @@ const useStyles = makeStyles((theme) => ({
 	nested: {
 		paddingLeft: theme.spacing(4),
 	},
+
+	sidenested: {
+		paddingRight: theme.spacing(67),
+	},
+	subMenuOpen: {
+		width: subMenuWidth,
+		transition: theme.transitions.create("width", {
+			easing: theme.transitions.easing.sharp,
+			duration: theme.transitions.duration.enteringScreen,
+		}),
+	},
+	subMenuClose: {
+		transition: theme.transitions.create("width", {
+			easing: theme.transitions.easing.sharp,
+			duration: theme.transitions.duration.leavingScreen,
+		}),
+		overflowX: "hidden",
+		width: theme.spacing(7) + 1,
+		[theme.breakpoints.up("sm")]: {
+			width: theme.spacing(9) + 1,
+		},
+	},
 }));
 
 export default function matSideBar() {
@@ -93,6 +116,11 @@ export default function matSideBar() {
 	const theme = useTheme();
 	const [open, setOpen] = React.useState(false);
 	const [subopen, subsetOpen] = React.useState(true);
+	const [ssubOpen, ssubsetOpen] = React.useState(true);
+
+	const openk = () => {
+		ssubsetOpen(!ssubOpen);
+	};
 
 	const handleClick = () => {
 		subsetOpen(!subopen);
@@ -204,6 +232,7 @@ export default function matSideBar() {
 						<ListItemText primary="Inbox" />
 						{open ? <ExpandLess /> : <ExpandMore />}
 					</ListItem>
+
 					<Collapse in={subopen} timeout="auto" unmountOnExit>
 						<List component="div" disablePadding>
 							<ListItem button className={classes.nested}>
@@ -227,17 +256,43 @@ export default function matSideBar() {
 						<ListItemText primary="Drafts" />
 					</ListItem>
 				</List>
-				{/* <List>
-					{["All mail", "Trash", "Spam"].map((text, index) => (
-						<ListItem button key={text}>
+				<button
+					onClick={openk}
+					className={clsx(classes.menuButton, {
+						[classes.hide]: open,
+					})}
+				>
+					sdssd
+				</button>
+				<ListItem
+					button
+					onClick={openk}
+					// className={clsx(classes.subMenu, {
+					// 	[classes.subMenuOpen]: open,
+					// 	[classes.subMenuClose]: !open,
+					// })}
+					className={clsx(classes.menuButton, {
+						[classes.hide]: open,
+					})}
+				>
+					<ListItemIcon>
+						<InboxIcon />
+					</ListItemIcon>
+					<ListItemText primary="Inbox" />
+					{ssubOpen ? <ExpandLess /> : <ExpandMore />}
+				</ListItem>
+				<Collapse in={ssubOpen} timeout="auto" unmountOnExit>
+					<List component="div" disablePadding>
+						<ListItem button className={classes.sidenested}>
 							<ListItemIcon>
-								{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+								<StarBorder />
 							</ListItemIcon>
-							<ListItemText primary={text} />
+							<ListItemText primary="Starred" />
 						</ListItem>
-					))}
-				</List> */}
+					</List>
+				</Collapse>
 			</Drawer>
+			<h1>hello</h1>
 		</div>
 	);
 }
