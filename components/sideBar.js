@@ -78,6 +78,11 @@ const useStyles = makeStyles((theme) => ({
 	fullList: {
 		width: "auto",
 	},
+
+	paper: {
+		overflowY: "unset",
+		left: "20%",
+	},
 }));
 
 export default function sideBar() {
@@ -226,6 +231,9 @@ export default function sideBar() {
 							<React.Fragment key={anchor}>
 								<button onClick={toggleDrawer(anchor, true)}>{anchor}</button>
 								<Drawer
+									classes={{
+										paper: classes.paper,
+									}}
 									anchor={anchor}
 									open={state[anchor]}
 									onClose={toggleDrawer(anchor, false)}

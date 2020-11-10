@@ -4,9 +4,10 @@ import changeName from "../components/changeName";
 
 export default function accountMenu() {
 	const [menu, setMenuOpen] = useState(<changeName />);
+	const [menut, setMenu] = useState({});
 
 	const toggleMenu = (item, open) => (event) => {
-		setMenuOpen({ ...menu, [item]: open });
+		setMenuOpen({ ...menu, [item.value]: open });
 	};
 
 	const menukk = [
@@ -64,16 +65,17 @@ export default function accountMenu() {
 				<h4>Logout</h4>
 				<hr className="new5" />
 				sdsd
+				<button onClick={setMenu}></button>
 				{menukk.map((item, index) => (
 					<>
-						<h1 key={index}>dsadasd</h1>
+						<h1>dsadasd</h1>
 						<button
+							key={index}
 							className="btn btn-primary"
 							onClick={toggleMenu(item, true)}
 						>
-							{item.value}cfdsfsdff
+							{item.key}
 						</button>
-						<p>nothign</p>
 					</>
 				))}
 			</div>
