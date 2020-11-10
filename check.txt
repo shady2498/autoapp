@@ -87,3 +87,25 @@ export async function getServerSideProps() {
 // 	console.log(props);
 // 	return <h1>sds</h1>;
 // }
+
+
+////////////////////////////////////////////////////////// sub menu ////////////////////////////////////////////////////////////////////////////////
+
+	<ListItem button onClick={handleClick}>
+							<ListItemIcon>
+								<InboxIcon />
+							</ListItemIcon>
+							<ListItemText primary="Inbox" />
+							{open ? <ExpandLess /> : <ExpandMore />}
+						</ListItem>
+
+						<Collapse in={subopen} timeout="auto" unmountOnExit>
+							<List component="div" disablePadding>
+								<ListItem button className={classes.nested}>
+									<ListItemIcon>
+										<StarBorder />
+									</ListItemIcon>
+									<ListItemText primary="Starred" />
+								</ListItem>
+							</List>
+						</Collapse>

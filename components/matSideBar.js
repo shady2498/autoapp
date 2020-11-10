@@ -2,6 +2,8 @@ import React from "react";
 import clsx from "clsx";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
+import Button from "@material-ui/core/Button";
+
 import List from "@material-ui/core/List";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Divider from "@material-ui/core/Divider";
@@ -23,6 +25,7 @@ import StarBorder from "@material-ui/icons/StarBorder";
 
 const drawerWidth = 240;
 const subMenuWidth = 500;
+const anchor = "left";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -109,6 +112,13 @@ const useStyles = makeStyles((theme) => ({
 			width: theme.spacing(9) + 1,
 		},
 	},
+
+	list: {
+		width: 250,
+	},
+	fullList: {
+		width: "auto",
+	},
 }));
 
 export default function matSideBar() {
@@ -117,14 +127,12 @@ export default function matSideBar() {
 	const [open, setOpen] = React.useState(false);
 	const [subopen, subsetOpen] = React.useState(true);
 	const [ssubOpen, ssubsetOpen] = React.useState(true);
-
-	const openk = () => {
-		ssubsetOpen(!ssubOpen);
-	};
-
-	const handleClick = () => {
-		subsetOpen(!subopen);
-	};
+	const [state, setState] = React.useState({
+		top: false,
+		left: false,
+		bottom: false,
+		right: false,
+	});
 
 	const menu = [
 		{
@@ -161,138 +169,154 @@ export default function matSideBar() {
 	const handleDrawerClose = () => {
 		setOpen(false);
 	};
+	const toggleDrawer = (anchor, open) => (event) => {
+		if (
+			event.type === "keydown" &&
+			(event.key === "Tab" || event.key === "Shift")
+		) {
+			return;
+		}
+
+		setState({ ...state, [anchor]: open });
+	};
+
+	const list = (anchor) => (
+		<div
+			className={clsx(classes.list, {
+				[classes.fullList]: anchor === "top" || anchor === "bottom",
+			})}
+			role="presentation"
+			onClick={toggleDrawer(anchor, false)}
+			onKeyDown={toggleDrawer(anchor, false)}
+		>
+			<List>
+				{["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+					<ListItem button key={text}>
+						<ListItemIcon>
+							{index % 2 === 0 ? <InboxIcon /> : <InboxIcon />}
+						</ListItemIcon>
+						<ListItemText primary={text} />
+					</ListItem>
+				))}
+			</List>
+			<Divider />
+			<List>
+				{["All mail", "Trash", "Spam"].map((text, index) => (
+					<ListItem button key={text}>
+						<ListItemIcon>
+							{index % 2 === 0 ? <InboxIcon /> : <InboxIcon />}
+						</ListItemIcon>
+						<ListItemText primary={text} />
+					</ListItem>
+				))}
+			</List>
+		</div>
+	);
 
 	return (
-		<div className={classes.root}>
-			<CssBaseline />
+		<>
+			<div className={classes.root}>
+				<CssBaseline />
 
-			<Drawer
-				variant="permanent"
-				className={clsx(classes.drawer, {
-					[classes.drawerOpen]: open,
-					[classes.drawerClose]: !open,
-				})}
-				classes={{
-					paper: clsx({
+				<Drawer
+					variant="permanent"
+					className={clsx(classes.drawer, {
 						[classes.drawerOpen]: open,
 						[classes.drawerClose]: !open,
-					}),
-				}}
-			>
-				<IconButton
-					color="inherit"
-					aria-label="open drawer"
-					onClick={handleDrawerOpen}
-					edge="start"
-					className={clsx(classes.menuButton, {
-						[classes.hide]: open,
 					})}
+					classes={{
+						paper: clsx({
+							[classes.drawerOpen]: open,
+							[classes.drawerClose]: !open,
+						}),
+					}}
 				>
-					<MenuIcon />
-				</IconButton>
-				<div className={classes.toolbar}>
-					{open ? (
-						<IconButton onClick={handleDrawerClose}>
-							<ChevronLeftIcon />
-							{/* {theme.direction === "rtl" ? (
+					<IconButton
+						color="inherit"
+						aria-label="open drawer"
+						onClick={handleDrawerOpen}
+						edge="start"
+						className={clsx(classes.menuButton, {
+							[classes.hide]: open,
+						})}
+					>
+						<MenuIcon />
+					</IconButton>
+					<div className={classes.toolbar}>
+						{open ? (
+							<IconButton onClick={handleDrawerClose}>
+								<ChevronLeftIcon />
+								{/* {theme.direction === "rtl" ? (
 							<ChevronRightIcon />
 						) : (
 							<ChevronLeftIcon />
 						)} */}
-						</IconButton>
-					) : null}
-				</div>
-				<Divider />
-				<List>
-					{menu.map((item, index) => (
-						<Link href={item.value}>
-							<ListItem button key={item.key}>
-								<ListItemIcon>{<item.icon />}home</ListItemIcon>
-								<p>{item.key}</p>
-							</ListItem>
-						</Link>
-					))}
-				</List>
-				<Divider /> <Divider />
-				<Divider />
-				<List
-					component="nav"
-					aria-labelledby="nested-list-subheader"
-					subheader={
-						<ListSubheader component="div" id="nested-list-subheader">
-							Nested List Items
-						</ListSubheader>
-					}
-					// className={classes.root}
-				>
-					<ListItem button onClick={handleClick}>
-						<ListItemIcon>
-							<InboxIcon />
-						</ListItemIcon>
-						<ListItemText primary="Inbox" />
-						{open ? <ExpandLess /> : <ExpandMore />}
-					</ListItem>
-
-					<Collapse in={subopen} timeout="auto" unmountOnExit>
-						<List component="div" disablePadding>
-							<ListItem button className={classes.nested}>
-								<ListItemIcon>
-									<StarBorder />
-								</ListItemIcon>
-								<ListItemText primary="Starred" />
-							</ListItem>
-						</List>
-					</Collapse>
-					<ListItem button>
-						<ListItemIcon>
-							<SendIcon />
-						</ListItemIcon>
-						<ListItemText primary="Sent mail" />
-					</ListItem>
-					<ListItem button>
-						<ListItemIcon>
-							<DraftsIcon />
-						</ListItemIcon>
-						<ListItemText primary="Drafts" />
-					</ListItem>
-				</List>
-				<button
-					onClick={openk}
-					className={clsx(classes.menuButton, {
-						[classes.hide]: open,
-					})}
-				>
-					sdssd
-				</button>
-				<ListItem
-					button
-					onClick={openk}
-					// className={clsx(classes.subMenu, {
-					// 	[classes.subMenuOpen]: open,
-					// 	[classes.subMenuClose]: !open,
-					// })}
-					className={clsx(classes.menuButton, {
-						[classes.hide]: open,
-					})}
-				>
-					<ListItemIcon>
-						<InboxIcon />
-					</ListItemIcon>
-					<ListItemText primary="Inbox" />
-					{ssubOpen ? <ExpandLess /> : <ExpandMore />}
-				</ListItem>
-				<Collapse in={ssubOpen} timeout="auto" unmountOnExit>
-					<List component="div" disablePadding>
-						<ListItem button className={classes.sidenested}>
+							</IconButton>
+						) : null}
+					</div>
+					<Divider />
+					<List>
+						{menu.map((item, index) => (
+							<Link href={item.value}>
+								<ListItem button key={item.key}>
+									<ListItemIcon>{<item.icon />}home</ListItemIcon>
+									<p>{item.key}</p>
+								</ListItem>
+							</Link>
+						))}
+					</List>
+					<Divider /> <Divider />
+					<Divider />
+					<List
+						component="nav"
+						aria-labelledby="nested-list-subheader"
+						subheader={
+							<ListSubheader component="div" id="nested-list-subheader">
+								Nested List Items
+							</ListSubheader>
+						}
+						// className={classes.root}
+					>
+						<ListItem button>
 							<ListItemIcon>
-								<StarBorder />
+								<SendIcon />
 							</ListItemIcon>
-							<ListItemText primary="Starred" />
+							<ListItemText primary="Sent mail" />
+							<React.Fragment key={anchor}>
+								<button onClick={toggleDrawer(anchor, true)}>{anchor}</button>
+								<Drawer
+									anchor={anchor}
+									open={state[anchor]}
+									onClose={toggleDrawer(anchor, false)}
+								>
+									{list(anchor)}
+								</Drawer>
+							</React.Fragment>
+						</ListItem>
+						<ListItem button>
+							<ListItemIcon>
+								<DraftsIcon />
+							</ListItemIcon>
+							<ListItemText primary="Drafts" />
 						</ListItem>
 					</List>
-				</Collapse>
-			</Drawer>
-			<h1>hello</h1>
-		</div>
+					<ListItem>
+						{/* {["left", "right", "top", "bottom"].map(
+							(anchor) => console.log(anchor)
+							// <React.Fragment key={anchor}>
+							// 	<button onClick={toggleDrawer(anchor, true)}>{anchor}</button>
+							// 	<Drawer
+							// 		anchor={anchor}
+							// 		open={state[anchor]}
+							// 		onClose={toggleDrawer(anchor, false)}
+							// 	>
+							// 		{list(anchor)}
+							// 	</Drawer>
+							// </React.Fragment>
+						)} */}
+					</ListItem>
+				</Drawer>
+			</div>
+		</>
 	);
 }
