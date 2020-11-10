@@ -1018,9 +1018,13 @@ small {
 	margin-bottom: 43px;
 }
 .widget-summary {
-	display: table;
+	display: flex;
 	width: 100%;
 }
+	/* a.text-muted.text-uppercase {
+		margin-left: 71px;
+	} */
+
 .widget-summary:after {
 	content: "";
 	display: table;
@@ -1028,6 +1032,7 @@ small {
 }
 .widget-summary .widget-summary-col.widget-summary-col-icon {
 	width: 1%;
+	float: left;	
 }
 .widget-summary .widget-summary-col {
 	display: table-cell;
@@ -1058,9 +1063,22 @@ button#desktop-notice {
 
 /**notification page**/
 .summary {
-	display: flex;
+	display: -webkit-flex;
 	color: black;
 	font-weight: bold;
+	margin-left: 90px;
+}
+.summary-footer>a {
+    display: block;
+    /* margin-top: -14px; */
+    /* margin-left: 24px; */
+    position: relative;
+    line-height: 2px;
+    transform: translate(68px, -8px);
+}
+.summary-footer{
+	display: inline-block;
+    margin: 0 -36px 0 16px;
 }
 
 .MuiSvgIcon-root {
@@ -1083,9 +1101,9 @@ button#desktop-notice {
 	color: red;
 }
 .error-cross {
-	transform: translate(-35%, -58%);
-	color: black;
-	float: right;
+	transform: translate(216%, -90%);
+    color: black;
+	/* float: right; */
 }
 
 .accountcard {
@@ -1173,3 +1191,93 @@ h4,
 .paswordtext {
 	margin-top: 5px;
 }
+
+
+.btn:not(:disabled):not(.disabled) {
+    margin: 0px;
+    padding: 10px 156px 11px 180px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+	.btn:not(:disabled):not(.disabled) {
+		margin: 0px;
+	    /* padding: 0;  */
+	}
+  }
