@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
+//for the navigation on homepage
 export default function topMenuBar() {
 	return (
 		<>
