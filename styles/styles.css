@@ -715,21 +715,22 @@ address {
 .btn_radius_0 {
 	border-radius: 0px;
 }
- .col.coloumn-setting {
-    max-width: 25% !important;
-} 
+.col.coloumn-setting {
+	max-width: 25% !important;
+}
 /* home */
 
 /* box settings */
- .mb-4, .my-4 {
-    margin-bottom: 1.5rem !important;
-    display: inline-block;
-    width: 24%;
+.mb-4,
+.my-4 {
+	margin-bottom: 1.5rem !important;
+	display: inline-block;
+	width: 24%;
 }
- 
- .card-img-top {
-    width: 318px !important;
-    height: 191px !important;
+
+.card-img-top {
+	width: 318px !important;
+	height: 191px !important;
 }
 body {
 	font-family: "Lato", sans-serif;
@@ -997,80 +998,80 @@ small {
 }
 /*Summary page*/
 .panel {
-    background: transparent;
-    /* -webkit-box-shadow: none; */
-    box-shadow: none;
+	background: transparent;
+	/* -webkit-box-shadow: none; */
+	box-shadow: none;
 	border: none;
 	margin-bottom: 20px;
 	border-radius: 4px;
 	margin-top: 40px;
 }
 .panel-body {
-    background: #fdfdfd;
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
+	background: #fdfdfd;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	border-radius: 5px;
 }
 .panel-body {
 	padding: 15px;
 	padding-bottom: 0px;
-	margin-bottom: 43PX;
+	margin-bottom: 43px;
 }
 .widget-summary {
-    display: table;
-    width: 100%;
+	display: table;
+	width: 100%;
 }
 .widget-summary:after {
-    content: "";
-    display: table;
-    clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 .widget-summary .widget-summary-col.widget-summary-col-icon {
-    width: 1%;
+	width: 1%;
 }
 .widget-summary .widget-summary-col {
-    display: table-cell;
+	display: table-cell;
 	vertical-align: top;
 }
 
 .widget-summary.widget-summary-xlg .summary-icon {
-    width: 110px;
-    height: 110px;
-    line-height: 110px;
-   /*  font-size: 48px; */
-    font-size: 4.8rem;
+	width: 110px;
+	height: 110px;
+	line-height: 110px;
+	/*  font-size: 48px; */
+	font-size: 4.8rem;
 }
 section.content-body {
-    BACKGROUND-COLOR: #EBEFF2;
+	background-color: #ebeff2;
 }
 .btn:not(:disabled):not(.disabled) {
-    cursor: pointer;
-    margin-top: 25px;
+	cursor: pointer;
+	margin-top: 25px;
 }
 
 button#desktop-notice {
-    width: 100%;
+	width: 100%;
 }
 .btn-primary.btn-setting {
-    height: 42px !important;
+	height: 42px !important;
 }
 
 /**notification page**/
-.summary{
+.summary {
 	display: flex;
 	color: black;
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .MuiSvgIcon-root {
-    fill: currentColor;
-    width: 2em;
-    height: 1em;
-    display: inline-block;
-    font-size: 4.5rem !important;
-    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    flex-shrink: 0;
-    user-select: none;
+	fill: currentColor;
+	width: 2em;
+	height: 1em;
+	display: inline-block;
+	font-size: 4.5rem !important;
+	transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+	flex-shrink: 0;
+	user-select: none;
 }
 /*  .panel-body {
 	border-left: solid;
@@ -1078,11 +1079,97 @@ button#desktop-notice {
 }  */
 
 .panel-body.redclr {
-    border-left: solid;
-    color: red;
+	border-left: solid;
+	color: red;
 }
-.error-cross{
+.error-cross {
 	transform: translate(-35%, -58%);
-	color: black;	
+	color: black;
 	float: right;
+}
+
+.accountcard {
+	border: 1px solid #dedede;
+	background-color: #ffffff;
+	height: 800px;
+}
+
+h4,
+.h4 {
+	display: inline-block;
+	font-weight: bold;
+	margin-top: 0px;
+}
+.accountprofile {
+	border: 1px solid #dedede;
+	margin: 0 0 0 55px;
+	background-color: #ffffff;
+}
+
+hr {
+	color: #f0f0f0;
+}
+.profilename {
+	margin-top: 125px;
+}
+
+.avatar {
+	vertical-align: middle;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 10px solid #1e82d2;
+	margin: 0 0 0 119px;
+}
+.Nameprofile {
+	font-size: 33px;
+	margin: 0 0 0 103px;
+}
+
+.profileemail {
+	font-size: 22px;
+	margin-left: 117px;
+}
+hr.new5 {
+	border: 1px solid #d7d7d7;
+	margin-top: 0px;
+	padding: 0 0 0 81px;
+}
+
+.profilebodycolour {
+	background-color: #f1f0f0;
+	height: 1050px;
+	width: 100%;
+}
+.profiletital {
+	font-weight: bold;
+}
+
+.hrheights {
+	padding: 0 0 0 241px;
+}
+
+.btn:not(:disabled):not(.disabled) {
+	margin: 248px 0 0px 314px;
+	padding: 10px 156px 11px 180px;
+}
+
+h4,
+.h4 {
+	display: inline-block;
+	font-weight: bold;
+	margin-top: 0px;
+	font-size: 20px;
+	line-height: 2;
+}
+.inputprofile {
+	border: none;
+	border-bottom: 1px solid black;
+	line-height: 2px;
+	text-decoration: none;
+	margin-right: 10px;
+	margin-left: 5px;
+}
+.paswordtext {
+	margin-top: 5px;
 }
