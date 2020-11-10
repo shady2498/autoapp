@@ -1049,3 +1049,99 @@ section.content-body {
 button#desktop-notice {
     width: 100%;
 }
+
+.accountcard{
+
+	border: 1px solid #dedede;
+	background-color: #ffffff;
+	height: 800px;
+	
+
+}
+
+h4, .h4 {
+
+	display: inline-block;
+	font-weight: bold;
+	margin-top: 0px;
+}
+.accountprofile{
+	border: 1px solid #dedede;
+	margin: 0 0 0 55px;
+	background-color: #ffffff;
+}
+
+hr{
+	color: #f0f0f0;
+}
+.profilename{
+	margin-top: 125px;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+	border: 10px solid #1e82d2;
+	margin: 0 0 0 119px;
+}
+.Nameprofile{
+
+	font-size: 33px;
+    margin: 0 0 0 103px;
+}
+
+.profileemail{
+	font-size: 22px;
+    margin-left: 117px;
+
+}
+hr.new5 {
+	border: 1px solid #d7d7d7;
+	margin-top: 0px;
+    padding: 0 0 0 81px;
+  }
+
+ .profilebodycolour{
+
+	background-color: #f1f0f0;
+	height: 1050px;
+	width: 100%;
+ }
+ .profiletital{
+	 font-weight: bold;
+ }
+ 
+ .hrheights{
+	padding: 0 0 0 241px;
+ }
+
+ .btn:not(:disabled):not(.disabled) {
+
+    margin: 248px 0 0px 314px;
+    padding: 10px 156px 11px 180px;
+
+ }
+
+h4, .h4 {
+    display: inline-block;
+    font-weight: bold;
+	margin-top: 0px;
+	font-size: 20px;
+    line-height: 2;
+}
+.inputprofile{
+
+	border: none;
+	border-bottom: 1px solid black;
+	line-height: 2px;
+	text-decoration: none;
+	margin-right: 10px;
+	margin-left:5px;
+}
+.paswordtext{
+
+	margin-top:5px;
+}
+
