@@ -21,18 +21,15 @@ export default function Vehicles(props) {
 										/>
 										<div className="media-body">
 											<h4>
-												<strong key={index}> {vehicles.CarOwner}</strong>{" "}
+												<strong key={index}> {vehicles.CarOwner}</strong>
 											</h4>
 											<text>
 												current speed:
 												<strong key={index}>{vehicles.currentSpeed}</strong>
 											</text>
 											<text>
-												current Elevation:{" "}
-												<strong key={index}>
-													{" "}
-													{vehicles.currentElevation}{" "}
-												</strong>{" "}
+												current Elevation:
+												<strong key={index}>{vehicles.currentElevation}</strong>
 											</text>
 										</div>
 									</div>

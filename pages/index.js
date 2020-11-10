@@ -1,9 +1,8 @@
-import Mat from "../components/matSideBar";
-import Matt from "../components/matingSideBar";
+import SideBar from "../components/sideBar";
 export default function Home() {
 	return (
 		<>
-			<Mat />
+			<SideBar />
 		</>
 	);
 }
