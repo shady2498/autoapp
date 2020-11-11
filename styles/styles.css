@@ -217,7 +217,7 @@ input {
 	}
 	.input-group {
 		position: relative;
-		margin-bottom: 30px;
+		margin-bottom: 58px;
 		border-bottom: 2px solid #ccc;
 	}
 	.input--style-1 {
@@ -379,8 +379,9 @@ input {
 }
 
 .h1mainstyle {
-	font-weight: 700;
+
 	font-size: 50px;
+    font-weight: 900;
 }
 
 .form_style {
@@ -1046,7 +1047,7 @@ section.content-body {
 }
 .btn:not(:disabled):not(.disabled) {
 	cursor: pointer;
-	margin-top: 25px;
+	margin-top: 153px;
 }
 
 button#desktop-notice {
@@ -1149,10 +1150,7 @@ hr.new5 {
 	padding: 0 0 0 241px;
 }
 
-.btn:not(:disabled):not(.disabled) {
-	margin: 248px 0 0px 314px;
-	padding: 10px 156px 11px 180px;
-}
+
 
 h4,
 .h4 {

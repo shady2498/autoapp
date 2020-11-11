@@ -1,7 +1,8 @@
 import React from "react";
 import SignIn from "../components/signIn";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faCar } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faCar, fafacebook, } from "@fortawesome/free-solid-svg-icons";
+
 
 export default function signIn() {
 	return (
@@ -31,12 +32,13 @@ export default function signIn() {
 					<div className="row justify-content-center">
 						<div col-md-6>
 							<button className="btn">
-								<i className="fa fa-home"></i>
+							<FontAwesomeIcon icon={faHome} />
+								
 							</button>
 						</div>
 						<div col-md-6>
 							<button style={{ backgroundColor: "#1e82d2" }} className="btn">
-								<i className="fa fa-car"></i>
+							<FontAwesomeIcon icon={faCar} />
 							</button>
 						</div>
 					</div>
@@ -53,6 +55,9 @@ export default function signIn() {
 					<br />
 
 					<br />
+					<FontAwesomeIcon icon={faCar} />
+			
+					<FontAwesomeIcon icon={faCar} />
 					<i id="fastyle" className="fa fa-facebook fa-3x"></i>
 					<i id="fastyle" className="fa fa-google fa-3x"></i>
 					<i id="fastyle" className="fa fa-instagram fa-3x"></i>
