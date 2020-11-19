@@ -7,7 +7,7 @@ import Sidebar from "../components/sideBar";
 export default function home() {
 	return (
 		<>
-			<Sidebar />
+			{/* <Sidebar /> */}
 
 			<section className="map_sect_one">
 				<div className="maparea">
@@ -32,21 +32,65 @@ export default function home() {
 										<small className="noti"> Notifications</small>
 									</h5>
 									<text className="sep">18 September 2020</text>
+									<section class="panel panel-featured-left panel-featured-secondary">
+									<div class="panel-body redclr">
+										<div class="widget-summary">
+											<Notifications />
+										</div>
+									</div>
+									</section>
 								</div>
-								<div className="activy_boxes">
+								{/* <div className="activy_boxes">
 									<Notifications show={2} />
-								</div>
+								</div> */}
+								
 							</div>
 						</div>
-						<div className="col-lg-5 col-md-5">
-							<div className="card card-elegant">
+						<div className="col-lg-4 col-md-4">
+							{/* <div className="card card-elegant">
 								<div className="card-block">
 									<h5 className="card-title text-uppercase"> Your Vehicle</h5>
 								</div>
-								<div className="activy_boxes">
+								<div className="activy_boxes blue_line">
 									<Vehicles show={3} />
 								</div>
-							</div>
+							</div> */}
+							<header class="panel-heading bg-color mt-5">
+						
+												<div class="widget-profile-info">
+													<div class="profile-picture">
+													<span className="blue-line"></span>
+													<img src="avatar.png" alt="Avatar" class="avatar"/>
+													</div>
+													<div class="profile-info">
+														<h4 class="name text-semibold">John Doe</h4>
+														<h5 class="role">Administrator</h5>
+														<p class="new data">Some context here</p>
+														<div class="profile-footer">
+															<a href="#">(edit profile)</a>
+														</div>
+													</div>
+												</div>
+						
+											</header>
+											<header class="panel-heading bg-color">
+						
+												<div class="widget-profile-info">
+													<div class="profile-picture">
+													<span className="blue-line"></span>
+													<img src="avatar.png" alt="Avatar" class="avatar"/>
+													</div>
+													<div class="profile-info">
+														<h4 class="name text-semibold">John Doe</h4>
+														<h5 class="role">Administrator</h5>
+														<p class="new data">Some context here</p>
+														<div class="profile-footer">
+															<a href="#">(edit profile)</a>
+														</div>
+													</div>
+												</div>
+						
+											</header>
 						</div>
 					</div>
 				</div>

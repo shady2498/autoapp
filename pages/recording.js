@@ -6,16 +6,16 @@ import SideBar from "../components/sideBar";
 export default function recording() {
 	return (
 		<>
-			<SideBar />
+			{/* <SideBar /> */}
 
 			<TopMenuBar />
 			<div>
-				<h1>Recordings </h1>
+				<h1 className="h1Recording">Recordings </h1>
 				<text>here is something information you must know</text>
 				<div className="row">
 					<input
 						type="search"
-						className="form-control rec_search fa-search"
+						className="form-control rec_search fa-search searchinput"
 						placeholder="Search for video "
 						aria-autocomplete="list"
 						aria-expanded="false"
@@ -27,7 +27,6 @@ export default function recording() {
 						Cancel
 					</button>
 				</div>
-
 				<Recordings />
 			</div>
 		</>

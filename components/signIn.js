@@ -1,6 +1,12 @@
 import React from "react";
 import useForm from "../customhooks/useForm";
 import Link from "next/link";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookF,faGoogle,faGooglePlusG,faInstagram } from '@fortawesome/free-brands-svg-icons' 	
+import { FacebookLoginButton } from "react-social-login-buttons";
+
+
+
 
 export default function SignIn() {
 	const { handleChange, values } = useForm();
@@ -38,11 +44,50 @@ export default function SignIn() {
 							onChange={handleChange}
 						></input>
 					</label>
+	
 				</div>
-
+				<div className="checkbox-custom chekbox-primary">
+													<input id="for-project" value="project" type="checkbox" name="for[]" required=""/>
+													<label for="for-project">My Project</label>
+													</div>
 				<Link href="/home" passHref>
-					<button type="submit">SignIn</button>
+				<button type="button" class="mb-xs mt-xs mr-xs btn btn-primary btn-lg btn-block">Sign In</button>
 				</Link>
+				<div className="anstyle">
+                   
+                    <a style={{color: "blue"}}> Forget Password? </a>
+					<br />
+					<span className="login_with" style={{color: "black",textAlign:"center"}}>or login with </span>
+                </div>
+				
+				
+			
+				<div className="footer_icons">
+{/* 				
+				<i id="fastyle" class="fa fa-facebook fa-3x"></i> */}
+				<a class="btn btn-block btn-social btn-twitter">
+    <span class="fa fa-twitter"></span> Sign in with Twitter
+  </a>
+
+
+  <a class="btn btn-social-icon btn-twitter">
+    <span class="fa fa-twitter"></span>
+  </a>
+				<FacebookLoginButton  />
+				 <FontAwesomeIcon icon={faFacebookF } /> 
+				{/* <FontAwesomeIcon icon={['fas', 'goggle']} />
+                <FontAwesomeIcon icon={['far', 'goggle']} /> */}
+                 <FontAwesomeIcon icon={faGooglePlusG} />
+		
+				<i id="fastyle" class="fa fa-facebook fa-3x"></i>
+                <i id="fastyle"  class="fa fa-google fa-3x"></i>
+                <i id="fastyle" class="fa fa-instagram fa-3x"></i>
+				{/* <i class="fab fa-instagram"></i>	 */}
+				</div>
+                <div class="needaccount">
+                    <span>Need an account?</span><span style={{color: "blue"}}>Sign up </span>
+                </div>
+
 			</form>
 		</>
 	);

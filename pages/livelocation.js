@@ -8,7 +8,7 @@ export default function livelocation() {
 		<>
 			<div>
 				<TopBar />
-				<SideBar />
+			{/* 	<SideBar /> */}
 
 				<LiveLocation />
 			</div>

@@ -1,13 +1,16 @@
 import React from "react";
+import Link from "next/link";
 import SignIn from "../components/signIn";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faCar } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faCar, } from "@fortawesome/free-solid-svg-icons";
+
+
 
 export default function signIn() {
 	return (
 		<>
-			<div className="row">
-				<div className="col-md-6  login-bg-img ">
+				<div className="row">
+				<div className="col-md-6  login-bg-img">
 					<img className="img_size" src="./img/wifi.png" />
 
 					<div id="main_text">
@@ -27,38 +30,37 @@ export default function signIn() {
 						</p>
 					</div>
 				</div>
-				<div className="col-md-6 main_logindiv">
+
+				<div className="col-md-6  main_logindiv">
 					<div className="row justify-content-center">
-						<div col-md-6>
+						<div>
 							<button className="btn">
-								<i className="fa fa-home"></i>
+								<FontAwesomeIcon icon={faHome} />
 							</button>
 						</div>
-						<div col-md-6>
+						<div>
 							<button style={{ backgroundColor: "#1e82d2" }} className="btn">
-								<i className="fa fa-car"></i>
+								<FontAwesomeIcon icon={faCar} />
 							</button>
 						</div>
 					</div>
 					<div>
-						<h1 className="h1style">Welcome to</h1>
-						<h1 className="h1mainstyle"> Auto Camera App </h1>
+						<h1 className="h2mainstyle"> Auto Camera App </h1>
 					</div>
-					<SignIn />
-					<div className="anstyle">
+					<div className="form_style">
+
+					{/* <span style={{color: "black",textAlign:"center"}}>or login with </span> */}
+						<SignIn />
+						
 						<br />
-						<a style={{ color: "blue" }}> Forget Password?</a>
-					</div>
 
-					<br />
+						<br />
+						
 
-					<br />
-					<i id="fastyle" className="fa fa-facebook fa-3x"></i>
-					<i id="fastyle" className="fa fa-google fa-3x"></i>
-					<i id="fastyle" className="fa fa-instagram fa-3x"></i>
-					<div className="needaccount">
-						<span>Need an account?</span>
-						<span style={{ color: "blue" }}> Sign up</span>
+						{/* <div className="needaccount">
+							<span>Need an account?</span>
+							<Link href="/signUp">Sign In</Link>
+						</div> */}
 					</div>
 				</div>
 			</div>

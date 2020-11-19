@@ -7,7 +7,7 @@ export default function liveview() {
 		<>
 			<div>
 				<TopBar />
-				<SideBar /> <Liveview />
+				{/* <SideBar /> */} <Liveview />
 			</div>
 		</>
 	);

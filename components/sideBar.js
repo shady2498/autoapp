@@ -94,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
 
 	paper: {
 		overflowY: "unset",
-		left: "20%",
+		left: "10%",
 	},
 }));
 
@@ -247,7 +247,7 @@ export default function sideBar() {
 									classes={{
 										paper: classes.paper,
 									}}
-									anchor={anchor}
+							anchor={anchor}
 									open={state[anchor]}
 									onClose={toggleDrawer(anchor, false)}
 								>

@@ -27,7 +27,7 @@ export default function SignIn() {
 					className="input--style-1"
 					type="email"
 					name="email"
-					placeholder="email"
+					placeholder="Email"
 					value={values.email}
 					onChange={handleChange}
 				/>
@@ -38,7 +38,7 @@ export default function SignIn() {
 					className="input--style-1"
 					type="password"
 					name="password"
-					placeholder="password"
+					placeholder="Password"
 					value={values.password}
 					onChange={handleChange}
 				/>
@@ -48,15 +48,13 @@ export default function SignIn() {
 				<input
 					type="pincode"
 					name="pincode"
-					placeholder="pincode"
+					placeholder="PINCode"
 					value={values.pincode}
 					onChange={handleChange}
 				/>
 			</div>
 
-			<button type="submit" className="btn btn-primary btnsubmit">
-				<span className="submit"> Submit </span>
-			</button>
+			<button type="button" class="mb-xs mt-xs mr-xs btn btn-primary btn-lg btn-block">Sign Up</button>
 		</form>
 	);
 }
