@@ -243,4 +243,37 @@ export default function sideBar() {
 
 
 
-///////////////////////////////////////////////////
+///////////////////////////////////////////////////account stuff/////////////////////
+
+sdsd
+						<button onClick={setMenu}></button>
+						{menukk.map((item, index) => (
+							<>
+								<h1>dsadasd</h1>
+								<button
+									key={index}
+									className="btn btn-primary"
+									onClick={toggleMenu(item, true)}
+								>
+									{item.key}
+								</button>
+							</>
+						))}
+
+
+
+
+						//////////////// change name//////////////////
+
+
+<div className="col-6  accountprofile   shadow p-3 mb-6 bg-white rounded">
+						<h1>Change name</h1>
+
+						<div className="profilename">
+							<text>Name</text>
+							<h1>Tomas Wilson</h1>
+							<hr className="new5  hrheights" />
+						</div>
+
+						<button className="mt-sm mb-sm btn btn-Primay">Save</button>
+					</div>
