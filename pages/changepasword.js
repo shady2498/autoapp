@@ -11,7 +11,7 @@ export default function account() {
 			<h1 className="profiletital">Account</h1>
 			<text>Here is something information that you must to know.</text>
 			<div className="row">
-			<div className="col-3 accountcard  shadow p-3 mb-6 bg-white rounded" >
+			<div className="col-md-3 col-sm-12  accountcard  shadow p-3 mb-6 bg-white rounded" >
 			<img src="..\img\images.png" className="avatar"/>
 			<br/>
 			
@@ -42,8 +42,8 @@ export default function account() {
 			
 		
 			</div>
-			<div className="col-6  accountprofile   shadow p-3 mb-6 bg-white rounded" >
-			<h1>Change Password</h1>
+			<div className="col-md-6 col-sm-12  accountprofile   shadow p-3 mb-6 bg-white rounded" >
+			<h1 className="profileH1">Change Password</h1>
 			
 			<div className="profilename">
 			<text className="paswordtext">Old Password</text>
@@ -64,7 +64,7 @@ export default function account() {
 			</div>
 			
 
-			<button className="mt-sm mb-sm btn btn-Primay">Save</button>
+			<button className="mt-sm mb-sm btn btn-Primay profilebtn">Save</button>
 			</div>
 			</div>
 			</div>

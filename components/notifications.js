@@ -38,7 +38,7 @@ export default function Notifications(props) {
 									className="mt-sm mb-sm btn btn-info"
 								>
 									<p>{notificationsdetail.title}</p>{" "}
-									<div className="error-cross">
+									<div className="error-crosss">
 										<CloseIcon onClick={() => handleDelete(index)} />
 									</div>
 								</button>
@@ -52,7 +52,7 @@ export default function Notifications(props) {
 										<ErrorIcon />
 									</div>
 								</div>
-								<div class="summary">
+								<div class="summaryies">
 									<h4 class="title">{notificationsdetail.title}</h4>
 								</div>
 								<div class="summary-footer">

@@ -54,9 +54,7 @@ export default function SignIn() {
 				/>
 			</div>
 
-			<button type="submit" className="btn btn-primary btnsubmit">
-				<span className="submit"> Sign Up </span>
-			</button>
+			<button type="button" class="mb-xs mt-xs mr-xs btn btn-primary btn-lg btn-block">Sign Up</button>
 		</form>
 	);
 }

@@ -7,24 +7,27 @@ export default function notifications() {
 			<div>
 				<section role="main" class="content-body">
 					<div className="container-fluid">
-						<div className="col-md-10">
+						<div className="col-md-10 col-sm-6 offset-md-3    ">
 							<h2 class="panel-title">Notifications</h2>
 							<p>18 sep 20</p>
 						</div>
-						<div class="col-12 mx-auto btn-group btn-group-justified">
-							<a class="btn btn-primary btn-setting" role="button">
-								Current Notifications
+						{/* previous class <div class="col-12 mx-auto btn-group btn-group-justified "> */}
+						<div class=" row d-flex justify-content-center  ">
+							<a class="btn btn-primary col-md-3 btn-setting col-sm-12  " role="button">
+								Current&nbsp;Notifications
 							</a>
-							<a class="btn btn-primary btn-setting " role="button">
-								Active Notifications
+							
+							
+							<a class="btn btn-primary btn-setting col-md-3 	col-sm-12" role="button">
+								Active&nbsp;Notifications
 							</a>
 						</div>
 					</div>
 
 					<div className="container">
 						<div className="row">
-							<div class="col-md-12">
-								<section class="panel panel-featured-left panel-featured-secondary">
+							<div class="col-md-12  change">
+								<section class="paneling panel-featured-left panel-featured-secondary">
 									<div class="panel-body redclr">
 										<div class="widget-summary">
 											<Notifications />

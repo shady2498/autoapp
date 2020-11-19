@@ -4,14 +4,19 @@ import DriverRating from "../components/driverRating";
 import Notifications from "../components/notifications";
 import TopBar from "../components/topMenuBar";
 import SideBar from "../components/sideBar";
+import ErrorIcon from "@material-ui/icons/Error";
+import CloseIcon from "@material-ui/icons/Close";
+
+
+
 const summary = () => {
 	return (
 		<>
-			<section role="main" className="content-body">
-				<SideBar />
+			<section role="main" className="content-body col-sm-12">
+				{/* <SideBar /> */}
 				<TopBar />
 				<div className="row">
-					<div className="col-8 mt-5">
+					<div className="col-md-8 col-sm-12  mt-5">
 						<section classNameName="map_sect_one">
 							<div classNameName="maparea">
 								<iframe
@@ -40,123 +45,173 @@ const summary = () => {
 							</div>
 						</section>
 					</div>
-					<div className="col-4 mt-5">
+					<div className="col-md-4 col-sm-12  mt-5">
 						<section className="panel panel-featured-left panel-featured-primary">
-							<div className="panel-body">
+							<div className="panel-body box-size">
 								<div className="widget-summary">
-									<div className="widget-summary-col widget-summary-col-icon">
+									{/* <div className="widget-summary-col widget-summary-col-icon">
 										<div className="summary-icon bg-primary">
-											<i className="fa fa-life-ring"></i>
+											
 										</div>
-									</div>
+									</div> */}
 									<div className="widget-summary-col">
-										<div className="summary">
+										<div className="summary icon-set">
 											<h4 className="title">Support Questions</h4>
-											<div className="info">
-												<strong className="amount">1281</strong>
-												<span className="text-primary">(14 unread)</span>
-											</div>
+											<br/>
+											<h5 className="abc">Support Questions</h5>
+										{/* 	<strong className="amount">1281</strong>
+												<span className="text-primary">(14 unread)</span> */}
+											{/* <div className="info">
+												
+											</div> */}
+											
 										</div>
 										<div className="summary-footer">
 											<a className="text-muted text-uppercase">(view all)</a>
 										</div>
+										
 									</div>
 								</div>
+								{/* <div className="widget-summary-col-icon"> */}
+										<div className="summary-icon bg-primary">
+										<ErrorIcon />
+											</div>
+									{/* 	</div> */}
 							</div>
 
-							<div className="panel-body">
+							<div className="panel-body box-size">
 								<div className="widget-summary">
-									<div className="widget-summary-col widget-summary-col-icon">
+									{/* <div className="widget-summary-col widget-summary-col-icon">
 										<div className="summary-icon bg-primary">
-											<i className="fa fa-life-ring"></i>
+											
 										</div>
-									</div>
+									</div> */}
 									<div className="widget-summary-col">
-										<div className="summary">
+										<div className="summary icon-set">
 											<h4 className="title">Support Questions</h4>
-											<div className="info">
-												<strong className="amount">1281</strong>
-												<span className="text-primary">(14 unread)</span>
-											</div>
+											<br/>
+											<h5 className="abc">Support Questions</h5>
+										{/* 	<strong className="amount">1281</strong>
+												<span className="text-primary">(14 unread)</span> */}
+											{/* <div className="info">
+												
+											</div> */}
+											
 										</div>
 										<div className="summary-footer">
 											<a className="text-muted text-uppercase">(view all)</a>
 										</div>
+										
 									</div>
 								</div>
+								{/* <div className="widget-summary-col-icon"> */}
+										<div className="summary-icon bg-primary">
+										<ErrorIcon />
+											</div>
+									{/* 	</div> */}
 							</div>
 
-							<div className="panel-body">
+							<div className="panel-body box-size">
 								<div className="widget-summary">
-									<div className="widget-summary-col widget-summary-col-icon">
+									{/* <div className="widget-summary-col widget-summary-col-icon">
 										<div className="summary-icon bg-primary">
-											<i className="fa fa-life-ring"></i>
+											
 										</div>
-									</div>
+									</div> */}
 									<div className="widget-summary-col">
-										<div className="summary">
+										<div className="summary icon-set">
 											<h4 className="title">Support Questions</h4>
-											<div className="info">
-												<strong className="amount">1281</strong>
-												<span className="text-primary">(14 unread)</span>
-											</div>
+											<br/>
+											<h5 className="abc">Support Questions</h5>
+										{/* 	<strong className="amount">1281</strong>
+												<span className="text-primary">(14 unread)</span> */}
+											{/* <div className="info">
+												
+											</div> */}
+											
 										</div>
 										<div className="summary-footer">
 											<a className="text-muted text-uppercase">(view all)</a>
 										</div>
+										
 									</div>
 								</div>
+								{/* <div className="widget-summary-col-icon"> */}
+										<div className="summary-icon bg-primary">
+										<ErrorIcon />
+											</div>
+									{/* 	</div> */}
 							</div>
 
-							<div className="panel-body">
+							<div className="panel-body box-size">
 								<div className="widget-summary">
-									<div className="widget-summary-col widget-summary-col-icon">
+									{/* <div className="widget-summary-col widget-summary-col-icon">
 										<div className="summary-icon bg-primary">
-											<i className="fa fa-life-ring"></i>
+											
 										</div>
-									</div>
+									</div> */}
 									<div className="widget-summary-col">
-										<div className="summary">
+										<div className="summary icon-set">
 											<h4 className="title">Support Questions</h4>
-											<div className="info">
-												<strong className="amount">1281</strong>
-												<span className="text-primary">(14 unread)</span>
-											</div>
+											<br/>
+											<h5 className="abc">Support Questions</h5>
+										{/* 	<strong className="amount">1281</strong>
+												<span className="text-primary">(14 unread)</span> */}
+											{/* <div className="info">
+												
+											</div> */}
+											
 										</div>
 										<div className="summary-footer">
 											<a className="text-muted text-uppercase">(view all)</a>
 										</div>
+										
 									</div>
 								</div>
+								{/* <div className="widget-summary-col-icon"> */}
+										<div className="summary-icon bg-primary">
+										<ErrorIcon />
+											</div>
+									{/* 	</div> */}
 							</div>
 
-							<div className="panel-body">
+							<div className="panel-body box-size">
 								<div className="widget-summary">
-									<div className="widget-summary-col widget-summary-col-icon">
+									{/* <div className="widget-summary-col widget-summary-col-icon">
 										<div className="summary-icon bg-primary">
-											<i className="fa fa-life-ring"></i>
+											
 										</div>
-									</div>
+									</div> */}
 									<div className="widget-summary-col">
-										<div className="summary">
+										<div className="summary icon-set">
 											<h4 className="title">Support Questions</h4>
-											<div className="info">
-												<strong className="amount">1281</strong>
-												<span className="text-primary">(14 unread)</span>
-											</div>
+											<br/>
+											<h5 className="abc">Support Questions</h5>
+										{/* 	<strong className="amount">1281</strong>
+												<span className="text-primary">(14 unread)</span> */}
+											{/* <div className="info">
+												
+											</div> */}
+											
 										</div>
 										<div className="summary-footer">
 											<a className="text-muted text-uppercase">(view all)</a>
 										</div>
+										
 									</div>
 								</div>
+								{/* <div className="widget-summary-col-icon"> */}
+										<div className="summary-icon bg-primary">
+										<ErrorIcon />
+											</div>
+									{/* 	</div> */}
 							</div>
 						</section>
 					</div>
 				</div>
 				<div className="row show-grid">
-					<div className="col-md-6">
-						<section className="panel">
+					<div className="col-md-6  col-sm-12">
+						<section className="paneles">
 							<header className="panel-heading">
 								<div className="panel-actions">
 									<a href="#" className="fa fa-caret-down"></a>
@@ -165,12 +220,34 @@ const summary = () => {
 							</header>
 							<div className="panel-body">
 								<h2 className="panel-title">Desktop Notifications</h2>
-								<Notifications show="3" />
+								{/* <Notifications show="3" /> */}
+								<div className="col-md-12 offset-md-1	">
+								<div className="row">
+								<button type="button" className="btn btn-primary btn-radius_31">
+						Search
+						
+					</button>
+					<button type="button" className="btn btn-light btn-radius_31">
+						Cancel
+					</button>
+					</div></div>
+								<section class="panel panel-featured-left panel-featured-secondary">
+									<div class="panel-body redclr">
+										<div class="widget-summary">
+											<Notifications />
+										</div>
+									</div>
+									</section>
+								
 							</div>
+
+
+						
+
 						</section>
 					</div>
-					<div className="col-md-6">
-						<section className="panel">
+					<div className="col-md-6 col-sm-12 ">
+						<section className="paneles">
 							<header className="panel-heading">
 								<div className="panel-actions">
 									<a href="#" className="fa fa-caret-down"></a>

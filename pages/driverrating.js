@@ -8,7 +8,7 @@ export default function driverrating() {
 				<div className="container">
 					<div className="row">
 						<div className="col-md-12">
-							<section className="panel">
+							<section className="panel top-settings	">
 								<header className="panel-heading">
 									<div className="panel-actions">
 										<a href="#" className="fa fa-caret-down"></a>
