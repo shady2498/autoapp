@@ -88,15 +88,7 @@ export default function testPage() {
 
 	const switching = () => {
 		console.log("sdsada");
-		if (changeName == true) {
-			<ChangeName />;
-		} else if (changePin == true) {
-			<ChangePin />;
-		} else if (changePassword == true) {
-			<ChangePassword />;
-		} else if (addDevice == true) {
-			<AddDevice />;
-		}
+
 		// switch (menu) {
 		// 	case "foo":
 		// 		return "bar";
@@ -124,9 +116,20 @@ export default function testPage() {
 						</button>
 					</>
 				))}
-				<button onClick={() => open()}>sdasdasdafsdafdfs</button>
-				{() => switching}
-				{/* <h1>sdas</h1> */}
+				{/* <button onClick={() => open()}>sdasdasdafsdafdfs</button> */}
+				{/* {() => switching} */}
+				{menu.changeName == true ? <ChangeName /> : null}
+				{() => {
+					if (changeName == true) {
+						<ChangeName />;
+					} else if (changePin == true) {
+						<ChangePin />;
+					} else if (changePassword == true) {
+						<ChangePassword />;
+					} else if (addDevice == true) {
+						<AddDevice />;
+					}
+				}}
 			</div>
 		</>
 	);
