@@ -13,10 +13,7 @@ export default function account() {
 	});
 
 	const toggleMenu = (item, open) => {
-		// console.log(open);
 		if (item.value == "changeName") {
-			// console.log(item.value);
-			// console.log("king");
 			setMenu({
 				...menu,
 				changeName: open,
@@ -24,11 +21,8 @@ export default function account() {
 				changePin: false,
 				addDevice: false,
 			});
-			// setMenu((prevState) => {...menu});
 			console.log(menu);
 		} else if (item.value == "changePassword") {
-			// console.log(item.value);
-			// console.log("king");
 			setMenu({
 				...menu,
 				changeName: false,
@@ -36,11 +30,8 @@ export default function account() {
 				changePin: false,
 				addDevice: false,
 			});
-			// setMenu((prevState) => {...menu});
 			console.log(menu);
 		} else if (item.value == "changePin") {
-			// console.log(item.value);
-			// console.log("king");
 			setMenu({
 				...menu,
 				changeName: false,
@@ -48,11 +39,8 @@ export default function account() {
 				changePin: open,
 				addDevice: false,
 			});
-			// setMenu((prevState) => {...menu});
 			console.log(menu);
 		} else if (item.value == "addDevice") {
-			// console.log(item.value);
-			// console.log("king");
 			setMenu({
 				...menu,
 				changeName: false,
@@ -60,7 +48,6 @@ export default function account() {
 				changePin: false,
 				addDevice: open,
 			});
-			// setMenu((prevState) => {...menu});
 			console.log(menu);
 		} else {
 			console.log("nothign");

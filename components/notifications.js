@@ -47,23 +47,25 @@ export default function Notifications(props) {
 				: notificationsdata.reverse().map((notificationsdetail, index) => {
 						return (
 							<>
-								<div className="widget-summary-col widget-summary-col-icon">
-									<div class="summary-icon ">
-										<ErrorIcon />
+								<div key={index}>
+									<div className="widget-summary-col widget-summary-col-icon">
+										<div class="summary-icon ">
+											<ErrorIcon />
+										</div>
 									</div>
+									<div class="summaryies">
+										<h4 class="title">{notificationsdetail.title}</h4>
+									</div>
+									<div class="summary-footer">
+										<a class="text-muted text-uppercase">
+											{notificationsdetail.detail}
+										</a>
+									</div>
+									<div className="error-cross">
+										<CloseIcon onClick={() => handleDelete(index)} />
+									</div>
+									{/* <button onClick={() => handleDelete(index)}>adasd</button> */}
 								</div>
-								<div class="summaryies">
-									<h4 class="title">{notificationsdetail.title}</h4>
-								</div>
-								<div class="summary-footer">
-									<a class="text-muted text-uppercase">
-										{notificationsdetail.detail}
-									</a>
-								</div>
-								<div className="error-cross">
-									<CloseIcon onClick={() => handleDelete(index)} />
-								</div>
-								{/* <button onClick={() => handleDelete(index)}>adasd</button> */}
 							</>
 						);
 				  })}

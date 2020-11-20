@@ -13,12 +13,17 @@ export default function notifications() {
 						</div>
 						{/* previous class <div class="col-12 mx-auto btn-group btn-group-justified "> */}
 						<div class=" row d-flex justify-content-center  ">
-							<a class="btn btn-primary col-md-3 btn-setting col-sm-12  " role="button">
+							<a
+								class="btn btn-primary col-md-3 btn-setting col-sm-12  "
+								role="button"
+							>
 								Current&nbsp;Notifications
 							</a>
-							
-							
-							<a class="btn btn-primary btn-setting col-md-3 	col-sm-12" role="button">
+
+							<a
+								class="btn btn-primary btn-setting col-md-3 	col-sm-12"
+								role="button"
+							>
 								Active&nbsp;Notifications
 							</a>
 						</div>
@@ -30,7 +35,7 @@ export default function notifications() {
 								<section class="paneling panel-featured-left panel-featured-secondary">
 									<div class="panel-body redclr">
 										<div class="widget-summary">
-											<Notifications />
+											<Notifications show="all" />
 										</div>
 									</div>
 

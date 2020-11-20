@@ -32,18 +32,17 @@ export default function home() {
 										<small className="noti"> Notifications</small>
 									</h5>
 									<text className="sep">18 September 2020</text>
-									<section class="panel panel-featured-left panel-featured-secondary">
-									<div class="panel-body redclr">
-										<div class="widget-summary">
-											<Notifications />
+									<section className="panel panel-featured-left panel-featured-secondary">
+										<div className="panel-body redclr">
+											<div className="widget-summary">
+												<Notifications show={3} />
+											</div>
 										</div>
-									</div>
 									</section>
 								</div>
 								{/* <div className="activy_boxes">
 									<Notifications show={2} />
 								</div> */}
-								
 							</div>
 						</div>
 						<div className="col-lg-4 col-md-4">
@@ -55,42 +54,38 @@ export default function home() {
 									<Vehicles show={3} />
 								</div>
 							</div> */}
-							<header class="panel-heading bg-color mt-5">
-						
-												<div class="widget-profile-info">
-													<div class="profile-picture">
-													<span className="blue-line"></span>
-													<img src="avatar.png" alt="Avatar" class="avatar"/>
-													</div>
-													<div class="profile-info">
-														<h4 class="name text-semibold">John Doe</h4>
-														<h5 class="role">Administrator</h5>
-														<p class="new data">Some context here</p>
-														<div class="profile-footer">
-															<a href="#">(edit profile)</a>
-														</div>
-													</div>
-												</div>
-						
-											</header>
-											<header class="panel-heading bg-color">
-						
-												<div class="widget-profile-info">
-													<div class="profile-picture">
-													<span className="blue-line"></span>
-													<img src="avatar.png" alt="Avatar" class="avatar"/>
-													</div>
-													<div class="profile-info">
-														<h4 class="name text-semibold">John Doe</h4>
-														<h5 class="role">Administrator</h5>
-														<p class="new data">Some context here</p>
-														<div class="profile-footer">
-															<a href="#">(edit profile)</a>
-														</div>
-													</div>
-												</div>
-						
-											</header>
+							<header className="panel-heading bg-color mt-5">
+								<div className="widget-profile-info">
+									<div className="profile-picture">
+										<span className="blue-line"></span>
+										<img src="#" alt="Avatar" className="avatar" />
+									</div>
+									<div className="profile-info">
+										<h4 className="name text-semibold">John Doe</h4>
+										<h5 className="role">Administrator</h5>
+										<p className="new data">Some context here</p>
+										<div className="profile-footer">
+											<a href="#">(edit profile)</a>
+										</div>
+									</div>
+								</div>
+							</header>
+							<header className="panel-heading bg-color">
+								<div className="widget-profile-info">
+									<div className="profile-picture">
+										<span className="blue-line"></span>
+										<img src="#" alt="Avatar" className="avatar" />
+									</div>
+									<div className="profile-info">
+										<h4 className="name text-semibold">John Doe</h4>
+										<h5 className="role">Administrator</h5>
+										<p className="new data">Some context here</p>
+										<div className="profile-footer">
+											<a href="#">(edit profile)</a>
+										</div>
+									</div>
+								</div>
+							</header>
 						</div>
 					</div>
 				</div>
