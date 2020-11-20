@@ -12,9 +12,10 @@ export default function Notifications(props) {
 		setShow({ notificationsdata: items });
 	};
 	return (
-		<div>
-			{/* <h1>Notifications</h1> */}
-			{/* {notifications.map((notificationsdetail, index) => {
+		<>
+			<div>
+				{/* <h1>Notifications</h1> */}
+				{/* {notifications.map((notificationsdetail, index) => {
 				console.log(index);
 				if (props.show && index < props.show) {
 					return <h1 key={index}>{notificationsdetail.title}</h1>;
@@ -23,52 +24,53 @@ export default function Notifications(props) {
 				}
 			})} */}
 
-			{props.show !== undefined && props.show !== "all"
-				? notificationsdata
-						.slice(
-							notificationsdata.length - props.show,
-							notificationsdata.length
-						)
-						.reverse()
-						.map((notificationsdetail, index) => {
-							return (
-								<button
-									key={index}
-									id="desktop-notice"
-									className="mt-sm mb-sm btn btn-info"
-								>
-									<p>{notificationsdetail.title}</p>{" "}
-									<div className="error-crosss">
-										<CloseIcon onClick={() => handleDelete(index)} />
-									</div>
-								</button>
-							);
-						})
-				: notificationsdata.reverse().map((notificationsdetail, index) => {
-						return (
-							<>
-								<div key={index}>
-									<div className="widget-summary-col widget-summary-col-icon">
-										<div class="summary-icon ">
-											<ErrorIcon />
+				{props.show !== undefined && props.show !== "all"
+					? notificationsdata
+							.slice(
+								notificationsdata.length - props.show,
+								notificationsdata.length
+							)
+							.reverse()
+							.map((notificationsdetail, index) => {
+								return (
+									<button
+										key={index}
+										id="desktop-notice"
+										className="mt-sm mb-sm btn btn-info"
+									>
+										<p>{notificationsdetail.title}</p>{" "}
+										<div className="error-crosss">
+											<CloseIcon onClick={() => handleDelete(index)} />
 										</div>
+									</button>
+								);
+							})
+					: notificationsdata.reverse().map((notificationsdetail, index) => {
+							return (
+								<>
+									<div key={index}>
+										<div className="widget-summary-col widget-summary-col-icon">
+											<div class="summary-icon ">
+												<ErrorIcon />
+											</div>
+										</div>
+										<div class="summaryies">
+											<h4 class="title">{notificationsdetail.title}</h4>
+										</div>
+										<div class="summary-footer">
+											<a class="text-muted text-uppercase">
+												{notificationsdetail.detail}
+											</a>
+										</div>
+										<div className="error-cross">
+											<CloseIcon onClick={() => handleDelete(index)} />
+										</div>
+										{/* <button onClick={() => handleDelete(index)}>adasd</button> */}
 									</div>
-									<div class="summaryies">
-										<h4 class="title">{notificationsdetail.title}</h4>
-									</div>
-									<div class="summary-footer">
-										<a class="text-muted text-uppercase">
-											{notificationsdetail.detail}
-										</a>
-									</div>
-									<div className="error-cross">
-										<CloseIcon onClick={() => handleDelete(index)} />
-									</div>
-									{/* <button onClick={() => handleDelete(index)}>adasd</button> */}
-								</div>
-							</>
-						);
-				  })}
-		</div>
+								</>
+							);
+					  })}
+			</div>
+		</>
 	);
 }

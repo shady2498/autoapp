@@ -15,30 +15,19 @@ import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import Link from "next/link";
 import ListSubheader from "@material-ui/core/ListSubheader";
+import Collapse from "@material-ui/core/Collapse";
 import SendIcon from "@material-ui/icons/Send";
 import vehiclesData from "../data/vehicles.json";
-
-const drawerWidth = 240;
+import Avatar from "@material-ui/core/Avatar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome, faCar } from "@fortawesome/free-solid-svg-icons";
+import ArrowRightIcon from "@material-ui/icons/ArrowRight";
+import ArrowLeftIcon from "@material-ui/icons/ArrowLeft";
+const drawerWidth = 378;
 const anchor = "left";
-
 const useStyles = makeStyles((theme) => ({
 	root: {
 		display: "flex",
-	},
-	appBar: {
-		zIndex: theme.zIndex.drawer + 1,
-		transition: theme.transitions.create(["width", "margin"], {
-			easing: theme.transitions.easing.sharp,
-			duration: theme.transitions.duration.leavingScreen,
-		}),
-	},
-	appBarShift: {
-		marginLeft: drawerWidth,
-		width: `calc(100% - ${drawerWidth}px)`,
-		transition: theme.transitions.create(["width", "margin"], {
-			easing: theme.transitions.easing.sharp,
-			duration: theme.transitions.duration.enteringScreen,
-		}),
 	},
 	menuButton: {
 		marginRight: 36,
@@ -84,20 +73,20 @@ const useStyles = makeStyles((theme) => ({
 	nested: {
 		paddingLeft: theme.spacing(4),
 	},
-
 	list: {
-		width: 250,
+		width: 373,
 	},
 	fullList: {
 		width: "auto",
 	},
-
 	paper: {
 		overflowY: "unset",
 		left: "10%",
 	},
+	faCar: {
+		size: "1500px",
+	},
 }));
-
 export default function sideBar() {
 	const classes = useStyles();
 	const theme = useTheme();
@@ -108,7 +97,6 @@ export default function sideBar() {
 		bottom: false,
 		right: false,
 	});
-
 	const menu = [
 		{
 			key: "Home",
@@ -136,11 +124,9 @@ export default function sideBar() {
 			icon: "NotificationsIcon",
 		},
 	];
-
 	const handleDrawerOpen = () => {
 		setOpen(true);
 	};
-
 	const handleDrawerClose = () => {
 		setOpen(false);
 	};
@@ -151,10 +137,8 @@ export default function sideBar() {
 		) {
 			return;
 		}
-
 		setState({ ...state, [anchor]: open });
 	};
-
 	const list = (anchor) => (
 		<div
 			className={clsx(classes.list, {
@@ -165,11 +149,12 @@ export default function sideBar() {
 			onKeyDown={toggleDrawer(anchor, false)}
 		>
 			<List>
+				<div className="selectvehicle">Select vehicle</div>
 				{vehiclesData.map((vehiclesdata, index) => (
 					<ListItem button key={vehiclesdata.id}>
-						<ListItemIcon>
+						{/* <ListItemIcon>
 							{index % 2 === 0 ? <InboxIcon /> : <InboxIcon />}
-						</ListItemIcon>
+						</ListItemIcon> */}
 						<ListItemText primary={vehiclesdata.CarOwner} />
 					</ListItem>
 				))}
@@ -177,12 +162,10 @@ export default function sideBar() {
 			<Divider />
 		</div>
 	);
-
 	return (
 		<>
 			<div className={classes.root}>
 				<CssBaseline />
-
 				<Drawer
 					variant="permanent"
 					className={clsx(classes.drawer, {
@@ -196,21 +179,15 @@ export default function sideBar() {
 						}),
 					}}
 				>
-					<IconButton
-						color="inherit"
-						aria-label="open drawer"
-						onClick={handleDrawerOpen}
-						edge="start"
-						className={clsx(classes.menuButton, {
-							[classes.hide]: open,
-						})}
-					>
-						<MenuIcon />
-					</IconButton>
+					<div className="row">
+						<Avatar alt="Remy Sharp" src="..\img\images.png"></Avatar>
+						<h1 className="h1name">TOMAS WIlSON</h1>
+						<text className="emailtext">Luckytom@rach</text>
+					</div>
 					<div className={classes.toolbar}>
 						{open ? (
 							<IconButton onClick={handleDrawerClose}>
-								<ChevronLeftIcon />
+								<ArrowLeftIcon />
 							</IconButton>
 						) : null}
 					</div>
@@ -218,8 +195,11 @@ export default function sideBar() {
 					<List>
 						{menu.map((item, index) => (
 							<Link href={item.value}>
-								<ListItem button key={item.key}>
-									<ListItemIcon>{<item.icon />}home</ListItemIcon>
+								<ListItem button key={item.key} className="ptag">
+									<ListItemIcon>
+										{<item.icon />}
+										<FontAwesomeIcon icon={faCar} size="6x" />
+									</ListItemIcon>
 									<p>{item.key}</p>
 								</ListItem>
 							</Link>
@@ -230,24 +210,24 @@ export default function sideBar() {
 						component="nav"
 						aria-labelledby="nested-list-subheader"
 						subheader={
-							<ListSubheader component="div" id="nested-list-subheader">
-								Nested List Items
-							</ListSubheader>
+							<ListSubheader
+								component="div"
+								id="nested-list-subheader"
+							></ListSubheader>
 						}
 						// className={classes.root}
 					>
 						<ListItem button>
-							<ListItemIcon>
-								<SendIcon />
-							</ListItemIcon>
-							<ListItemText primary="Sent mail" />
 							<React.Fragment key={anchor}>
-								<button onClick={toggleDrawer(anchor, true)}>{anchor}</button>
+								<a onClick={toggleDrawer(anchor, true)}>
+									{" "}
+									<ArrowRightIcon />{" "}
+								</a>
 								<Drawer
 									classes={{
 										paper: classes.paper,
 									}}
-							anchor={anchor}
+									anchor={anchor}
 									open={state[anchor]}
 									onClose={toggleDrawer(anchor, false)}
 								>
@@ -255,12 +235,21 @@ export default function sideBar() {
 								</Drawer>
 							</React.Fragment>
 						</ListItem>
-						<ListItem button>
-							<ListItemIcon>some </ListItemIcon>
-							<ListItemText primary="Drafts" />
-						</ListItem>
+						<ListItem button></ListItem>
 					</List>
 				</Drawer>
+			</div>
+			<div className="menuiconeside">
+				<IconButton
+					color="inherit"
+					onClick={handleDrawerOpen}
+					edge="start"
+					className={clsx(classes.menuButton, {
+						[classes.hide]: open,
+					})}
+				>
+					<ArrowRightIcon className="arrowclass1" />
+				</IconButton>
 			</div>
 		</>
 	);
