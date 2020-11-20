@@ -1,23 +1,93 @@
 import React, { useState } from "react";
-import AccountMenu from "../components/accountMenu";
 import ChangeName from "../components/changeName";
+import ChangePassword from "../components/changePassword";
+import ChangePin from "../components/changePin";
+import AddDevice from "../components/addNewDevice";
 
 export default function account() {
-	const handleClick = (input) => {
-		// console.log(input);
-		if (input === "changeName") {
-			// setMenu({...menu, });
-			console.log(input);
-			setMenu((changeName = true));
-		}
-	};
-
 	const [menu, setMenu] = useState({
 		changeName: false,
 		changePassword: false,
 		changePin: false,
 		addDevice: false,
 	});
+
+	const toggleMenu = (item, open) => {
+		// console.log(open);
+		if (item.value == "changeName") {
+			// console.log(item.value);
+			// console.log("king");
+			setMenu({
+				...menu,
+				changeName: open,
+				changePassword: false,
+				changePin: false,
+				addDevice: false,
+			});
+			// setMenu((prevState) => {...menu});
+			console.log(menu);
+		} else if (item.value == "changePassword") {
+			// console.log(item.value);
+			// console.log("king");
+			setMenu({
+				...menu,
+				changeName: false,
+				changePassword: open,
+				changePin: false,
+				addDevice: false,
+			});
+			// setMenu((prevState) => {...menu});
+			console.log(menu);
+		} else if (item.value == "changePin") {
+			// console.log(item.value);
+			// console.log("king");
+			setMenu({
+				...menu,
+				changeName: false,
+				changePassword: false,
+				changePin: open,
+				addDevice: false,
+			});
+			// setMenu((prevState) => {...menu});
+			console.log(menu);
+		} else if (item.value == "addDevice") {
+			// console.log(item.value);
+			// console.log("king");
+			setMenu({
+				...menu,
+				changeName: false,
+				changePassword: false,
+				changePin: false,
+				addDevice: open,
+			});
+			// setMenu((prevState) => {...menu});
+			console.log(menu);
+		} else {
+			console.log("nothign");
+		}
+	};
+	const menukk = [
+		{
+			key: "name",
+			value: "changeName",
+			icon: "LanguageIcon",
+		},
+		{
+			key: "password",
+			value: "changePassword",
+			icon: "NotificationsIcon",
+		},
+		{
+			key: "changePin",
+			value: "changePin",
+			icon: "NotificationsIcon",
+		},
+		{
+			key: "addDevice",
+			value: "addDevice",
+			icon: "NotificationsIcon",
+		},
+	];
 	return (
 		<>
 			<div className="profilebodycolour">
@@ -35,32 +105,34 @@ export default function account() {
 						<br />
 						<h4>Tomas Wilson </h4>
 						<hr className="new5" />
-						<text>Email Address</text>
-						<br />
-						<h4>luckytom@rach</h4>
-						<hr className="new5" />
-						<h4>Change Password</h4>
-						<div>
-							<button
-								className="btn btn-primary"
-								onClick={() => handleClick("changeName")}
-							>
-								<p>changeName</p>
-							</button>
-						</div>
-
-						<hr className="new5" />
-						<h4>PIN Code</h4>
-						<hr className="new5" />
-						<h4>Change PIN Code</h4>
-						<hr className="new5" />
-						<h4>Support</h4>
-						<hr className="new5" />
-						<h4>Logout</h4>
-						<hr className="new5" />
+						{menukk.map((item, index) => (
+							<>
+								<button
+									key={index}
+									className="btn btn-primary"
+									onClick={() => toggleMenu(item, true)}
+								>
+									{item.key}
+								</button>
+							</>
+						))}
 					</div>
 				</div>
 			</div>
+
+			{(() => {
+				if (menu.changeName == true) {
+					return <ChangeName />;
+				} else if (menu.changePin == true) {
+					return <ChangePin />;
+				} else if (menu.changePassword == true) {
+					return <ChangePassword />;
+				} else if (menu.addDevice == true) {
+					return <AddDevice />;
+				} else {
+					return null;
+				}
+			})()}
 		</>
 	);
 }

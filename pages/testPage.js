@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import ChangeName from "../components/changeName";
+import ChangePassword from "../components/changePassword";
+import ChangePin from "../components/changePin";
+import AddDevice from "../components/addNewDevice";
 
 export default function testPage() {
 	const [menu, setMenu] = useState({
@@ -86,25 +89,9 @@ export default function testPage() {
 		},
 	];
 
-	const switching = () => {
-		console.log("sdsada");
-
-		// switch (menu) {
-		// 	case "foo":
-		// 		return "bar";
-		// 	default:
-		// 		return "foo";
-		// }
-	};
-
-	const open = () => {
-		console.log("dsadadas");
-	};
-
 	return (
 		<>
 			<div>
-				<button onClick={setMenu}>jjjj</button>
 				{menukk.map((item, index) => (
 					<>
 						<button
@@ -116,20 +103,20 @@ export default function testPage() {
 						</button>
 					</>
 				))}
-				{/* <button onClick={() => open()}>sdasdasdafsdafdfs</button> */}
-				{/* {() => switching} */}
-				{menu.changeName == true ? <ChangeName /> : null}
-				{() => {
-					if (changeName == true) {
-						<ChangeName />;
-					} else if (changePin == true) {
-						<ChangePin />;
-					} else if (changePassword == true) {
-						<ChangePassword />;
-					} else if (addDevice == true) {
-						<AddDevice />;
+
+				{(() => {
+					if (menu.changeName == true) {
+						return <ChangeName />;
+					} else if (menu.changePin == true) {
+						return <ChangePin />;
+					} else if (menu.changePassword == true) {
+						return <ChangePassword />;
+					} else if (menu.addDevice == true) {
+						return <AddDevice />;
+					} else {
+						return null;
 					}
-				}}
+				})()}
 			</div>
 		</>
 	);
