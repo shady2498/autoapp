@@ -2,11 +2,10 @@ import React from "react";
 import Notifications from "../components/Notifications";
 import Recordings from "../components/recordings";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import NewSideBaring from "../components/newSideBaring";
 import SideBar from "../components/sideBar";
-
 import Vehicles from "../components/vehicles";
-import Sidebar from "../components/sideBar";
+
+// for pushing the contents to the side
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -36,6 +35,7 @@ export default function home() {
 				<main className={classes.content}>
 					<div className={classes.toolbar} />
 
+					{/* map  */}
 					<section className="map_sect_one">
 						<div className="maparea">
 							<iframe
@@ -73,14 +73,17 @@ export default function home() {
 									</div>
 								</div>
 								<div className="col-lg-4 col-md-4">
-									{/* <div className="card card-elegant">
-								<div className="card-block">
-									<h5 className="card-title text-uppercase"> Your Vehicle</h5>
-								</div>
-								<div className="activy_boxes blue_line">
-									<Vehicles show={3} />
-								</div>
-							</div> */}
+									<div className="card card-elegant">
+										<div className="card-block">
+											<h5 className="card-title text-uppercase">
+												{" "}
+												Your Vehicle
+											</h5>
+										</div>
+										<div className="activy_boxes blue_line">
+											<Vehicles show={3} />
+										</div>
+									</div>
 									<header className="panel-heading bg-color mt-5">
 										<div className="widget-profile-info">
 											<div className="profile-picture">
