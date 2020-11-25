@@ -34,9 +34,7 @@ export default function notifications() {
 							<div class="col-md-12  change">
 								<section class="paneling panel-featured-left panel-featured-secondary">
 									<div class="panel-body redclr">
-										<div class="widget-summary">
-											<Notifications show="all" />
-										</div>
+										<Notifications show="all" />
 									</div>
 
 									{/* <div class="panel-body redclr">

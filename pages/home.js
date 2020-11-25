@@ -1,52 +1,78 @@
 import React from "react";
 import Notifications from "../components/Notifications";
 import Recordings from "../components/recordings";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import NewSideBaring from "../components/newSideBaring";
+
 import Vehicles from "../components/vehicles";
 import Sidebar from "../components/sideBar";
 
+const useStyles = makeStyles((theme) => ({
+	root: {
+		display: "flex",
+	},
+	toolbar: {
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "flex-end",
+		padding: theme.spacing(0, 1),
+		// necessary for content to be below app bar
+		...theme.mixins.toolbar,
+	},
+	content: {
+		flexGrow: 1,
+		padding: theme.spacing(3),
+	},
+}));
 export default function home() {
+	const classes = useStyles();
+	const theme = useTheme();
+
 	return (
 		<>
-			{/* <Sidebar /> */}
+			<div className={classes.root}>
+				<NewSideBaring />
+				<main className={classes.content}>
+					<div className={classes.toolbar} />
 
-			<section className="map_sect_one">
-				<div className="maparea">
-					<iframe
-						width="100%"
-						height="350"
-						frameBorder="0"
-						scrolling="no"
-						marginHeight="0"
-						marginWidth="0"
-						src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-					></iframe>
-				</div>
-			</section>
-			<section className="Notiy_sect_one">
-				<div className="notyfiy_box">
-					<div className="row">
-						<div className="col-lg-7 col-md-7">
-							<div className="card card-elegant">
-								<div className="card-block">
-									<h5 className="card-title text-uppercase">
-										<small className="noti"> Notifications</small>
-									</h5>
-									<text className="sep">18 September 2020</text>
-									<section className="panel panel-featured-left panel-featured-secondary">
-										<div className="panel-body redclr">
-											<div className="widget-summary">
-												<Notifications show={3} />
-											</div>
+					<section className="map_sect_one">
+						<div className="maparea">
+							<iframe
+								width="100%"
+								height="350"
+								frameBorder="0"
+								scrolling="no"
+								marginHeight="0"
+								marginWidth="0"
+								src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+							></iframe>
+						</div>
+					</section>
+					<section className="Notiy_sect_one">
+						<div className="notyfiy_box">
+							<div className="row">
+								<div className="col-lg-7 col-md-7">
+									<div className="card card-elegant">
+										<div className="card-block">
+											<h5 className="card-title text-uppercase">
+												<small className="noti"> Notifications</small>
+											</h5>
+											<text className="sep">18 September 2020</text>
+											<section className="panel panel-featured-left panel-featured-secondary">
+												<div className="panel-body redclr">
+													<div className="widget-summary">
+														<Notifications show={3} />
+													</div>
+												</div>
+											</section>
 										</div>
-									</section>
-								</div>
-								{/* <div className="activy_boxes">
+										{/* <div className="activy_boxes">
 									<Notifications show={2} />
 								</div> */}
-							</div>
-						</div>
-						<div className="col-lg-4 col-md-4">
-							{/* <div className="card card-elegant">
+									</div>
+								</div>
+								<div className="col-lg-4 col-md-4">
+									{/* <div className="card card-elegant">
 								<div className="card-block">
 									<h5 className="card-title text-uppercase"> Your Vehicle</h5>
 								</div>
@@ -54,50 +80,60 @@ export default function home() {
 									<Vehicles show={3} />
 								</div>
 							</div> */}
-							<header className="panel-heading bg-color mt-5">
-								<div className="widget-profile-info">
-									<div className="profile-picture">
-										<span className="blue-line"></span>
-										<img src="..\img\images.png"  alt="Avatar" className="avatar" />
-									</div>
-									<div className="profile-info">
-										<h4 className="name text-semibold">John Doe</h4>
-										<h5 className="role">Administrator</h5>
-										<p className="new data">Some context here</p>
-										<div className="profile-footer">
-											<a href="#">(edit profile)</a>
+									<header className="panel-heading bg-color mt-5">
+										<div className="widget-profile-info">
+											<div className="profile-picture">
+												<span className="blue-line"></span>
+												<img
+													src="..\img\images.png"
+													alt="Avatar"
+													className="avatar"
+												/>
+											</div>
+											<div className="profile-info">
+												<h4 className="name text-semibold">John Doe</h4>
+												<h5 className="role">Administrator</h5>
+												<p className="new data">Some context here</p>
+												<div className="profile-footer">
+													<a href="#">(edit profile)</a>
+												</div>
+											</div>
 										</div>
-									</div>
-								</div>
-							</header>
-							<header className="panel-heading bg-color">
-								<div className="widget-profile-info">
-									<div className="profile-picture">
-										<span className="blue-line"></span>
-										<img src="..\img\images.png"  alt="Avatar" className="avatar" />
-									</div>
-									<div className="profile-info">
-										<h4 className="name text-semibold">John Doe</h4>
-										<h5 className="role">Administrator</h5>
-										<p className="new data">Some context here</p>
-										<div className="profile-footer">
-											<a href="#">(edit profile)</a>
+									</header>
+									<header className="panel-heading bg-color">
+										<div className="widget-profile-info">
+											<div className="profile-picture">
+												<span className="blue-line"></span>
+												<img
+													src="..\img\images.png"
+													alt="Avatar"
+													className="avatar"
+												/>
+											</div>
+											<div className="profile-info">
+												<h4 className="name text-semibold">John Doe</h4>
+												<h5 className="role">Administrator</h5>
+												<p className="new data">Some context here</p>
+												<div className="profile-footer">
+													<a href="#">(edit profile)</a>
+												</div>
+											</div>
 										</div>
-									</div>
+									</header>
 								</div>
-							</header>
+							</div>
 						</div>
-					</div>
-				</div>
-			</section>
+					</section>
 
-			<section className="picture1">
-				<h1> Recent Recordings </h1>
-				<span style={{ float: "right", color: "#0091ff" }}>See All</span>
-				<div className="col-md-12">
-					<Recordings show={4} />
-				</div>
-			</section>
+					<section className="picture1">
+						<h1> Recent Recordings </h1>
+						<span style={{ float: "right", color: "#0091ff" }}>See All</span>
+						<div className="col-md-12">
+							<Recordings show={4} />
+						</div>
+					</section>
+				</main>
+			</div>
 		</>
 	);
 }
