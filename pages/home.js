@@ -3,6 +3,7 @@ import Notifications from "../components/Notifications";
 import Recordings from "../components/recordings";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import NewSideBaring from "../components/newSideBaring";
+import SideBar from "../components/sideBar";
 
 import Vehicles from "../components/vehicles";
 import Sidebar from "../components/sideBar";
@@ -31,7 +32,7 @@ export default function home() {
 	return (
 		<>
 			<div className={classes.root}>
-				<NewSideBaring />
+				<SideBar />
 				<main className={classes.content}>
 					<div className={classes.toolbar} />
 
