@@ -15,8 +15,8 @@ const summary = () => {
 				<TopBar />
 				<div className="row">
 					<div className="col-md-8 col-sm-12  mt-5">
-						<section className=Name="map_sect_one">
-							<div className=Name="maparea">
+						<section className="map_sect_one">
+							<div className="maparea">
 								<iframe
 									width="100%"
 									height="350"
@@ -29,8 +29,8 @@ const summary = () => {
 							</div>
 						</section>
 
-						<section className=Name="map_sect_one mt-5">
-							<div className=Name="maparea">
+						<section className="map_sect_one mt-5">
+							<div className="maparea">
 								<iframe
 									width="100%"
 									height="350"

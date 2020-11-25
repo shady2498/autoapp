@@ -280,3 +280,160 @@ sdsd
 
 
 ///////////////////////////////////////////////////// SIDE BAR////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+////////////////////////////////search ///////////////////////////////////////////////////////////////////
+
+import React, { useEffect, useState } from "react";
+import { useCombobox } from "downshift";
+
+export default function Search() {
+	const [inputItems, setInputItems] = useState([]);
+	const [users, setUsers] = useState([]);
+	const [singleUser, setSingleUser] = useState("");
+
+	useEffect(() => {
+		fetch("https://jsonplaceholder.typicode.com/users")
+			.then((response) => response.json())
+			.then((data) => setUsers(data));
+	}, []);
+
+	const {
+		isOpen,
+		getMenuProps,
+		getInputProps,
+		getComboboxProps,
+		highlightedIndex,
+		getItemProps,
+	} = useCombobox({
+		items: inputItems,
+		onInputValueChange: ({ inputValue }) => {
+			setInputItems(
+				users.filter((item) =>
+					item.name.toLowerCase().startsWith(inputValue.toLowerCase())
+				)
+			);
+		},
+	});
+
+	return (
+		<div className="App">
+			<h2>Current User: {singleUser}</h2>
+			<div {...getComboboxProps()}>
+				<input
+					{...getInputProps()}
+					placeholder="Search"
+					enterButton="Search"
+					size="large"
+				/>
+			</div>
+			<ul {...getMenuProps()}>
+				{isOpen &&
+					inputItems.map((item, index) => (
+						<span
+							key={item.id}
+							{...getItemProps({ item, index })}
+							onClick={() => setSingleUser(item.name)}
+						>
+							<li
+								style={highlightedIndex === index ? { background: "#ede" } : {}}
+							>
+								<h4>{item.name}</h4>
+							</li>
+						</span>
+					))}
+			</ul>
+		</div>
+	);
+}
+
+/////////////////////////////////////////////chagne password page//////////////////////////////////
+
+import React from "react";
+
+export default function account() {
+	return (
+		<>
+			<div className="profilebodycolour">
+				<h1 className="profiletital">Account</h1>
+				<text>Here is something information that you must to know.</text>
+				<div className="row">
+					<div className="col-md-3 col-sm-12  accountcard  shadow p-3 mb-6 bg-white rounded">
+						<img src="..\img\images.png" className="avatar" />
+						<br />
+
+						<strong className="Nameprofile"> Tomas Wilson </strong>
+						<br />
+						<text className="profileemail"> luckytom@rach </text>
+
+						<br />
+						<text>Name</text>
+						<br />
+						<h4>Tomas Wilson </h4>
+						<hr className="new5" />
+						<text>Email Address</text>
+						<br />
+						<h4>luckytom@rach</h4>
+						<hr className="new5" />
+						<h4>Change Password</h4>
+						<hr className="new5" />
+						<h4>PIN Code</h4>
+						<hr className="new5" />
+						<h4>Change PIN Code</h4>
+						<hr className="new5" />
+
+						<h4>Support</h4>
+						<hr className="new5" />
+
+						<h4>Logout</h4>
+						<hr className="new5" />
+					</div>
+					<div className="col-md-6 col-sm-12  accountprofile   shadow p-3 mb-6 bg-white rounded">
+						<h1 className="profileH1">Change Password</h1>
+
+						<div className="profilename">
+							<text className="paswordtext">Old Password</text>
+							<div className="md-form mt-0">
+								<input
+									className="form-control inputprofile"
+									type="password"
+									placeholder=""
+									aria-label=""
+								/>
+							</div>
+							<text className="paswordtext">New Password</text>
+							<div className="md-form mt-0">
+								<input
+									className="form-control inputprofile"
+									type="password"
+									placeholder=""
+									aria-label=""
+								/>
+							</div>
+							<text className="paswordtext">Re-Password</text>
+							<div className="md-form mt-0">
+								<input
+									className="form-control inputprofile"
+									type="password"
+									placeholder=""
+									aria-label=""
+								/>
+							</div>
+						</div>
+
+						<button className="mt-sm mb-sm btn btn-Primay profilebtn">
+							Save
+						</button>
+					</div>
+				</div>
+			</div>
+		</>
+	);
+}
+
