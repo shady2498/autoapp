@@ -770,7 +770,7 @@ address {
 
 .card-img-top {
 	width: 100% !important;
-	height: 295px  !important;
+	height: 295px !important;
 }
 body {
 	font-family: "Lato", sans-serif;
@@ -836,8 +836,7 @@ body {
 	border-radius: 50%;
 }
 
-.error-cross1{
-
+.error-cross1 {
 	transform: translate(81%, -94%);
 }
 
@@ -1067,6 +1066,10 @@ small {
 	display: block;
 	width: 100%;
 }
+
+.king {
+	/* margin-bottom: 100px; */
+}
 /* a.text-muted.text-uppercase {
 		margin-left: 71px;
 	} */
@@ -1174,11 +1177,11 @@ section.paneling.panel-featured-left.panel-featured-secondary {
 .error-cross {
 	/* 	transform: translate(216%, -90%); */
 	/* transform: translate(189%, -108%); */
-	-webkit-transform: translate(-15%,-65%);
+	-webkit-transform: translate(-15%, -65%);
 	color: black;
 	position: relative;
-    display: inline-block;
-    left: 50%;
+	display: inline-block;
+	left: 50%;
 	/* float: right; */
 }
 
@@ -1741,93 +1744,96 @@ text.emailtext {
 	margin: 29px 0 0 54px;
 }
 
-/*****Modal*****///
-.modal-header .close{
+/*****Modal*****/
+.modal-header .close {
 	width: 50px;
-    height: 50px;
-    background: red;
-    border-radius: 50%;
+	height: 50px;
+	background: red;
+	border-radius: 50%;
 }
-
 
 button.close {
 	width: 50px;
-    height: 50px;
-    background: red;
-    border-radius: 50%;
+	height: 50px;
+	background: red;
+	border-radius: 50%;
 }
-.modal-header{
-     border-bottom: 0PX; 
+.modal-header {
+	border-bottom: 0px;
 }
-.modal-footer{
-	    border-top: 0px ;
+.modal-footer {
+	border-top: 0px;
 }
 .modal-header .close {
-    padding: 1rem 1rem;
-    margin: 0rem 0rem -1rem auto;
+	padding: 1rem 1rem;
+	margin: 0rem 0rem -1rem auto;
 }
 
 button.account-btn {
-    text-decoration: none;
-    border: none;
-    background: none;
-    /* border-bottom: 1px solid; */
-    font-size: 27px;
-    display: block;
-    /* padding: 12px 0 11px 308px; */
-    text-align: left;
+	text-decoration: none;
+	border: none;
+	background: none;
+	/* border-bottom: 1px solid; */
+	font-size: 27px;
+	display: block;
+	/* padding: 12px 0 11px 308px; */
+	text-align: left;
 }
 
 button.btn.btn-primary.btnsave {
-    margin: 339px 0 0 250px;
-    padding: 21px 215px 11px 215px;
+	margin: 339px 0 0 250px;
+	padding: 21px 215px 11px 215px;
 }
 
 h1.changename {
-    font-size: 34px;
-    font-weight: 900;
-    margin-bottom: 66px;
-}	
+	font-size: 34px;
+	font-weight: 900;
+	margin-bottom: 66px;
+}
 
 .form-control {
-    display: block;
-    width: 100%;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	display: block;
+	width: 100%;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #495057;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: 0.25rem;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 #partitioned {
 	padding-left: 15px;
 	letter-spacing: 42px;
 	border: 0;
-	background-image: linear-gradient(to left, black 70%, rgba(255, 255, 255, 0) 0%);
+	background-image: linear-gradient(
+		to left,
+		black 70%,
+		rgba(255, 255, 255, 0) 0%
+	);
 	background-position: bottom;
 	background-size: 50px 1px;
 	background-repeat: repeat-x;
 	background-position-x: 35px;
 	width: 220px;
 	min-width: 220px;
-  }
-  
-  #divInner{
+}
+
+#divInner {
 	left: 0;
 	position: sticky;
-  }
-  
-  #divOuter{
-    width: 190px;
-    position: relative;
-    overflow: hidden;
-    left: 28%;
-  }
-  .bg-clr {
+}
+
+#divOuter {
+	width: 190px;
+	position: relative;
+	overflow: hidden;
+	left: 28%;
+}
+.bg-clr {
 	background: #3b5998;
 	color: white;
 	width: 100px;
@@ -1857,81 +1863,50 @@ h1.changename {
 } 
  */
 
-
-
- .ReactModal__Overlay.ReactModal__Overlay--after-open{
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
 	position: fixed !important;
-    /* inset: 0px; */
-    inset: 257px;
+	/* inset: 0px; */
+	inset: 257px;
 	background-color: rgba(82, 82, 82, 0.75) !important;
- }
- .ReactModal__Content.ReactModal__Content--after-open{
-	 
-
-    height: 350px;
-    margin: 0 auto;
-   /*  margin-top: -160px; */
-    width: 40%;
-    overflow-y: hidden !important;
-    padding: 20px;
-border-radius: 4px;
+}
+.ReactModal__Content.ReactModal__Content--after-open {
+	height: 350px;
+	margin: 0 auto;
+	/*  margin-top: -160px; */
+	width: 40%;
+	overflow-y: hidden !important;
+	padding: 20px;
+	border-radius: 4px;
 	outline: none;
 	border: 0px solid rgba(204, 204, 204, 0.438) !important;
-   /*  border: 0px solid rgb(204, 204, 204) !important; */
-   /*  background: rgb(255, 255, 255); */
-    /* overflow: auto;*/
-position: absolute;
-    overflow: auto;
+	/*  border: 0px solid rgb(204, 204, 204) !important; */
+	/*  background: rgb(255, 255, 255); */
+	/* overflow: auto;*/
+	position: absolute;
+	overflow: auto;
 	margin-top: 100px;
 	background: none !important;
- }
- p.font-logout{
-	 font-size: small;
- }
-
-
-
-
- h1.changename {
-    font-size: 34px;
-    font-weight: 900;
-    margin-bottom: 66px;
+}
+p.font-logout {
+	font-size: small;
 }
 
-
-
-
-
+h1.changename {
+	font-size: 34px;
+	font-weight: 900;
+	margin-bottom: 66px;
+}
 
 input.accountinput {
-    border-bottom: 1px solid black;
-    width: 100%;
-    font-size: 40px;
+	border-bottom: 1px solid black;
+	width: 100%;
+	font-size: 40px;
 }
 
 button.btn.btn-primary.btnsave {
-    margin: 205px 0 0 250px;
-    padding: 21px 215px 11px 215px;
+	margin: 205px 0 0 250px;
+	padding: 21px 215px 11px 215px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (min-width: 768px) and (max-width: 1300px) {
 	.footer_icons {

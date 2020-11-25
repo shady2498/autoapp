@@ -3,12 +3,14 @@ import ChangeName from "../components/changeName";
 import ChangePassword from "../components/changePassword";
 import ChangePin from "../components/changePin";
 import AddDevice from "../components/addNewDevice";
+import AccountLogout from "../components/accountLogout";
 export default function account() {
 	const [menu, setMenu] = useState({
 		changeName: false,
 		changePassword: false,
 		changePin: false,
 		addDevice: false,
+		accountLogout: false,
 	});
 	const toggleMenu = (item, open) => {
 		if (item.value == "changeName") {
@@ -18,6 +20,7 @@ export default function account() {
 				changePassword: false,
 				changePin: false,
 				addDevice: false,
+				accountLogout: false,
 			});
 			console.log(menu);
 		} else if (item.value == "changePassword") {
@@ -27,6 +30,7 @@ export default function account() {
 				changePassword: open,
 				changePin: false,
 				addDevice: false,
+				accountLogout: false,
 			});
 			console.log(menu);
 		} else if (item.value == "changePin") {
@@ -36,6 +40,7 @@ export default function account() {
 				changePassword: false,
 				changePin: open,
 				addDevice: false,
+				accountLogout: false,
 			});
 			console.log(menu);
 		} else if (item.value == "addDevice") {
@@ -45,6 +50,17 @@ export default function account() {
 				changePassword: false,
 				changePin: false,
 				addDevice: open,
+				accountLogout: false,
+			});
+			console.log(menu);
+		} else if (item.value == "accountLogout") {
+			setMenu({
+				...menu,
+				changeName: false,
+				changePassword: false,
+				changePin: false,
+				addDevice: false,
+				accountLogout: open,
 			});
 			console.log(menu);
 		} else {
@@ -70,6 +86,11 @@ export default function account() {
 		{
 			key: "addDevice",
 			value: "addDevice",
+			icon: "NotificationsIcon",
+		},
+		{
+			key: "accountLogout",
+			value: "accountLogout",
 			icon: "NotificationsIcon",
 		},
 	];
@@ -99,27 +120,29 @@ export default function account() {
 								>
 									{item.key}
 								</button>
-								<hr className="new5"/>
+								<hr className="new5" />
 							</>
 						))}
 					</div>
-<div className="col-md-6 col-sm-12  accountprofile   shadow p-3 mb-6 bg-white rounded" >
-			{(() => {
-				if (menu.changeName == true) {
-					return <ChangeName />;
-				} else if (menu.changePin == true) {
-					return <ChangePin />;
-				} else if (menu.changePassword == true) {
-					return <ChangePassword />;
-				} else if (menu.addDevice == true) {
-					return <AddDevice />;
-				} else {
-					return null;
-				}
-			})()}
+					<div className="col-md-6 col-sm-12  accountprofile   shadow p-3 mb-6 bg-white rounded">
+						{(() => {
+							if (menu.changeName == true) {
+								return <ChangeName />;
+							} else if (menu.changePin == true) {
+								return <ChangePin />;
+							} else if (menu.changePassword == true) {
+								return <ChangePassword />;
+							} else if (menu.addDevice == true) {
+								return <AddDevice />;
+							} else if (menu.accountLogout == true) {
+								return <AccountLogout />;
+							} else {
+								return null;
+							}
+						})()}
+					</div>
 				</div>
-				</div>
-				</div>
+			</div>
 		</>
 	);
 }
