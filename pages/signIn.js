@@ -3,6 +3,7 @@ import Link from "next/link";
 import SignIn from "../components/signIn";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faCar, } from "@fortawesome/free-solid-svg-icons";
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons' 
 
 
 

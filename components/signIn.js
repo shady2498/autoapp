@@ -1,10 +1,15 @@
 import React from "react";
 import useForm from "../customhooks/useForm";
 import Link from "next/link";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF,faGoogle,faGooglePlusG,faInstagram } from '@fortawesome/free-brands-svg-icons' 	
-import { FacebookLoginButton } from "react-social-login-buttons";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faFacebookF,faGoogle,faGooglePlusG,faInstagram } from '@fortawesome/free-brands-svg-icons' 	
+// import { FacebookLoginButton } from "react-social-login-buttons";
 import FacebookIcon from '@material-ui/icons/Facebook';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFacebookF,faGoogle } from "@fortawesome/free-brands-svg-icons"
+import InstagramIcon from '@material-ui/icons/Instagram';
+
+
 
 
 
@@ -62,25 +67,18 @@ export default function SignIn() {
 				
 				
 			
-				<div className="footer_icons">
-{/* 				
-				<i id="fastyle" class="fa fa-facebook fa-3x"></i> */}
+				<div  className="row footer-5  justify-content-center ">
+
+	{/* <div  clasName="footer_icons1" > */}
+
+	<FontAwesomeIcon className="facebook-facebook1" id="fastyles" icon={faFacebookF}  />
+				 <FontAwesomeIcon className="fa-google1" id="fastyles2" icon={faGoogle}  />
+				 <InstagramIcon  id="fastyle2" className="fa-instagram"/>
+			
+	</div>
 				
-
-
-				{/* <FacebookLoginButton  /> */}
-				{/*  <FontAwesomeIcon icon={faFacebookF } />  */}
-				{/* <FontAwesomeIcon icon={['fas', 'goggle']} />
-                <FontAwesomeIcon icon={['far', 'goggle']} /> */}
-                 {/* <FontAwesomeIcon icon={faGooglePlusG} /> */}
-				 <div className="bg-clr">
-				 <FacebookIcon id="fastyles"/></div>
-					
-				 <i id="fastyle" class="fa fa-facebook fa-3x"></i>
-                <i id="fastyle"  class="fa fa-google fa-3x"></i>
-                <i id="fastyle" class="fa fa-instagram fa-3x"></i> 
-				{/* <i class="fab fa-instagram"></i>*/}	 
-				</div>
+				{/* </div> */}
+		
                 <div class="needaccount">
                     <span>Need an account?</span><span style={{color: "blue"}}>Sign up </span>
                 </div>
