@@ -234,7 +234,7 @@ const summary = () => {
 								<section class="panel panel-featured-left panel-featured-secondary">
 									<div class="panel-body redclr">
 										<div class="widget-summary">
-											<Notifications />
+											<Notifications className="error-cross1" />
 										</div>
 									</div>
 									</section>

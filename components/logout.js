@@ -3,7 +3,7 @@ import Modal from "react-modal";
 
 Modal.setAppElement("*");
 
-export default function changePin() {
+export default function logout() {
 	const [modalIsOpen, setModalIsOpen] = useState(false);
 	const [state, setState] = useState({
 		pin: "",
@@ -50,10 +50,11 @@ export default function changePin() {
       <div class="modal-body text-center">
 	  <div id="divOuter">
   <div id="divInner row justify-content-center">
-<input id="partitioned" type="text" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  onKeyPress="if(this.value.length==4) return false;"/>
+  <h1 >Logout?</h1>
+					<p className="font-logout">Are you sure that you want to logout from auto camera app?</p>
   </div>
 </div>
-					<p className="text-center">Please type your pin</p>
+				
       </div>
       <div class="modal-footer row justify-content-center">
 	  <button type="button" class="btn btn-outline-primary" data-dismiss="modal" onClick={() => setModalIsOpen(false)}>Cancel</button>

@@ -731,7 +731,7 @@ address {
 	border-radius: 0px;
 }
 .col.coloumn-setting {
-	max-width: 25% !important;
+	max-width: 100% !important;
 }
 /* home */
 
@@ -744,8 +744,8 @@ address {
 }
 
 .card-img-top {
-	width: 318px !important;
-	height: 191px !important;
+	width: 100% !important;
+	height: 295px  !important;
 }
 body {
 	font-family: "Lato", sans-serif;
@@ -809,6 +809,11 @@ body {
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
+}
+
+.error-cross1{
+
+	transform: translate(81%, -94%);
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -1033,7 +1038,8 @@ small {
 	margin-bottom: 43px;
 }
 .widget-summary {
-	display: flex;
+	/* display: flex; */
+	display: block;
 	width: 100%;
 }
 /* a.text-muted.text-uppercase {
@@ -1076,6 +1082,7 @@ section.content-body {
 
 button#desktop-notice {
 	width: 100%;
+	height: 100px;
 }
 .btn-primary.btn-setting {
 	height: 42px !important;
@@ -1141,8 +1148,12 @@ section.paneling.panel-featured-left.panel-featured-secondary {
 }
 .error-cross {
 	/* 	transform: translate(216%, -90%); */
-	transform: translate(189%, -108%);
+	/* transform: translate(189%, -108%); */
+	-webkit-transform: translate(-15%,-65%);
 	color: black;
+	position: relative;
+    display: inline-block;
+    left: 50%;
 	/* float: right; */
 }
 
@@ -1326,7 +1337,7 @@ span.login_with {
 }
 
 .error-crosss {
-	transform: translate(50%, -40%);
+	transform: translate(47%, -117%);
 	color: black;
 }
 .col-md-12.change {
@@ -1574,7 +1585,10 @@ section.content-body {
 		-webkit-transform: translate(-2px, -3px);
 	}
 	.error-cross {
-		transform: translate(304%, -228%);
+		/* transform: translate(304%, -228%); */
+		transform: translate(425%, -70%);
+		color: black;
+		display: inline-block;
 	}
 
 	.table {
@@ -1687,6 +1701,198 @@ text.emailtext {
 	font-size: 26px;
 	margin: 29px 0 0 54px;
 }
+
+/*****Modal*****///
+.modal-header .close{
+	width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
+}
+
+
+button.close {
+	width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
+}
+.modal-header{
+     border-bottom: 0PX; 
+}
+.modal-footer{
+	    border-top: 0px ;
+}
+.modal-header .close {
+    padding: 1rem 1rem;
+    margin: 0rem 0rem -1rem auto;
+}
+
+button.account-btn {
+    text-decoration: none;
+    border: none;
+    background: none;
+    /* border-bottom: 1px solid; */
+    font-size: 27px;
+    display: block;
+    /* padding: 12px 0 11px 308px; */
+    text-align: left;
+}
+
+button.btn.btn-primary.btnsave {
+    margin: 339px 0 0 250px;
+    padding: 21px 215px 11px 215px;
+}
+
+h1.changename {
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 66px;
+}	
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#partitioned {
+	padding-left: 15px;
+	letter-spacing: 42px;
+	border: 0;
+	background-image: linear-gradient(to left, black 70%, rgba(255, 255, 255, 0) 0%);
+	background-position: bottom;
+	background-size: 50px 1px;
+	background-repeat: repeat-x;
+	background-position-x: 35px;
+	width: 220px;
+	min-width: 220px;
+  }
+  
+  #divInner{
+	left: 0;
+	position: sticky;
+  }
+  
+  #divOuter{
+    width: 190px;
+    position: relative;
+    overflow: hidden;
+    left: 28%;
+  }
+  .bg-clr {
+	background: #3b5998;
+	color: white;
+	width: 100px;
+	border-radius: 5px;
+}
+
+/* ReactModal__Content.ReactModal__Content--after-open {
+	position: absolute;
+    inset: 40px !important;
+     border: 0px solid rgb(204, 204, 204) !important; 
+    background: rgb(255, 255, 255);
+    /* overflow: auto; 
+    border-radius: 4px;
+    outline: none;
+	padding: 20px;
+	overflow-y: hidden !important;
+} */
+/*  .ReactModal__Overlay.ReactModal__Overlay--after-open{
+	inset: -55px !important;
+	inset: 12px;
+    width: 40%;
+	left: 33%;
+	
+
+
+	
+} 
+ */
+
+
+
+ .ReactModal__Overlay.ReactModal__Overlay--after-open{
+	position: fixed !important;
+    /* inset: 0px; */
+    inset: 257px;
+	background-color: rgba(82, 82, 82, 0.75) !important;
+ }
+ .ReactModal__Content.ReactModal__Content--after-open{
+	 
+
+    height: 350px;
+    margin: 0 auto;
+   /*  margin-top: -160px; */
+    width: 40%;
+    overflow-y: hidden !important;
+    padding: 20px;
+border-radius: 4px;
+	outline: none;
+	border: 0px solid rgba(204, 204, 204, 0.438) !important;
+   /*  border: 0px solid rgb(204, 204, 204) !important; */
+   /*  background: rgb(255, 255, 255); */
+    /* overflow: auto;*/
+position: absolute;
+    overflow: auto;
+	margin-top: 100px;
+	background: none !important;
+ }
+ p.font-logout{
+	 font-size: small;
+ }
+
+
+
+
+ h1.changename {
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 66px;
+}
+
+
+
+
+
+
+input.accountinput {
+    border-bottom: 1px solid black;
+    width: 100%;
+    font-size: 40px;
+}
+
+button.btn.btn-primary.btnsave {
+    margin: 205px 0 0 250px;
+    padding: 21px 215px 11px 215px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 768px) and (max-width: 1300px) {
 	.footer_icons {

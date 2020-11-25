@@ -38,7 +38,11 @@ export default function Notifications(props) {
 										id="desktop-notice"
 										className="mt-sm mb-sm btn btn-info"
 									>
-										<p>{notificationsdetail.title}</p>{" "}
+									
+										<p 
+										
+										 className="text-left"> <ErrorIcon class="ErrorIconred"/> {notificationsdetail.title}</p>{" "}
+										
 										<div className="error-crosss">
 											<CloseIcon onClick={() => handleDelete(index)} />
 										</div>

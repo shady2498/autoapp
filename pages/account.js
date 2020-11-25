@@ -3,7 +3,6 @@ import ChangeName from "../components/changeName";
 import ChangePassword from "../components/changePassword";
 import ChangePin from "../components/changePin";
 import AddDevice from "../components/addNewDevice";
-
 export default function account() {
 	const [menu, setMenu] = useState({
 		changeName: false,
@@ -11,7 +10,6 @@ export default function account() {
 		changePin: false,
 		addDevice: false,
 	});
-
 	const toggleMenu = (item, open) => {
 		if (item.value == "changeName") {
 			setMenu({
@@ -81,7 +79,7 @@ export default function account() {
 				<h1 className="profiletital">Account</h1>
 				<text>Here is something information that you must to know.</text>
 				<div className="row">
-					<div className="col-3 accountcard  shadow p-3 mb-6 bg-white rounded">
+					<div className="col-md-3 accountcard  shadow p-3 mb-6 bg-white rounded">
 						<img src="..\img\images.png" className="avatar" />
 						<br />
 						<strong className="Nameprofile"> Tomas Wilson </strong>
@@ -96,17 +94,16 @@ export default function account() {
 							<>
 								<button
 									key={index}
-									className="btn btn-primary"
+									className="account-btn"
 									onClick={() => toggleMenu(item, true)}
 								>
 									{item.key}
 								</button>
+								<hr className="new5"/>
 							</>
 						))}
 					</div>
-				</div>
-			</div>
-
+<div className="col-md-6 col-sm-12  accountprofile   shadow p-3 mb-6 bg-white rounded" >
 			{(() => {
 				if (menu.changeName == true) {
 					return <ChangeName />;
@@ -120,6 +117,9 @@ export default function account() {
 					return null;
 				}
 			})()}
+				</div>
+				</div>
+				</div>
 		</>
 	);
 }

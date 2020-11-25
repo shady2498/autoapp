@@ -1,7 +1,7 @@
 //this is for car stats. It will display data of car status at the present time for example speed, internet connection etc
 
 import React from "react";
-import carstats from "../data/carstats.json";
+import carstats from "../components/modalsetting";
 
 export default function CarStats() {
 	return (

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF,faGoogle,faGooglePlusG,faInstagram } from '@fortawesome/free-brands-svg-icons' 	
 import { FacebookLoginButton } from "react-social-login-buttons";
-
+import FacebookIcon from '@material-ui/icons/Facebook';
 
 
 
@@ -65,24 +65,21 @@ export default function SignIn() {
 				<div className="footer_icons">
 {/* 				
 				<i id="fastyle" class="fa fa-facebook fa-3x"></i> */}
-				<a class="btn btn-block btn-social btn-twitter">
-    <span class="fa fa-twitter"></span> Sign in with Twitter
-  </a>
+				
 
 
-  <a class="btn btn-social-icon btn-twitter">
-    <span class="fa fa-twitter"></span>
-  </a>
-				<FacebookLoginButton  />
-				 <FontAwesomeIcon icon={faFacebookF } /> 
+				{/* <FacebookLoginButton  /> */}
+				{/*  <FontAwesomeIcon icon={faFacebookF } />  */}
 				{/* <FontAwesomeIcon icon={['fas', 'goggle']} />
                 <FontAwesomeIcon icon={['far', 'goggle']} /> */}
-                 <FontAwesomeIcon icon={faGooglePlusG} />
-		
-				<i id="fastyle" class="fa fa-facebook fa-3x"></i>
+                 {/* <FontAwesomeIcon icon={faGooglePlusG} /> */}
+				 <div className="bg-clr">
+				 <FacebookIcon id="fastyles"/></div>
+					
+				 <i id="fastyle" class="fa fa-facebook fa-3x"></i>
                 <i id="fastyle"  class="fa fa-google fa-3x"></i>
-                <i id="fastyle" class="fa fa-instagram fa-3x"></i>
-				{/* <i class="fab fa-instagram"></i>	 */}
+                <i id="fastyle" class="fa fa-instagram fa-3x"></i> 
+				{/* <i class="fab fa-instagram"></i>*/}	 
 				</div>
                 <div class="needaccount">
                     <span>Need an account?</span><span style={{color: "blue"}}>Sign up </span>

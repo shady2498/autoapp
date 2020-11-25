@@ -24,7 +24,7 @@ export default function Recordings(props) {
 											loading="lazy"
 											key={index}
 											url={recordings.video}
-											width="100px !important"
+											//width="100px !important"
 											height="194px !important"
 										/>
 									</div>

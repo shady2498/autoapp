@@ -58,7 +58,7 @@ export default function home() {
 								<div className="widget-profile-info">
 									<div className="profile-picture">
 										<span className="blue-line"></span>
-										<img src="#" alt="Avatar" className="avatar" />
+										<img src="..\img\images.png"  alt="Avatar" className="avatar" />
 									</div>
 									<div className="profile-info">
 										<h4 className="name text-semibold">John Doe</h4>
@@ -74,7 +74,7 @@ export default function home() {
 								<div className="widget-profile-info">
 									<div className="profile-picture">
 										<span className="blue-line"></span>
-										<img src="#" alt="Avatar" className="avatar" />
+										<img src="..\img\images.png"  alt="Avatar" className="avatar" />
 									</div>
 									<div className="profile-info">
 										<h4 className="name text-semibold">John Doe</h4>
