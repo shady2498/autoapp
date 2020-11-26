@@ -1,7 +1,5 @@
-import NewSideBaring from "../components/sideBar";
-import SideBar from "../components/sideBar";
-import { makeStyles } from "@material-ui/core/styles";
+import React from "react";
 
 export default function Home() {
-	return <SideBar />;
+	return <>Index</>;
 }

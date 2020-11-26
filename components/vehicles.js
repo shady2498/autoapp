@@ -11,7 +11,7 @@ export default function Vehicles(props) {
 						.reverse()
 						.map((vehicles, index) => {
 							return (
-								<div className="actvitybox">
+								<div className="actvitybox" key={index}>
 									<div className="media">
 										<img
 											id="avatar1"

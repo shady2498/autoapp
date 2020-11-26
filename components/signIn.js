@@ -56,7 +56,7 @@ export default function SignIn() {
 						name="for[]"
 						required=""
 					/>
-					<label for="for-project">My Project</label>
+					<label htmlFor="for-project">My Project</label>
 				</div>
 				<Link href="/home" passHref>
 					<button
