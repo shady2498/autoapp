@@ -1,7 +1,6 @@
 import React from "react";
 import Recordings from "../components/recordings";
 import TopMenuBar from "../components/topMenuBar";
-import SideBar from "../components/sideBar";
 
 export default function recording() {
 	return (

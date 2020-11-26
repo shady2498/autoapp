@@ -40,7 +40,7 @@ export default function Notifications(props) {
 									>
 										<p className="text-left">
 											{" "}
-											<ErrorIcon class="ErrorIconred" />{" "}
+											<ErrorIcon className="ErrorIconred" />{" "}
 											{notificationsdetail.title}
 										</p>{" "}
 										<div className="error-crosss">
@@ -53,17 +53,17 @@ export default function Notifications(props) {
 							return (
 								<>
 									<div key={index} className="king">
-										<div class="widget-summary">
+										<div className="widget-summary">
 											<div className="widget-summary-col widget-summary-col-icon">
-												<div class="summary-icon ">
+												<div className="summary-icon ">
 													<ErrorIcon />
 												</div>
 											</div>
-											<div class="summaryies">
-												<h4 class="title">{notificationsdetail.title}</h4>
+											<div className="summaryies">
+												<h4 className="title">{notificationsdetail.title}</h4>
 											</div>
-											<div class="summary-footer">
-												<a class="text-muted text-uppercase">
+											<div className="summary-footer">
+												<a className="text-muted text-uppercase">
 													{notificationsdetail.detail}
 												</a>
 											</div>

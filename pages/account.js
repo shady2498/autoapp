@@ -4,6 +4,7 @@ import ChangePassword from "../components/changePassword";
 import ChangePin from "../components/changePin";
 import AddDevice from "../components/addNewDevice";
 import AccountLogout from "../components/accountLogout";
+
 export default function account() {
 	const [menu, setMenu] = useState({
 		changeName: false,
@@ -22,7 +23,7 @@ export default function account() {
 				addDevice: false,
 				accountLogout: false,
 			});
-			console.log(menu);
+			// console.log(menu);
 		} else if (item.value == "changePassword") {
 			setMenu({
 				...menu,
@@ -32,7 +33,6 @@ export default function account() {
 				addDevice: false,
 				accountLogout: false,
 			});
-			console.log(menu);
 		} else if (item.value == "changePin") {
 			setMenu({
 				...menu,
@@ -42,7 +42,6 @@ export default function account() {
 				addDevice: false,
 				accountLogout: false,
 			});
-			console.log(menu);
 		} else if (item.value == "addDevice") {
 			setMenu({
 				...menu,
@@ -52,7 +51,6 @@ export default function account() {
 				addDevice: open,
 				accountLogout: false,
 			});
-			console.log(menu);
 		} else if (item.value == "accountLogout") {
 			setMenu({
 				...menu,
@@ -62,12 +60,11 @@ export default function account() {
 				addDevice: false,
 				accountLogout: open,
 			});
-			console.log(menu);
 		} else {
 			console.log("nothign");
 		}
 	};
-	const menukk = [
+	const menuDisplay = [
 		{
 			key: "name",
 			value: "changeName",
@@ -111,17 +108,17 @@ export default function account() {
 						<br />
 						<h4>Tomas Wilson </h4>
 						<hr className="new5" />
-						{menukk.map((item, index) => (
-							<>
+						{/* loops the menu  */}
+						{menuDisplay.map((item, index) => (
+							<React.Fragment key={index}>
 								<button
-									key={index}
 									className="account-btn"
 									onClick={() => toggleMenu(item, true)}
 								>
 									{item.key}
 								</button>
 								<hr className="new5" />
-							</>
+							</React.Fragment>
 						))}
 					</div>
 					<div className="col-md-6 col-sm-12  accountprofile   shadow p-3 mb-6 bg-white rounded">
@@ -129,13 +126,13 @@ export default function account() {
 							if (menu.changeName == true) {
 								return <ChangeName />;
 							} else if (menu.changePin == true) {
-								return <ChangePin />;
+								return <ChangePin set={true} />;
 							} else if (menu.changePassword == true) {
 								return <ChangePassword />;
 							} else if (menu.addDevice == true) {
 								return <AddDevice />;
 							} else if (menu.accountLogout == true) {
-								return <AccountLogout />;
+								return <AccountLogout set={true} />;
 							} else {
 								return null;
 							}

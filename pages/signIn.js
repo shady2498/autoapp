@@ -6,11 +6,12 @@ import { faHome, faCar, } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons' 
 
 
+import { faHome, faCar } from "@fortawesome/free-solid-svg-icons";
 
 export default function signIn() {
 	return (
 		<>
-				<div className="row">
+			<div className="row">
 				<div className="col-md-6  login-bg-img">
 					<img className="img_size" src="./img/wifi.png" />
 
@@ -49,14 +50,12 @@ export default function signIn() {
 						<h1 className="h2mainstyle"> Auto Camera App </h1>
 					</div>
 					<div className="form_style">
-
-					{/* <span style={{color: "black",textAlign:"center"}}>or login with </span> */}
+						{/* <span style={{color: "black",textAlign:"center"}}>or login with </span> */}
 						<SignIn />
-						
+
 						<br />
 
 						<br />
-						
 
 						{/* <div className="needaccount">
 							<span>Need an account?</span>

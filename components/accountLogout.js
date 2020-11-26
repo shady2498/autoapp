@@ -4,28 +4,22 @@ import Modal from "react-modal";
 Modal.setAppElement("*");
 
 // account logout modal
-export default function accountlogout() {
-	const [modalIsOpen, setModalIsOpen] = useState(false);
+export default function accountlogout(props) {
+	const [modalIsOpen, setModalIsOpen] = useState(props.set);
 	return (
 		<>
 			<div>
-				<button
-					class="btn btn-outline-primary"
-					onClick={() => setModalIsOpen(true)}
-				>
-					Logout
-				</button>
 				<Modal
 					isOpen={modalIsOpen}
 					onRequestClose={() => setModalIsOpen(false)}
 				>
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								{/*  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> */}
+					<div className="modal-dialog" role="document">
+						<div className="modal-content">
+							<div className="modal-header">
+								{/*  <h5 className="modal-title" id="exampleModalLabel">Modal title</h5> */}
 								<button
 									type="button"
-									class="close"
+									className="close"
 									data-dismiss="modal"
 									aria-label="Close"
 									onClick={() => setModalIsOpen(false)}
@@ -33,7 +27,7 @@ export default function accountlogout() {
 									<span aria-hidden="true">&times;</span>
 								</button>
 							</div>
-							<div class="modal-body text-center">
+							<div className="modal-body text-center">
 								<div id="divOuter">
 									<div id="divInner row justify-content-center">
 										<h1>Logout?</h1>
@@ -43,16 +37,16 @@ export default function accountlogout() {
 									</div>
 								</div>
 							</div>
-							<div class="modal-footer row justify-content-center">
+							<div className="modal-footer row justify-content-center">
 								<button
 									type="button"
-									class="btn btn-outline-primary"
+									className="btn btn-outline-primary"
 									data-dismiss="modal"
 									onClick={() => setModalIsOpen(false)}
 								>
 									Cancel
 								</button>
-								<button class="btn btn-primary">Logout</button>
+								<button className="btn btn-primary">Logout</button>
 							</div>
 						</div>
 					</div>

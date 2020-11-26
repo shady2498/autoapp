@@ -59,7 +59,7 @@ export default function home() {
 											<h5 className="card-title text-uppercase">
 												<small className="noti"> Notifications</small>
 											</h5>
-											<text className="sep">18 September 2020</text>
+											<p className="sep">18 September 2020</p>
 											<section className="panel panel-featured-left panel-featured-secondary">
 												<div className="panel-body redclr">
 													<div className="widget-summary">

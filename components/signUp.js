@@ -54,7 +54,12 @@ export default function SignIn() {
 				/>
 			</div>
 
-			<button type="button" class="mb-xs mt-xs mr-xs btn btn-primary btn-lg btn-block">Sign Up</button>
+			<button
+				type="button"
+				className="mb-xs mt-xs mr-xs btn btn-primary btn-lg btn-block"
+			>
+				Sign Up
+			</button>
 		</form>
 	);
 }
