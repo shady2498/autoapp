@@ -30,11 +30,12 @@ export default function home() {
 
 	return (
 		<>
+		
 			<div className={classes.root}>
-				<SideBar />
+			<SideBar />
 				<main className={classes.content}>
 					<div className={classes.toolbar} />
-
+<div className="maindivhome">
 					{/* map  */}
 					<section className="map_sect_one">
 						<div className="maparea">
@@ -84,7 +85,7 @@ export default function home() {
 											<Vehicles show={3} />
 										</div>
 									</div>
-									<header className="panel-heading bg-color mt-5">
+									{/* <header className="panel-heading bg-color mt-5">
 										<div className="widget-profile-info">
 											<div className="profile-picture">
 												<span className="blue-line"></span>
@@ -123,7 +124,7 @@ export default function home() {
 												</div>
 											</div>
 										</div>
-									</header>
+									</header> */}
 								</div>
 							</div>
 						</div>
@@ -136,6 +137,7 @@ export default function home() {
 							<Recordings show={4} />
 						</div>
 					</section>
+					</div>
 				</main>
 			</div>
 		</>

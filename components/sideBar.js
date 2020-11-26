@@ -1,6 +1,5 @@
 import React from "react";
 import vehiclesData from "../data/vehicles.json";
-
 import clsx from "clsx";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
@@ -15,6 +14,17 @@ import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
+import ArrowLeftIcon from "@material-ui/icons/ArrowLeft";
+import Avatar from "@material-ui/core/Avatar";
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import AppsIcon from '@material-ui/icons/Apps';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import LiveTvIcon from '@material-ui/icons/LiveTv';
+
+import LanguageIcon from '@material-ui/icons/Language';
+
+
+
 
 const drawerWidth = 378;
 const anchor = "left";
@@ -155,9 +165,18 @@ export default function sideBar() {
 						[classes.hide]: open,
 					})}
 				>
-					<MenuIcon />
+					<ArrowRightIcon className="Arrowsidebar" />
 				</IconButton>
 			</div>
+			<div className={classes.toolbar}>
+					<IconButton onClick={handleDrawerClose}>
+						{theme.direction === "rtl" ? (
+							<ChevronRightIcon />
+						) : (
+							<ArrowLeftIcon className="arrowleft21" />
+						)}
+					</IconButton>
+				</div>
 			<Drawer
 				variant="permanent"
 				className={clsx(classes.drawer, {
@@ -171,32 +190,26 @@ export default function sideBar() {
 					}),
 				}}
 			>
-				<div className={classes.toolbar}>
-					<IconButton onClick={handleDrawerClose}>
-						{theme.direction === "rtl" ? (
-							<ChevronRightIcon />
-						) : (
-							<ChevronLeftIcon />
-						)}
-					</IconButton>
-				</div>
+			
 
 				<div className="row">
+				<Avatar alt="Remy Sharp" src="..\img\images.png"></Avatar>
 					<h1 className="h1name">TOMAS WIlSON</h1>
 					<text className="emailtext">Luckytom@rach</text>
 				</div>
 
 				<Divider />
 				<List>
-					<p>option 1</p>
-					<p>option 1</p>
-					<p>option 1</p>
-					<p>option 1</p>
-					<p>option 1</p>
-					<p>option 1</p>
-					<p>option 1</p>
-					<p>option 1</p>
-				</List>
+				
+				<li className="liindrawer"> <LanguageIcon className="icone_size"/> <span className="icontextsidebar">Home</span></li>
+				<li className="liindrawer" > <NotificationsIcon className="icone_size" /> <span className="icontextsidebar">Notifications </span>  </li>
+				<li className="liindrawer" > <AppsIcon className="icone_size" /> <span className="icontextsidebar"> View All </span> </li>
+				<li className="liindrawer" > <AccountCircleIcon className="icone_size" /><span className="icontextsidebar"> </span> Account </li>
+                <li className="liindrawer" > <LiveTvIcon className="icone_size"  /><span className="icontextsidebar"> Add new device </span> </li>
+					
+					</List>
+
+
 				<ListItem button>
 					<React.Fragment key={anchor}>
 						<a onClick={toggleDrawer(anchor, true)}>

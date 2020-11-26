@@ -4,21 +4,25 @@ import vehicles from "../data/vehicles.json";
 export default function Vehicles(props) {
 	return (
 		<div>
-			<h1>Vehicles</h1>
 			{props.show !== undefined && props.show !== "all"
 				? vehicles
 						.slice(vehicles.length - props.show, vehicles.length)
 						.reverse()
 						.map((vehicles, index) => {
 							return (
+								<header className="panel-heading bg-color mt-5">
 								<div className="actvitybox">
 									<div className="media">
+									<div className="widget-profile-info">
+									<div className="profile-picture">
+									<span className="blue-line"></span>
 										<img
 											id="avatar1"
-											src={vehicles.image}
+											src="..\img\images.png"
 											className="mr-3 mt-3 rounded-circle"
 											style={{ width: 60 }}
 										/>
+										</div>
 										<div className="media-body">
 											<h4>
 												<strong key={index}> {vehicles.CarOwner}</strong>
@@ -34,6 +38,9 @@ export default function Vehicles(props) {
 										</div>
 									</div>
 								</div>
+								</div>
+							
+								</header>
 							);
 						})
 				: vehicles.reverse().map((vehicles, index) => {

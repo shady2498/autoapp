@@ -1,10 +1,31 @@
 import React from "react";
 import Notifications from "../components/Notifications";
+import SideBar from "../components/sideBar";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+	root: {
+		display: "flex",
+	},
+	toolbar: {
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "flex-end",
+		padding: theme.spacing(0, 1),
+		// necessary for content to be below app bar
+		...theme.mixins.toolbar,
+	},
+	content: {
+		flexGrow: 1,
+		padding: theme.spacing(3),
+	},
+}));
 
 export default function notifications() {
 	return (
 		<>
 			<div>
+			<SideBar />
 				<section role="main" class="content-body">
 					<div className="container-fluid">
 						<div className="col-md-10 col-sm-6 offset-md-3    ">
