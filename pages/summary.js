@@ -292,7 +292,7 @@ const summary = () => {
 																	<th>Drive Score</th>
 																</tr>
 															</thead>
-															<DriverRating show={4} />
+															<DriverRating show={3} />
 														</div>
 													</div>
 												</tbody>
