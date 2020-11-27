@@ -521,8 +521,9 @@ body {
 
 svg.MuiSvgIcon-root.Arrowsidebar {
     position: absolute;
-    left: 39px;
-    top: 293px;
+    left: 53px;
+	top: 471px;
+	position: fixed;
 }
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 
@@ -1530,8 +1531,8 @@ section.content-body {
 }
 
 .iframeallCameras {
-	width: 620px;
-	height: 339px;
+	width: 556px;
+	height: 279px;
 	padding: 0 0 0 6px;
 }
 .H1viewall {
@@ -1566,6 +1567,10 @@ p.card-text.cardtextrecording {
     margin: -117px 0 0 -25px;
 }
 
+.driverbody{
+	height: 155%;
+
+}
 @media only screen and (max-width: 600px) {
 	.btn:not(:disabled):not(.disabled) {
 		margin: 0px;
@@ -1979,7 +1984,9 @@ input.form-control.fa-search.searchinput.rec_search {
 h3.h3recording {
     font-size: 27px;
 }
-
+.recordingmain {
+    margin: -16px 0 0 -31px;
+}
 
 
 

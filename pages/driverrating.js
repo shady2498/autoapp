@@ -35,10 +35,10 @@ export default function driverrating() {
 				<main className={classes.content}>
 					<div className={classes.toolbar} />
 
-			<section role="main" className="content-body">
+			<section role="main" className="content-body driverbody ">
 				<div className="container">
 					<div className="row">
-						<div className="col-md-12">
+						<div className="col-md-12 ">
 							<section className="panel top-settings	">
 								<header className="panel-heading">
 									<div className="panel-actions">
