@@ -21,9 +21,16 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
+
 export default function notifications() {
+	const classes = useStyles();
+	    const theme = useTheme();
 	return (
 		<>
+	<div className={classes.root}>
+				<SideBar />
+				<main className={classes.content}>
+					<div className={classes.toolbar} />
 			<div>
 				<section role="main" className="content-body">
 					<div className="container-fluid">
@@ -84,6 +91,8 @@ export default function notifications() {
 						</div>
 					</div>
 				</section>
+			</div>
+			</main>
 			</div>
 		</>
 	);

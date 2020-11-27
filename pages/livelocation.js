@@ -30,12 +30,12 @@ export default function livelocation() {
 
 	return (
 		<>
-			<TopBar />
+			
 			<div className={classes.root}>
 				<SideBar />
 				<main className={classes.content}>
 					<div className={classes.toolbar} />
-
+					<TopBar />
 					<LiveLocation />
 				</main>
 			</div>

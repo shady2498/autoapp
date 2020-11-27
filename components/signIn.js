@@ -10,17 +10,7 @@ import { faFacebookF,faGoogle } from "@fortawesome/free-brands-svg-icons"
 import InstagramIcon from '@material-ui/icons/Instagram';
 
 
-
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faFacebookF,
-	faGoogle,
-	faGooglePlusG,
-	faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
 import { FacebookLoginButton } from "react-social-login-buttons";
-import FacebookIcon from "@material-ui/icons/Facebook";
 
 export default function SignIn() {
 	const { handleChange, values } = useForm();
@@ -117,19 +107,19 @@ export default function SignIn() {
 					{/* <FontAwesomeIcon icon={['fas', 'goggle']} />
                 <FontAwesomeIcon icon={['far', 'goggle']} /> */}
 					{/* <FontAwesomeIcon icon={faGooglePlusG} /> */}
-					<div className="bg-clr">
+					{/* <div className="bg-clr">
 						<FacebookIcon id="fastyles" />
-					</div>
+					</div> */}
 
-					<i id="fastyle" className="fa fa-facebook fa-3x"></i>
+					{/* <i id="fastyle" className="fa fa-facebook fa-3x"></i>
 					<i id="fastyle" className="fa fa-google fa-3x"></i>
 					<i id="fastyle" className="fa fa-instagram fa-3x"></i>
-					{/* <i className="fab fa-instagram"></i>*/}
+					<i className="fab fa-instagram"></i> */}
 				</div>
-				<div className="needaccount">
+				{/* <div className="needaccount">
 					<span>Need an account?</span>
 					<span style={{ color: "blue" }}>Sign up </span>
-				</div>
+				</div> */}
 			</form>
 		</>
 	);

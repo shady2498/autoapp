@@ -6,7 +6,6 @@ import { faHome, faCar, } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons' 
 
 
-import { faHome, faCar } from "@fortawesome/free-solid-svg-icons";
 
 export default function signIn() {
 	return (

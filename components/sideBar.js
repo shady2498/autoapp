@@ -204,7 +204,7 @@ export default function sideBar() {
 				<li className="liindrawer"> <LanguageIcon className="icone_size"/> <span className="icontextsidebar">Home</span></li>
 				<li className="liindrawer" > <NotificationsIcon className="icone_size" /> <span className="icontextsidebar">Notifications </span>  </li>
 				<li className="liindrawer" > <AppsIcon className="icone_size" /> <span className="icontextsidebar"> View All </span> </li>
-				<li className="liindrawer" > <AccountCircleIcon className="icone_size" /><span className="icontextsidebar"> </span> Account </li>
+				<li className="liindrawer" > <AccountCircleIcon className="icone_size" /><span className="icontextsidebar">  Account </span> </li>
                 <li className="liindrawer" > <LiveTvIcon className="icone_size"  /><span className="icontextsidebar"> Add new device </span> </li>
 					
 					</List>

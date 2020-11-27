@@ -6,12 +6,37 @@ import TopBar from "../components/topMenuBar";
 import SideBar from "../components/sideBar";
 import ErrorIcon from "@material-ui/icons/Error";
 import CloseIcon from "@material-ui/icons/Close";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+	root: {
+		display: "flex",
+	},
+	toolbar: {
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "flex-end",
+		padding: theme.spacing(0, 1),
+		// necessary for content to be below app bar
+		...theme.mixins.toolbar,
+	},
+	content: {
+		flexGrow: 1,
+		padding: theme.spacing(3),
+	},
+}));
 
 const summary = () => {
+	const classes = useStyles();
+	const theme = useTheme();
 	return (
 		<>
+		<div className={classes.root}>
+			<SideBar />
+			<main className={classes.content}>
+					<div className={classes.toolbar} />
 			<section role="main" className="content-body col-sm-12">
-				{/* <SideBar /> */}
+			
 				<TopBar />
 				<div className="row">
 					<div className="col-md-8 col-sm-12  mt-5">
@@ -257,6 +282,8 @@ const summary = () => {
 					</div>
 				</div>
 			</section>
+			</main>
+			</div>
 		</>
 	);
 };

@@ -4,6 +4,28 @@ import ChangePassword from "../components/changePassword";
 import ChangePin from "../components/changePin";
 import AddDevice from "../components/addNewDevice";
 import AccountLogout from "../components/accountLogout";
+import TopBar from "../components/topMenuBar";
+import SideBar from "../components/sideBar";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+	root: {
+		display: "flex",
+	},
+	toolbar: {
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "flex-end",
+		padding: theme.spacing(0, 1),
+		// necessary for content to be below app bar
+		...theme.mixins.toolbar,
+	},
+	content: {
+		flexGrow: 1,
+		padding: theme.spacing(3),
+	},
+}));
+
 
 export default function account() {
 	const [menu, setMenu] = useState({
@@ -91,8 +113,15 @@ export default function account() {
 			icon: "NotificationsIcon",
 		},
 	];
+	const classes = useStyles();
+	const theme = useTheme();
 	return (
 		<>
+
+<div className={classes.root}>
+				<SideBar />
+				<main className={classes.content}>
+					<div className={classes.toolbar} />
 			<div className="profilebodycolour">
 				<h1 className="profiletital">Account</h1>
 				<text>Here is something information that you must to know.</text>
@@ -139,6 +168,8 @@ export default function account() {
 						})()}
 					</div>
 				</div>
+			</div>
+			</main>
 			</div>
 		</>
 	);

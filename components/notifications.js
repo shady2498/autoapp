@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import notificationsdata from "../data/notifications.json";
 import ErrorIcon from "@material-ui/icons/Error";
 import CloseIcon from "@material-ui/icons/Close";
+import TopBar from "../components/topMenuBar";
+import SideBar from "../components/sideBar";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 
 export default function Notifications(props) {
 	const [show, setShow] = useState(notificationsdata);

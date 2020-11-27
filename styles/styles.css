@@ -1,5 +1,7 @@
 html{
 	height: 100%;
+	/* <link rel="preconnect" href="https://fonts.gstatic.com"> */
+
 }
 * {
 	padding: 0%;
@@ -1028,6 +1030,7 @@ small {
 
 #avatar1 {
 	border: 5px solid #0081e3;
+	width: 81px;
 }
 
 .sep {
@@ -1466,13 +1469,15 @@ span.login_with {
 }
 span.blue-line {
 	border-left: 6px solid #7074dd;
-	height: 90px;
+	height: 95px;
 	position: absolute;
-	left: 12%;
+	left: 1%;
+    top: 62%;
 }
 
 header.panel-heading.bg-color {
 	background-color: aliceblue;
+	font-size: 20px;
 }
 section.panel.top-settings {
 	margin-top: 40px;
@@ -1746,9 +1751,9 @@ text.emailtext {
 	display: none;
 }
 .selectvehicle {
-	font-size: 29px;
+	font-size: 32px;
 	font-weight: 900;
-	margin: 215px 0 0 68px;
+	margin: 215px 0 0 0px;
 }
 .MuiTypography-displayBlock {
 	display: block;
