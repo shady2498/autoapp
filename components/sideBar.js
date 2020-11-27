@@ -226,7 +226,7 @@ export default function sideBar() {
 					<React.Fragment key={anchor}>
 						<a onClick={toggleDrawer(anchor, true)}>
 							{" "}
-							<ArrowRightIcon />{" "}
+							<ArrowRightIcon className="arrowbtn12" />{" "}
 						</a>
 						<Drawer
 							classes={{

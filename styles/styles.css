@@ -1571,6 +1571,13 @@ p.card-text.cardtextrecording {
 	height: 155%;
 
 }
+
+svg.MuiSvgIcon-root.arrowbtn12 {
+    position: absolute;
+    right: 182px;
+    top: -371px;
+    /* font-size: 0px; */
+}
 @media only screen and (max-width: 600px) {
 	.btn:not(:disabled):not(.disabled) {
 		margin: 0px;
