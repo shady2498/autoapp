@@ -4,8 +4,6 @@ import TopMenuBar from "../components/topMenuBar";
 import SideBar from "../components/sideBar";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 
-
-
 const useStyles = makeStyles((theme) => ({
 	root: {
 		display: "flex",
@@ -29,33 +27,32 @@ export default function recording() {
 	return (
 		<>
 			<div className={classes.root}>
-			<SideBar />
-		  <main className={classes.content}>
-			<div className={classes.toolbar} />
-			<TopMenuBar />
-			<div>
-				<h1 className="h1Recording">Recordings </h1>
-				<text>here is something information you must know</text>
-				<div className="row">
-					<input
-						type="search"
-						className="form-control rec_search fa-search searchinput"
-						placeholder="Search for video "
-						aria-autocomplete="list"
-						aria-expanded="false"
-					/>
-					<button type="button" className="btn btn-primary btn-radius_30">
-						Search
-					</button>
-					<button type="button" className="btn btn-light btn-radius_30">
-						Cancel
-					</button>
-				</div>
-				<Recordings />
+				<SideBar />
+				<main className={classes.content}>
+					<div className={classes.toolbar} />
+					<TopMenuBar />
+					<div>
+						<h1 className="h1Recording">Recordings </h1>
+						<p>here is something information you must know</p>
+						<div className="row">
+							<input
+								type="search"
+								className="form-control rec_search fa-search searchinput"
+								placeholder="Search for video "
+								aria-autocomplete="list"
+								aria-expanded="false"
+							/>
+							<button type="button" className="btn btn-primary btn-radius_30">
+								Search
+							</button>
+							<button type="button" className="btn btn-light btn-radius_30">
+								Cancel
+							</button>
+						</div>
+						<Recordings />
+					</div>
+				</main>
 			</div>
-		</main>
-		</div>
-	
 		</>
 	);
 }

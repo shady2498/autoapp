@@ -22,13 +22,13 @@ export default function addnewdevice() {
 						<h2 className="card-title">Unknow Devices</h2>
 						<p className="card-text"># 34215678443</p>
 						<p className="card-text">Connected by 02!22 PM</p>
-						<text>
+						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 							enim ad minim veniam Lorem ipsum dolor sit amet, consectetur
 							adipiscing elit, sed do eiusmod tempor incididunt ut labore et
 							dolore magna aliqua.
-						</text>
+						</p>
 						<a href="#" className="btn btn-primary">
 							Connect
 						</a>

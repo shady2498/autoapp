@@ -46,7 +46,7 @@ export default function Recordings(props) {
 										<h5 className="card-title carddate">
 											Sept 20,2020,08:03PM
 										</h5>
-										{/* <text className="textcard">Sept 18,2020,03:57</text>{" "} */}
+										{/* <text className="textcard">Sept 18,2020,03:57</p>{" "} */}
 										<span className="ytp-overflow-icon"></span>
 										<h3 className="h3recording">
 											{" "}
@@ -56,9 +56,9 @@ export default function Recordings(props) {
 										<p className="card-text cardtextrecording">
 											Private 0 MPH 1019.11MB{" "}
 										</p>
-										<text className="textrecording">
+										<p className="textrecording">
 											Uploaded from Zoe's Car Invalod date ago
-										</text>
+										</p>
 									</div>
 								</div>
 							</div>

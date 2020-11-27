@@ -28,7 +28,6 @@ export default function liveview() {
 	const theme = useTheme();
 	return (
 		<>
-			
 			<div className={classes.root}>
 				<SideBar />
 				<main className={classes.content}>

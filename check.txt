@@ -270,7 +270,7 @@ sdsd
 						<h1>Change name</h1>
 
 						<div className="profilename">
-							<text>Name</text>
+							<p>Name</p>
 							<h1>Tomas Wilson</h1>
 							<hr className="new5  hrheights" />
 						</div>
@@ -362,7 +362,7 @@ export default function account() {
 		<>
 			<div className="profilebodycolour">
 				<h1 className="profiletital">Account</h1>
-				<text>Here is something information that you must to know.</text>
+				<p>Here is something information that you must to know.</p>
 				<div className="row">
 					<div className="col-md-3 col-sm-12  accountcard  shadow p-3 mb-6 bg-white rounded">
 						<img src="..\img\images.png" className="avatar" />
@@ -370,14 +370,14 @@ export default function account() {
 
 						<strong className="Nameprofile"> Tomas Wilson </strong>
 						<br />
-						<text className="profileemail"> luckytom@rach </text>
+						<text className="profileemail"> luckytom@rach </p>
 
 						<br />
-						<text>Name</text>
+						<p>Name</p>
 						<br />
 						<h4>Tomas Wilson </h4>
 						<hr className="new5" />
-						<text>Email Address</text>
+						<p>Email Address</p>
 						<br />
 						<h4>luckytom@rach</h4>
 						<hr className="new5" />
@@ -398,7 +398,7 @@ export default function account() {
 						<h1 className="profileH1">Change Password</h1>
 
 						<div className="profilename">
-							<text className="paswordtext">Old Password</text>
+							<text className="paswordtext">Old Password</p>
 							<div className="md-form mt-0">
 								<input
 									className="form-control inputprofile"
@@ -407,7 +407,7 @@ export default function account() {
 									aria-label=""
 								/>
 							</div>
-							<text className="paswordtext">New Password</text>
+							<text className="paswordtext">New Password</p>
 							<div className="md-form mt-0">
 								<input
 									className="form-control inputprofile"
@@ -416,7 +416,7 @@ export default function account() {
 									aria-label=""
 								/>
 							</div>
-							<text className="paswordtext">Re-Password</text>
+							<text className="paswordtext">Re-Password</p>
 							<div className="md-form mt-0">
 								<input
 									className="form-control inputprofile"

@@ -242,7 +242,7 @@ const summary = () => {
 									</header>
 									<div className="panel-body">
 										<h2 className="panel-title">Desktop Notifications</h2>
-										{/* <Notifications  /> */}
+
 										<div className="col-md-12 offset-md-1	">
 											<div className="row">
 												<button
@@ -282,7 +282,19 @@ const summary = () => {
 										<div className="table-responsive">
 											<table className="table table-striped mb-none">
 												<tbody>
-													<DriverRating show={4} />
+													<div>
+														<div>
+															<thead>
+																<tr>
+																	<th>#</th>
+																	<th>Name</th>
+																	<th>Last Driven</th>
+																	<th>Drive Score</th>
+																</tr>
+															</thead>
+															<DriverRating show={4} />
+														</div>
+													</div>
 												</tbody>
 											</table>
 										</div>

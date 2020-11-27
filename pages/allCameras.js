@@ -3,7 +3,6 @@ import TopBar from "../components/topMenuBar";
 import SideBar from "../components/sideBar";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 
-
 const useStyles = makeStyles((theme) => ({
 	root: {
 		display: "flex",
@@ -23,93 +22,91 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function allCameras() {
-	
 	const classes = useStyles();
 	const theme = useTheme();
 
-	
 	return (
 		<>
-		<div className={classes.root}>
+			<div className={classes.root}>
 				<SideBar />
 				<main className={classes.content}>
 					<div className={classes.toolbar} />
-			<h1 className="H1viewall">View All Cameras</h1>
-			<p className="Pviewall">
-				Here is something information that you must to know.{" "}
-			</p>
-			<div className="row">
-				<div className="col-md-4">
-					<iframe
-						className="iframeallCameras"
-						src="https://www.youtube.com/embed/bHWgc5MPnPA"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-					></iframe>
-					<iframe
-						className="iframeallCameras"
-						src="https://www.youtube.com/embed/bHWgc5MPnPA"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-					></iframe>
-					<iframe
-						className="iframeallCameras"
-						src="https://www.youtube.com/embed/bHWgc5MPnPA"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-					></iframe>
-				</div>
-				<div className="col-md-4">
-					<iframe
-						className="iframeallCameras"
-						src="https://www.youtube.com/embed/bHWgc5MPnPA"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-					></iframe>
-					<iframe
-						className="iframeallCameras"
-						src="https://www.youtube.com/embed/bHWgc5MPnPA"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-					></iframe>
-					<iframe
-						className="iframeallCameras"
-						src="https://www.youtube.com/embed/bHWgc5MPnPA"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-					></iframe>
-				</div>
-				<div className="col-md-4">
-					<iframe
-						className="iframeallCameras"
-						src="https://www.youtube.com/embed/bHWgc5MPnPA"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-					></iframe>
-					<iframe
-						className="iframeallCameras"
-						src="https://www.youtube.com/embed/bHWgc5MPnPA"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-					></iframe>
-					<iframe
-						className="iframeallCameras"
-						src="https://www.youtube.com/embed/bHWgc5MPnPA"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-					></iframe>
-				</div>
-			</div>
-			</main>
+					<h1 className="H1viewall">View All Cameras</h1>
+					<p className="Pviewall">
+						Here is something information that you must to know.{" "}
+					</p>
+					<div className="row">
+						<div className="col-md-4">
+							<iframe
+								className="iframeallCameras"
+								src="https://www.youtube.com/embed/bHWgc5MPnPA"
+								frameBorder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowFullScreen
+							></iframe>
+							<iframe
+								className="iframeallCameras"
+								src="https://www.youtube.com/embed/bHWgc5MPnPA"
+								frameBorder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowFullScreen
+							></iframe>
+							<iframe
+								className="iframeallCameras"
+								src="https://www.youtube.com/embed/bHWgc5MPnPA"
+								frameBorder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowFullScreen
+							></iframe>
+						</div>
+						<div className="col-md-4">
+							<iframe
+								className="iframeallCameras"
+								src="https://www.youtube.com/embed/bHWgc5MPnPA"
+								frameBorder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowFullScreen
+							></iframe>
+							<iframe
+								className="iframeallCameras"
+								src="https://www.youtube.com/embed/bHWgc5MPnPA"
+								frameBorder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowFullScreen
+							></iframe>
+							<iframe
+								className="iframeallCameras"
+								src="https://www.youtube.com/embed/bHWgc5MPnPA"
+								frameBorder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowFullScreen
+							></iframe>
+						</div>
+						<div className="col-md-4">
+							<iframe
+								className="iframeallCameras"
+								src="https://www.youtube.com/embed/bHWgc5MPnPA"
+								frameBorder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowFullScreen
+							></iframe>
+							<iframe
+								className="iframeallCameras"
+								src="https://www.youtube.com/embed/bHWgc5MPnPA"
+								frameBorder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowFullScreen
+							></iframe>
+							<iframe
+								className="iframeallCameras"
+								src="https://www.youtube.com/embed/bHWgc5MPnPA"
+								frameBorder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowFullScreen
+							></iframe>
+						</div>
+					</div>
+				</main>
 			</div>
 		</>
 	);

@@ -2,13 +2,12 @@ import React from "react";
 import useForm from "../customhooks/useForm";
 import Link from "next/link";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faFacebookF,faGoogle,faGooglePlusG,faInstagram } from '@fortawesome/free-brands-svg-icons' 	
+// import { faFacebookF,faGoogle,faGooglePlusG,faInstagram } from '@fortawesome/free-brands-svg-icons'
 // import { FacebookLoginButton } from "react-social-login-buttons";
-import FacebookIcon from '@material-ui/icons/Facebook';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faFacebookF,faGoogle } from "@fortawesome/free-brands-svg-icons"
-import InstagramIcon from '@material-ui/icons/Instagram';
-
+import FacebookIcon from "@material-ui/icons/Facebook";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF, faGoogle } from "@fortawesome/free-brands-svg-icons";
+import InstagramIcon from "@material-ui/icons/Instagram";
 
 import { FacebookLoginButton } from "react-social-login-buttons";
 
@@ -70,33 +69,42 @@ export default function SignIn() {
 				<div className="anstyle">
 					<a style={{ color: "blue" }}> Forget Password? </a>
 					<br />
-					<span className="login_with" style={{color: "black",textAlign:"center"}}>or login with </span>
-                </div>
-				
-				
-			
-				<div  className="row footer-5  justify-content-center ">
-
-	{/* <div  clasName="footer_icons1" > */}
-
-	<FontAwesomeIcon className="facebook-facebook1" id="fastyles" icon={faFacebookF}  />
-				 <FontAwesomeIcon className="fa-google1" id="fastyles2" icon={faGoogle}  />
-				 <InstagramIcon  id="fastyle2" className="fa-instagram"/>
-			
-				</div>
-				
-				{/* </div> */}
-		
-                <div class="needaccount">
-                    <span>Need an account?</span><span style={{color: "blue"}}>Sign up </span>
-                </div>
 					<span
 						className="login_with"
 						style={{ color: "black", textAlign: "center" }}
 					>
 						or login with{" "}
 					</span>
-				
+				</div>
+
+				<div className="row footer-5  justify-content-center ">
+					{/* <div  clasName="footer_icons1" > */}
+
+					<FontAwesomeIcon
+						className="facebook-facebook1"
+						id="fastyles"
+						icon={faFacebookF}
+					/>
+					<FontAwesomeIcon
+						className="fa-google1"
+						id="fastyles2"
+						icon={faGoogle}
+					/>
+					<InstagramIcon id="fastyle2" className="fa-instagram" />
+				</div>
+
+				{/* </div> */}
+
+				<div className="needaccount">
+					<span>Need an account?</span>
+					<span style={{ color: "blue" }}>Sign up </span>
+				</div>
+				<span
+					className="login_with"
+					style={{ color: "black", textAlign: "center" }}
+				>
+					or login with{" "}
+				</span>
 
 				<div className="footer_icons">
 					{/* 				

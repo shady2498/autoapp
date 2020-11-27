@@ -26,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-
 export default function account() {
 	const [menu, setMenu] = useState({
 		changeName: false,
@@ -88,27 +87,27 @@ export default function account() {
 	};
 	const menuDisplay = [
 		{
-			key: "name",
+			key: "Name",
 			value: "changeName",
 			icon: "LanguageIcon",
 		},
 		{
-			key: "password",
+			key: "Password",
 			value: "changePassword",
 			icon: "NotificationsIcon",
 		},
 		{
-			key: "changePin",
+			key: "Change Pin",
 			value: "changePin",
 			icon: "NotificationsIcon",
 		},
 		{
-			key: "addDevice",
+			key: "Add Device",
 			value: "addDevice",
 			icon: "NotificationsIcon",
 		},
 		{
-			key: "accountLogout",
+			key: "Account Logout",
 			value: "accountLogout",
 			icon: "NotificationsIcon",
 		},
@@ -117,59 +116,58 @@ export default function account() {
 	const theme = useTheme();
 	return (
 		<>
-
-<div className={classes.root}>
+			<div className={classes.root}>
 				<SideBar />
 				<main className={classes.content}>
 					<div className={classes.toolbar} />
-			<div className="profilebodycolour">
-				<h1 className="profiletital">Account</h1>
-				<text>Here is something information that you must to know.</text>
-				<div className="row">
-					<div className="col-md-3 accountcard  shadow p-3 mb-6 bg-white rounded">
-						<img src="..\img\images.png" className="avatar" />
-						<br />
-						<strong className="Nameprofile"> Tomas Wilson </strong>
-						<br />
-						<text className="profileemail"> luckytom@rach </text>
-						<br />
-						<text>Name</text>
-						<br />
-						<h4>Tomas Wilson </h4>
-						<hr className="new5" />
-						{/* loops the menu  */}
-						{menuDisplay.map((item, index) => (
-							<React.Fragment key={index}>
-								<button
-									className="account-btn"
-									onClick={() => toggleMenu(item, true)}
-								>
-									{item.key}
-								</button>
+					<div className="profilebodycolour">
+						<h1 className="profiletital">Account</h1>
+						<p>Here is something information that you must to know.</p>
+						<div className="row">
+							<div className="col-md-3 accountcard  shadow p-3 mb-6 bg-white rounded">
+								<img src="..\img\images.png" className="avatar" />
+								<br />
+								<strong className="Nameprofile"> Tomas Wilson </strong>
+								<br />
+								<text className="profileemail"> luckytom@rach </p>
+								<br />
+								<p>Name</p>
+								<br />
+								<h4>Tomas Wilson </h4>
 								<hr className="new5" />
-							</React.Fragment>
-						))}
+								{/* loops the menu  */}
+								{menuDisplay.map((item, index) => (
+									<React.Fragment key={index}>
+										<button
+											className="account-btn"
+											onClick={() => toggleMenu(item, true)}
+										>
+											{item.key}
+										</button>
+										<hr className="new5" />
+									</React.Fragment>
+								))}
+							</div>
+							<div className="col-md-6 col-sm-12  accountprofile   shadow p-3 mb-6 bg-white rounded">
+								{(() => {
+									if (menu.changeName == true) {
+										return <ChangeName />;
+									} else if (menu.changePin == true) {
+										return <ChangePin set={true} />;
+									} else if (menu.changePassword == true) {
+										return <ChangePassword />;
+									} else if (menu.addDevice == true) {
+										return <AddDevice />;
+									} else if (menu.accountLogout == true) {
+										return <AccountLogout set={true} />;
+									} else {
+										return null;
+									}
+								})()}
+							</div>
+						</div>
 					</div>
-					<div className="col-md-6 col-sm-12  accountprofile   shadow p-3 mb-6 bg-white rounded">
-						{(() => {
-							if (menu.changeName == true) {
-								return <ChangeName />;
-							} else if (menu.changePin == true) {
-								return <ChangePin set={true} />;
-							} else if (menu.changePassword == true) {
-								return <ChangePassword />;
-							} else if (menu.addDevice == true) {
-								return <AddDevice />;
-							} else if (menu.accountLogout == true) {
-								return <AccountLogout set={true} />;
-							} else {
-								return null;
-							}
-						})()}
-					</div>
-				</div>
-			</div>
-			</main>
+				</main>
 			</div>
 		</>
 	);

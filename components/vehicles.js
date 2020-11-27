@@ -27,16 +27,16 @@ export default function Vehicles(props) {
 													<h4>
 														<strong key={index}> {vehicles.CarOwner}</strong>
 													</h4>
-													<text>
+													<p>
 														current speed:
 														<strong key={index}>{vehicles.currentSpeed}</strong>
-													</text>
-													<text>
+													</p>
+													<p>
 														current Elevation:
 														<strong key={index}>
 															{vehicles.currentElevation}
 														</strong>
-													</text>
+													</p>
 												</div>
 											</div>
 										</div>

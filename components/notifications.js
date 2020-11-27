@@ -17,16 +17,6 @@ export default function Notifications(props) {
 	return (
 		<>
 			<div>
-				{/* <h1>Notifications</h1> */}
-				{/* {notifications.map((notificationsdetail, index) => {
-				console.log(index);
-				if (props.show && index < props.show) {
-					return <h1 key={index}>{notificationsdetail.title}</h1>;
-				} else if (props.show && props.show == "all") {
-					return <h1 key={index}>{notificationsdetail.title}</h1>;
-				}
-			})} */}
-
 				{props.show !== undefined && props.show !== "all"
 					? notificationsdata
 							.slice(
@@ -55,7 +45,7 @@ export default function Notifications(props) {
 					: notificationsdata.reverse().map((notificationsdetail, index) => {
 							return (
 								<React.Fragment key={index}>
-									<div key={index} className="king">
+									<div className="king">
 										<div className="widget-summary">
 											<div className="widget-summary-col widget-summary-col-icon">
 												<div className="summary-icon ">
