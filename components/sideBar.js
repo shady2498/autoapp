@@ -1,6 +1,8 @@
 import React from "react";
 import vehiclesData from "../data/vehicles.json";
 import clsx from "clsx";
+import Link from "next/link";
+
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
@@ -195,31 +197,41 @@ export default function sideBar() {
 
 				<Divider />
 				<List>
-					<li className="liindrawer">
-						{" "}
-						<LanguageIcon className="icone_size" />{" "}
-						<span className="icontextsidebar">Home</span>
-					</li>
-					<li className="liindrawer">
-						{" "}
-						<NotificationsIcon className="icone_size" />{" "}
-						<span className="icontextsidebar">Notifications </span>{" "}
-					</li>
-					<li className="liindrawer">
-						{" "}
-						<AppsIcon className="icone_size" />{" "}
-						<span className="icontextsidebar"> View All </span>{" "}
-					</li>
-					<li className="liindrawer">
-						{" "}
-						<AccountCircleIcon className="icone_size" />
-						<span className="icontextsidebar"> Account </span>{" "}
-					</li>
-					<li className="liindrawer">
-						{" "}
-						<LiveTvIcon className="icone_size" />
-						<span className="icontextsidebar"> Add new device </span>{" "}
-					</li>
+					<Link href="/home">
+						<li className="liindrawer">
+							{" "}
+							<LanguageIcon className="icone_size" />{" "}
+							<span className="icontextsidebar">Home</span>
+						</li>
+					</Link>
+					<Link href="/notification">
+						<li className="liindrawer">
+							{" "}
+							<NotificationsIcon className="icone_size" />{" "}
+							<span className="icontextsidebar">Notifications </span>{" "}
+						</li>
+					</Link>
+					<Link href="/allCameras">
+						<li className="liindrawer">
+							{" "}
+							<AppsIcon className="icone_size" />{" "}
+							<span className="icontextsidebar"> View All </span>{" "}
+						</li>
+					</Link>
+					<Link href="/account">
+						<li className="liindrawer">
+							{" "}
+							<AccountCircleIcon className="icone_size" />
+							<span className="icontextsidebar"> Account </span>{" "}
+						</li>
+					</Link>
+					<Link href="/addnewdevice">
+						<li className="liindrawer">
+							{" "}
+							<LiveTvIcon className="icone_size" />
+							<span className="icontextsidebar"> Add new device </span>{" "}
+						</li>
+					</Link>
 				</List>
 
 				<ListItem button>
