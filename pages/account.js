@@ -129,7 +129,7 @@ export default function account() {
 								<br />
 								<strong className="Nameprofile"> Tomas Wilson </strong>
 								<br />
-								<text className="profileemail"> luckytom@rach </p>
+								<p className="profileemail"> luckytom@rach </p>
 								<br />
 								<p>Name</p>
 								<br />
