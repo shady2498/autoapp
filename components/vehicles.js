@@ -10,36 +10,37 @@ export default function Vehicles(props) {
 						.reverse()
 						.map((vehicles, index) => {
 							return (
-								<header className="panel-heading bg-color mt-5">
-								<div className="actvitybox">
-									<div className="media">
-									<div className="widget-profile-info">
-									<div className="profile-picture">
-									<span className="blue-line"></span>
-										<img
-											id="avatar1"
-											src="..\img\images.png"
-											className="mr-3 mt-3 rounded-circle"
-											style={{ width: 60 }}
-										/>
-										</div>
-										<div className="media-body">
-											<h4>
-												<strong key={index}> {vehicles.CarOwner}</strong>
-											</h4>
-											<text>
-												current speed:
-												<strong key={index}>{vehicles.currentSpeed}</strong>
-											</text>
-											<text>
-												current Elevation:
-												<strong key={index}>{vehicles.currentElevation}</strong>
-											</text>
+								<header className="panel-heading bg-color mt-5" key={index}>
+									<div className="actvitybox">
+										<div className="media">
+											<div className="widget-profile-info">
+												<div className="profile-picture">
+													<span className="blue-line"></span>
+													<img
+														id="avatar1"
+														src="..\img\images.png"
+														className="mr-3 mt-3 rounded-circle"
+														style={{ width: 60 }}
+													/>
+												</div>
+												<div className="media-body">
+													<h4>
+														<strong key={index}> {vehicles.CarOwner}</strong>
+													</h4>
+													<text>
+														current speed:
+														<strong key={index}>{vehicles.currentSpeed}</strong>
+													</text>
+													<text>
+														current Elevation:
+														<strong key={index}>
+															{vehicles.currentElevation}
+														</strong>
+													</text>
+												</div>
+											</div>
 										</div>
 									</div>
-								</div>
-								</div>
-							
 								</header>
 							);
 						})

@@ -54,7 +54,7 @@ export default function Notifications(props) {
 							})
 					: notificationsdata.reverse().map((notificationsdetail, index) => {
 							return (
-								<>
+								<React.Fragment key={index}>
 									<div key={index} className="king">
 										<div className="widget-summary">
 											<div className="widget-summary-col widget-summary-col-icon">
@@ -78,7 +78,7 @@ export default function Notifications(props) {
 											{/* <button onClick={() => handleDelete(index)}>adasd</button> */}
 										</div>
 									</div>
-								</>
+								</React.Fragment>
 							);
 					  })}
 			</div>
