@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import Notifications from "../components/Notifications";
+import Notifications from "../components/notifications";
 import SideBar from "../components/sideBar";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 

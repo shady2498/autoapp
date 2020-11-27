@@ -1,5 +1,5 @@
 import React from "react";
-import Notifications from "../components/Notifications";
+import Notifications from "../components/notifications";
 import Recordings from "../components/recordings";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import SideBar from "../components/sideBar";
