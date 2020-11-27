@@ -28,12 +28,12 @@ export default function liveview() {
 	const theme = useTheme();
 	return (
 		<>
-			<TopBar />
+			
 			<div className={classes.root}>
 				<SideBar />
 				<main className={classes.content}>
 					<div className={classes.toolbar} />
-
+					<TopBar />
 					<Liveview />
 				</main>
 			</div>
