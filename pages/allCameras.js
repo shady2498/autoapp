@@ -32,8 +32,10 @@ export default function allCameras() {
 		<>
 		<div className={classes.root}>
 				<SideBar />
+				<div className="recordingmain">
 				<main className={classes.content}>
 					<div className={classes.toolbar} />
+					
 			<h1 className="H1viewall">View All Cameras</h1>
 			<p className="Pviewall">
 				Here is something information that you must to know.{" "}
@@ -110,6 +112,7 @@ export default function allCameras() {
 				</div>
 			</div>
 			</main>
+			</div>
 			</div>
 		</>
 	);
