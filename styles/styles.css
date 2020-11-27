@@ -753,6 +753,11 @@ address {
 	border-radius: 30px;
 }
 
+.rec_search {
+    width: 76%;
+    border-radius: 22px;
+}
+
 .btn-radius_30 {
 	width: 10%;
 	border-radius: 30px;
@@ -772,8 +777,12 @@ address {
 .my-4 {
 	margin-bottom: 1.5rem !important;
 	display: inline-block;
-	width: 24%;
+	width: 25%;
+	height: 516px;
+
+	
 }
+
 
 .card-img-top {
 	width: 100% !important;
@@ -900,6 +909,9 @@ body {
 	padding-bottom: 2.5rem;
 	margin: 0 auto 2.4rem;
 	max-width: 9.375rem;
+}
+text.textrecording {
+    font-size: 17px;
 }
 
 .card-elegant .btn-link {
@@ -1111,6 +1123,10 @@ section.content-body {
 	height: 100%;
 	border: 30px solid #fff; */
 }
+section.content-body {
+    overflow-x: hidden;
+    margin: -22px 0 0 -18px;
+}
 .btn:not(:disabled):not(.disabled) {
 	cursor: pointer;
 	/* margin-top: 153px; */
@@ -1228,7 +1244,7 @@ hr {
 }
 .Nameprofile {
 	font-size: 33px;
-	margin: 0 0 0 103px;
+	margin: 0 0 0 69px;
 }
 
 .profileemail {
@@ -1520,7 +1536,7 @@ section.content-body {
 }
 .H1viewall {
 	font-weight: 900;
-	font-size: 58px;
+	font-size: 48px;
 }
 .Pviewall {
 	color: #a39797;
@@ -1532,6 +1548,22 @@ section.content-body {
     left: -49px;
     top: -349px;
 	
+}
+
+p.card-text.cardtextrecording {
+    font-size: 18px;
+}
+
+.makeStyles-content-17 {
+    padding: 24px;
+    flex-grow: 1;
+    margin: -110px 0 0 -20px;
+}
+
+.makeStyles-content-20 {
+    padding: 24px;
+    flex-grow: 1;
+    margin: -117px 0 0 -25px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -1708,10 +1740,7 @@ section.content-body {
 	}
 }
 
-footer_icons1
-{
 
-}
 
 /* ///////////////////////////////////// */
 
@@ -1941,6 +1970,20 @@ button.btn.btn-primary.btnsave {
 	margin: 205px 0 0 250px;
 	padding: 21px 215px 11px 215px;
 }
+
+input.form-control.fa-search.searchinput.rec_search {
+    width: 74%;
+    border-radius: 29px;
+}
+
+h3.h3recording {
+    font-size: 27px;
+}
+
+
+
+
+
 
 @media screen and (min-width: 768px) and (max-width: 1300px) {
 	.footer_icons {

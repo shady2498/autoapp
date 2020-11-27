@@ -46,7 +46,7 @@ export default function Recordings(props) {
 										<h5 className="card-title carddate">
 											Sept 20,2020,08:03PM
 										</h5>
-										<text className="textcard">Sept 18,2020,03:57</text>{" "}
+										{/* <text className="textcard">Sept 18,2020,03:57</text>{" "} */}
 										<span className="ytp-overflow-icon"></span>
 										<h3 className="h3recording">
 											{" "}
