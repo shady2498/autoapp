@@ -3,17 +3,17 @@ import Modal from "react-modal";
 
 Modal.setAppElement("*");
 
-export default function callEmergencylModal() {
-	const [modalIsOpen, setModalIsOpen] = useState(false);
+export default function callEmergencylModal(props) {
+	const [modalIsOpen, setModalIsOpen] = useState(props.set);
 	return (
 		<>
 			<div>
-				<button
+				{/* <button
 					className="btn btn-outline-primary"
 					onClick={() => setModalIsOpen(true)}
 				>
 					Call 911
-				</button>
+				</button> */}
 				<Modal
 					isOpen={modalIsOpen}
 					onRequestClose={() => setModalIsOpen(false)}

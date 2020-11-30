@@ -2,6 +2,7 @@ import React from "react";
 import vehiclesData from "../data/vehicles.json";
 import clsx from "clsx";
 import Link from "next/link";
+import EmergencyNumber from "../components/callEmergencylModal";
 
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
@@ -24,7 +25,7 @@ import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import LiveTvIcon from "@material-ui/icons/LiveTv";
 
 import LanguageIcon from "@material-ui/icons/Language";
-import PhoneIcon from '@material-ui/icons/Phone';
+import PhoneIcon from "@material-ui/icons/Phone";
 
 const drawerWidth = 378;
 const anchor = "left";
@@ -100,6 +101,11 @@ export default function sideBar() {
 	const classes = useStyles();
 	const theme = useTheme();
 	const [open, setOpen] = React.useState(false);
+	const [emergency, setEmergency] = React.useState({ emergencyNumber: false });
+
+	const openModal = (open) => {
+		setEmergency({ emergencyNumber: true });
+	};
 
 	const handleDrawerOpen = () => {
 		setOpen(true);
@@ -234,7 +240,7 @@ export default function sideBar() {
 						</li>
 					</Link>
 				</List>
-	
+
 				<ListItem button>
 					<React.Fragment key={anchor}>
 						<a onClick={toggleDrawer(anchor, true)}>
@@ -253,13 +259,19 @@ export default function sideBar() {
 						</Drawer>
 					</React.Fragment>
 				</ListItem>
-				
+
 				<ListItem button></ListItem>
 				<div>
-
-<button className="btn911 "><PhoneIcon/></button><br/> <span className="span911">911  </span>
-
-</div>
+					<button className="btn911 " onClick={() => openModal(open)}>
+						<PhoneIcon />
+					</button>
+					<br /> <span className="span911">911 </span>
+					{(() => {
+						if (emergency.emergencyNumber == true) {
+							return <EmergencyNumber set={true} />;
+						}
+					})()}
+				</div>
 			</Drawer>
 		</div>
 	);
