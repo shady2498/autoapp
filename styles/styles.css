@@ -779,7 +779,7 @@ address {
 	margin-bottom: 1.5rem !important;
 	display: inline-block;
 	width: 25%;
-	height: 516px;
+	height: 0px;
 
 	
 }
@@ -1752,6 +1752,15 @@ svg.MuiSvgIcon-root.arrowbtn12 {
 	}
 }
 
+.btn911 {
+    background-color: #e02020;
+    width: 91px;
+	border-radius: 50px;
+	border: none;
+	color: white;
+	margin: 128px 0 0 86px;
+}
+
 
 
 /* ///////////////////////////////////// */
@@ -1839,8 +1848,9 @@ button.account-btn {
 }
 
 button.btn.btn-primary.btnsave {
-	margin: 339px 0 0 250px;
-	padding: 21px 215px 11px 215px;
+	margin: 205px 0 0 154px;
+
+    padding: 21px 215px 11px 228px;
 }
 
 h1.changename {
@@ -1993,6 +2003,13 @@ h3.h3recording {
 }
 .recordingmain {
     margin: -16px 0 0 -31px;
+}
+
+
+.span911{
+	margin: 0 0 0 108px;
+    font-size: 25px;
+    font-weight: 700;
 }
 
 
